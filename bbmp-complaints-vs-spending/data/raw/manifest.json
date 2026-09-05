@@ -1,0 +1,57 @@
+{
+  "ward_master.csv": {
+    "dataset": "BBMP Ward Information",
+    "resource": "BBMP Ward Information",
+    "url": "https://data.opencity.in/dataset/87b978d1-352e-4b90-aa2c-9991e55d3425/resource/01d485da-6509-4555-ab4c-036720ad0c51/download/3648198e-a595-4c6b-b76e-2ec180fc9f14.csv"
+  },
+  "ward_crosswalk_old_new.csv": {
+    "dataset": "BBMP Ward Information",
+    "resource": "Constituencies to Wards Mapping for Old and New Wards",
+    "url": "https://data.opencity.in/dataset/87b978d1-352e-4b90-aa2c-9991e55d3425/resource/ebf9c61c-338f-4f11-888a-914493100dc2/download/e08d0f26-d02b-4e0f-ad5b-4049048a9561.csv"
+  },
+  "workorders_ward_category_gross.csv": {
+    "dataset": "BBMP Work Orders Categorised (2018-2023)",
+    "resource": "BBMP Ward Wise Work Orders Gross Categorised (2018-2023)",
+    "url": "https://data.opencity.in/dataset/b130b893-ce8d-4fd6-a916-d145084b986b/resource/a763fad9-55c5-4d4a-b2df-184d50c5cf9f/download/29285709-57fd-470e-933f-4f5ba97ff343.csv"
+  },
+  "workorders_ward_category_net.csv": {
+    "dataset": "BBMP Work Orders Categorised (2018-2023)",
+    "resource": "BBMP Ward Wise Work Orders Net Amount Categorised (2018-2023)",
+    "url": "https://data.opencity.in/dataset/b130b893-ce8d-4fd6-a916-d145084b986b/resource/1a213c61-a188-414f-b4cd-2ebba27195e1/download/5b6b7dd7-67c5-4b69-a0b4-e9fc7ef92dce.csv"
+  },
+  "bbmp_ward_map_2015.kml": {
+    "dataset": "BBMP Ward Information",
+    "resource": "BBMP Ward Map - 2015",
+    "url": "https://data.opencity.in/dataset/87b978d1-352e-4b90-aa2c-9991e55d3425/resource/a0329df6-2924-43f4-8fe4-7a6ffcc1d53d/download/806d6b9c-e8d9-4eb0-a3a3-b2ba68ec3cda.kml"
+  },
+  "ward_population_2011.csv": {
+    "dataset": "Bengaluru Data - Census 2011",
+    "resource": "Bengaluru Ward-wise Census Data - 2011",
+    "url": "https://data.opencity.in/dataset/023a1c0c-1901-4eb1-b1bf-66a900485099/resource/269cdf01-dae5-4736-8f4d-72a8e57fa3a9/download/83390055-d933-420f-82b7-608e139336c2.csv"
+  },
+  "grievances_2020.csv": {
+    "dataset": "BBMP Grievances Data",
+    "resource": "BBMP Grievances 2020",
+    "url": "https://data.opencity.in/dataset/54344a76-a37a-4d05-961c-df9bac5494ad/resource/58808356-4b0a-4b02-9d70-75993b4dcd1c/download/413fa9ec-8d06-4ecb-884e-1436c5a0f5dd.csv"
+  },
+  "grievances_2021.csv": {
+    "dataset": "BBMP Grievances Data",
+    "resource": "BBMP Grievances 2021",
+    "url": "https://data.opencity.in/dataset/54344a76-a37a-4d05-961c-df9bac5494ad/resource/bada528d-f4f5-4ace-9dd1-8ac459fe350b/download/9e7e6892-06b6-4fdc-967a-e4787562f155.csv"
+  },
+  "grievances_2022.csv": {
+    "dataset": "BBMP Grievances Data",
+    "resource": "BBMP Grievances 2022",
+    "url": "https://data.opencity.in/dataset/54344a76-a37a-4d05-961c-df9bac5494ad/resource/e44f1808-4923-4390-b62c-710d19ab876b/download/b4dd8dd1-1628-4f35-9247-ef5afaad214d.csv"
+  },
+  "grievances_2023.csv": {
+    "dataset": "BBMP Grievances Data",
+    "resource": "BBMP Grievances 2023",
+    "url": "https://data.opencity.in/dataset/54344a76-a37a-4d05-961c-df9bac5494ad/resource/fae120ab-d95c-4281-aa86-5bf694712472/download/d4419a76-e2af-44b3-aa25-369c85126f0f.csv"
+  },
+  "grievances_2024.csv": {
+    "dataset": "BBMP Grievances Data",
+    "resource": "BBMP Grievances 2024",
+    "url": "https://data.opencity.in/dataset/54344a76-a37a-4d05-961c-df9bac5494ad/resource/2a3f29ef-a7a1-4fc3-b125-cbcc958a89d1/download/82f88d50-71c5-4203-92ac-5ccb5cabc7a2.csv"
+  }
+}

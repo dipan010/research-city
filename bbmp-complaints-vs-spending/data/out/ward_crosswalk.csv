@@ -1,0 +1,334 @@
+observed_name,normalised,ward_no,canonical_name,match_method,match_score,sources,ward_no_225,ward_name_225
+KempegowdWard,kempegowdward,1.0,Kempegowda Ward,fuzzy,0.87,workorders_2018_2023,1,Kempegowda Ward
+Kempegowda Ward,kempegowda,1.0,Kempegowda Ward,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,1,Kempegowda Ward
+Chowdeshwari Ward,chowdeshwari,2.0,Chowdeswari Ward,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,2,Chowdeswari Ward
+Atturu,atturu,3.0,Atturu,exact,1.0,workorders_2018_2023,3,Someshwara Ward
+YelahankSatellitTown,yelahanksatellittown,4.0,Yelahanka Satellite Town,fuzzy,0.909,workorders_2018_2023,4,Attur Layout
+Yelahanka old Satellite Town,yelahanka old satellite town,4.0,Yelahanka Satellite Town,fuzzy,0.923,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,4,Attur Layout
+Jakkur,jakkur,5.0,Jakkuru,fuzzy,0.923,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,6,Kogilu
+Jakkuru,jakkuru,5.0,Jakkuru,exact,1.0,workorders_2018_2023,6,Kogilu
+Thanisandra,thanisandra,6.0,Thanisandra,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,7,Thanisandra
+Byatarayanapura,byatarayanapura,7.0,Byatarayanapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,8,Jakkuru
+Kodigehalli,kodigehalli,8.0,Kodigehalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,9,Amrutahalli
+Vidyaranyapura,vidyaranyapura,9.0,Vidyaranyapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,10,Kempapura
+DoddBommasandra,doddbommasandra,10.0,Dodda Bommasandra,fuzzy,0.938,workorders_2018_2023,11,Byatarayanapura
+Doddabommasandra,doddabommasandra,10.0,Dodda Bommasandra,fuzzy,0.97,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,11,Byatarayanapura
+KuvempNagar,kuvempnagar,11.0,Kuvempu Nagar,fuzzy,0.917,workorders_2018_2023,12,Kodigehalli
+Kuvempu Nagar,kuvempu nagar,11.0,Kuvempu Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,12,Kodigehalli
+Shettihalli,shettihalli,12.0,Shettihalli,exact,1.0,workorders_2018_2023,16,Kammagondanahalli
+Shettyhalli,shettyhalli,12.0,Shettihalli,fuzzy,0.909,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,16,Kammagondanahalli
+Mallasandra,mallasandra,13.0,Mallasandra,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,17,Shettihalli
+Bagalagunte,bagalagunte,14.0,Bagalakunte,fuzzy,0.909,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,18,Bagalakunte
+Bagalakunte,bagalakunte,14.0,Bagalakunte,exact,1.0,workorders_2018_2023,18,Bagalakunte
+Dasarahalli,dasarahalli,15.0,T Dasarahalli,fuzzy,0.917,workorders_2018_2023,19,Defence Colony
+T-Dasarahalli,t dasarahalli,15.0,T Dasarahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,19,Defence Colony
+Jalahalli,jalahalli,16.0,Jalahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,36,Chatrapati Shivaji
+J.P.Park,j p park,17.0,J P Park,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,37,Chanakya
+RadhakrishnTemplWard,radhakrishntemplward,18.0,Radhakrishna Temple Ward,fuzzy,0.821,workorders_2018_2023,66,Radhakrishna Temple Ward
+Radhakrishna Temple,radhakrishna temple,18.0,Radhakrishna Temple Ward,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,66,Radhakrishna Temple Ward
+Sanjay Nagar,sanjay nagar,19.0,SanJayanagar,fuzzy,0.917,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,67,Sanjaya Nagar
+SanjayNagar,sanjaynagar,19.0,SanJayanagar,fuzzy,0.957,workorders_2018_2023,67,Sanjaya Nagar
+GangNagar,gangnagar,20.0,Ganga Nagar,fuzzy,0.9,workorders_2018_2023,68,Vishwanath Nagenahalli
+Ganga Nagar,ganga nagar,20.0,Ganga Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,68,Vishwanath Nagenahalli
+Hebbal,hebbal,21.0,Hebbala,fuzzy,0.923,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,69,Manorayanapalya
+Hebbala,hebbala,21.0,Hebbala,exact,1.0,workorders_2018_2023,69,Manorayanapalya
+VishwanatNagenahalli,vishwanatnagenahalli,22.0,Vishwanath Nagenahalli,fuzzy,0.952,workorders_2018_2023,70,Hebbala
+Vishwanathnagenahalli,vishwanathnagenahalli,22.0,Vishwanath Nagenahalli,fuzzy,0.977,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,70,Hebbala
+Nagavara,nagavara,23.0,Nagavara,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,94,Hennur
+HBLayout,hblayout,24.0,HBR Layout,fuzzy,0.889,workorders_2018_2023,95,Nagavara
+HBR Layout,hbr layout,24.0,HBR Layout,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,95,Nagavara
+Horamavu,horamavu,25.0,Horamavu,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,81,Horamavu
+RamamurthNagar,ramamurthnagar,26.0,Ramamurthy Nagar,fuzzy,0.933,workorders_2018_2023,82,Babusab Paiya
+Ramamurthy Nagar,ramamurthy nagar,26.0,Ramamurthy Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,82,Babusab Paiya
+Banasavadi,banasavadi,27.0,Banasavadi,exact,1.0,workorders_2018_2023,96,Kadugondanahalli
+Banaswadi,banaswadi,27.0,Banasavadi,fuzzy,0.842,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,96,Kadugondanahalli
+Kammanahalli,kammanahalli,28.0,Kammanahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,97,Venkateshpura
+Kacharakanahalli,kacharakanahalli,29.0,Kacharkanahalli,fuzzy,0.968,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,98,Kacharkanahalli
+Kacharkanahalli,kacharkanahalli,29.0,Kacharkanahalli,exact,1.0,workorders_2018_2023,98,Kacharkanahalli
+Kadugondanahalli,kadugondanahalli,30.0,Kadugondanahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,99,HRBR Layout
+KushaNagar,kushanagar,31.0,Kushal Nagar,fuzzy,0.909,workorders_2018_2023,74,Kaval Bairasandra
+Kushal Nagar,kushal nagar,31.0,Kushal Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,74,Kaval Bairasandra
+KavaBairasandra,kavabairasandra,32.0,Kaval Bairasandra,fuzzy,0.938,workorders_2018_2023,75,Kushal Nagar
+Kavalbyrasandra,kavalbyrasandra,32.0,Kaval Bairasandra,fuzzy,0.875,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,75,Kushal Nagar
+Manorayanapalya,manorayanapalya,33.0,Manorayana Palya,fuzzy,0.968,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,71,Chamundi Nagar
+Gangenahalli,gangenahalli,34.0,Gangenahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,72,Ganga Nagar
+AramanNagara,aramannagara,35.0,Aramane Nagara,fuzzy,0.923,workorders_2018_2023,59,Mattikere
+Aramane Nagar,aramane nagar,35.0,Aramane Nagara,fuzzy,0.963,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,59,Mattikere
+Mathikere,mathikere,36.0,Mattikere,fuzzy,0.889,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,60,Aramane Nagara
+Mattikere,mattikere,36.0,Mattikere,exact,1.0,workorders_2018_2023,60,Aramane Nagara
+Yeshwanthpur,yeshwanthpur,37.0,Yeshwanthpura,fuzzy,0.96,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,38,J P Park
+Yeshwanthpura,yeshwanthpura,37.0,Yeshwanthpura,exact,1.0,workorders_2018_2023,38,J P Park
+H.M.T,h m t,38.0,HMT Ward,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,39,Kanneshwara Rama
+Chokkasandra,chokkasandra,39.0,Chokkasandra,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,20,Mallasandra
+DoddBidarakallu,doddbidarakallu,40.0,Dodda Bidarakallu,fuzzy,0.938,workorders_2018_2023,28,Dodda Bidarakallu
+Dodda Bidarkallu,dodda bidarkallu,40.0,Dodda Bidarakallu,fuzzy,0.97,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,28,Dodda Bidarakallu
+PeenyIndustriaArea,peenyindustriaarea,41.0,Peenya Industrial Area,fuzzy,0.9,workorders_2018_2023,21,T.Dasarahalli
+Peenya Industrial Area,peenya industrial area,41.0,Peenya Industrial Area,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,21,T.Dasarahalli
+LakshmDevNagar,lakshmdevnagar,42.0,Lakshmi Devi Nagar,fuzzy,0.875,workorders_2018_2023,40,Veeramadakari
+Lakshmidevi Nagar,lakshmidevi nagar,42.0,Lakshmi Devi Nagar,fuzzy,0.971,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,40,Veeramadakari
+NandinLayout,nandinlayout,43.0,Nandini Layout,fuzzy,0.923,workorders_2018_2023,50,Marappana Palya
+Nandini Layout,nandini layout,43.0,Nandini Layout,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,50,Marappana Palya
+MarappanPalya,marappanpalya,44.0,Marappana Palya,fuzzy,0.929,workorders_2018_2023,51,Nagapura
+Marappana Palya,marappana palya,44.0,Marappana Palya,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,51,Nagapura
+Malleshwaram,malleshwaram,45.0,Malleshwaram,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,61,Malleswaram
+Malleswaram,malleswaram,45.0,Malleshwaram,fuzzy,0.957,workorders_2018_2023,61,Malleswaram
+Jayachamarajendr Nagar,jayachamarajendr nagar,46.0,Jayachamarajendra Nagar,fuzzy,0.978,workorders_2018_2023,73,Jayachamarajendra Nagar
+Jayachamarajendra Nagar,jayachamarajendra nagar,46.0,Jayachamarajendra Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,73,Jayachamarajendra Nagar
+DevarJeevanahalli,devarjeevanahalli,47.0,Devara Jeevanahalli,fuzzy,0.944,workorders_2018_2023,76,Muneshwara Nagar
+Devarajeevanahalli,devarajeevanahalli,47.0,Devara Jeevanahalli,fuzzy,0.973,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,76,Muneshwara Nagar
+MuneshwarNagar,muneshwarnagar,48.0,Muneshwara Nagar,fuzzy,0.933,workorders_2018_2023,77,Devara Jeevanahalli
+Muneshwara Nagar,muneshwara nagar,48.0,Muneshwara Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,77,Devara Jeevanahalli
+Lingarajapura,lingarajapura,49.0,Lingarajapura,exact,1.0,workorders_2018_2023,100,Banasavadi
+Lingarajapuram,lingarajapuram,49.0,Lingarajapura,fuzzy,0.963,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,100,Banasavadi
+Benniganahalli,benniganahalli,50.0,Benniganahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,117,C V Raman Nagar
+Vijanapura,vijanapura,51.0,Vijnanapura,fuzzy,0.952,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,83,Kalkere
+Vijnanapura,vijnanapura,51.0,Vijnanapura,exact,1.0,workorders_2018_2023,83,Kalkere
+K.R.Puram,k r puram,52.0,KR Puram,fuzzy,0.941,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,84,Ramamurthy Nagara
+Basavanapura,basavanapura,53.0,Basavanapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,85,Vijinanapura
+Hoodi,hoodi,54.0,Hudi,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,104,Kadugodi
+Hudi,hudi,54.0,Hudi,exact,1.0,workorders_2018_2023,104,Kadugodi
+Devasandra,devasandra,55.0,Devasandra,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,86,K R Puram
+A.Narayanapura,a narayanapura,56.0,A Narayanapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,87,Medahalli
+Narayanapura,narayanapura,56.0,A Narayanapura,fuzzy,0.923,workorders_2018_2023,87,Medahalli
+C.V.Raman Nagar,c v raman nagar,57.0,C.V. Raman Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,118,Lal Bahadur Nagar
+NeTippasandara,netippasandara,58.0,New Tippa Sandra,fuzzy,0.867,workorders_2018_2023,119,New Bayappanahalli
+Newthippasandra,newthippasandra,58.0,New Tippa Sandra,fuzzy,0.903,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,119,New Bayappanahalli
+MaruthSevNagar,maruthsevnagar,59.0,Maruthi Seva Nagar,fuzzy,0.875,workorders_2018_2023,101,Kammanahalli
+Maruthi Seva Nagar,maruthi seva nagar,59.0,Maruthi Seva Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,101,Kammanahalli
+Sagayapuram,sagayapuram,60.0,Sagayara Puram,fuzzy,0.88,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,78,S K Garden
+Sagayarapuram,sagayarapuram,60.0,Sagayara Puram,fuzzy,0.963,workorders_2018_2023,78,S K Garden
+S.K.Garden,s k garden,61.0,SK Garden,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,79,Sagayarapuram
+RamaswamPalya,ramaswampalya,62.0,Ramaswamy Palya,fuzzy,0.929,workorders_2018_2023,126,Ramaswamy Palya
+Ramaswamy Palya,ramaswamy palya,62.0,Ramaswamy Palya,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,126,Ramaswamy Palya
+Jayamahal,jayamahal,63.0,Jaya Mahal,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,127,Jayamahal
+RajamahaGuttahalli,rajamahaguttahalli,64.0,Raj Mahal Guttahalli,fuzzy,0.895,workorders_2018_2023,62,Subramanya Nagar
+Rajamahal,rajamahal,64.0,Raj Mahal Guttahalli,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,62,Subramanya Nagar
+KadMalleshwaWard,kadmalleshwaward,65.0,Kadu Malleshwar Ward,fuzzy,0.839,workorders_2018_2023,63,Gayithri Nagar
+SubramanyNagar,subramanynagar,66.0,Subramanya Nagar,fuzzy,0.933,workorders_2018_2023,64,Kadu Malleshwara
+Subramanya Nagar,subramanya nagar,66.0,Subramanya Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,64,Kadu Malleshwara
+Nagapura,nagapura,67.0,Nagapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,52,Mahalakshimpuram
+Mahalakshimpuram,mahalakshimpuram,68.0,Mahalakshmipuram,fuzzy,0.938,workorders_2018_2023,53,Nandini Layout
+Mahalakshmipuram,mahalakshmipuram,68.0,Mahalakshmipuram,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,53,Nandini Layout
+Laggere,laggere,69.0,Laggere,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,41,Peenya
+RajagopaNagar,rajagopanagar,70.0,Rajagopal Nagar,fuzzy,0.929,workorders_2018_2023,22,Chokkasandra
+Rajagopala Nagar,rajagopala nagar,70.0,Rajagopal Nagar,fuzzy,0.968,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,22,Chokkasandra
+Hegganahalli,hegganahalli,71.0,Hegganahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,23,Nelagadderanahalli
+Herohalli,herohalli,72.0,Herohalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,29,Vidyamanyanagar
+Kottegepalya,kottegepalya,73.0,Kottegepalya,exact,1.0,workorders_2018_2023,42,Lakshmi Devi Nagar
+Kottigepalya,kottigepalya,73.0,Kottegepalya,fuzzy,0.917,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,42,Lakshmi Devi Nagar
+ShakthGanapathNagar,shakthganapathnagar,74.0,Shakthi Ganapathi Nagar,fuzzy,0.905,workorders_2018_2023,54,Jai Maruthinagar
+Shakthiganapathi Nagar,shakthiganapathi nagar,74.0,Shakthi Ganapathi Nagar,fuzzy,0.978,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,54,Jai Maruthinagar
+ShankaMatt,shankamatt,75.0,Shankar Matt,fuzzy,0.909,workorders_2018_2023,55,Puneet Rajkumar Ward
+Shankaramata,shankaramata,75.0,Shankar Matt,fuzzy,0.833,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,55,Puneet Rajkumar Ward
+Gayathri Nagar,gayathri nagar,76.0,Gayithri Nagar,fuzzy,0.929,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,65,Rajamahal Guttahalli
+GayithrNagar,gayithrnagar,76.0,Gayithri Nagar,fuzzy,0.923,workorders_2018_2023,65,Rajamahal Guttahalli
+Dattathreya Temple,dattathreya temple,77.0,Dattatreya Temple Ward,fuzzy,0.971,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,132,Dattatreya Temple
+DattatreyTemple,dattatreytemple,77.0,Dattatreya Temple Ward,fuzzy,0.938,workorders_2018_2023,132,Dattatreya Temple
+Pulikeshi Nagar,pulikeshi nagar,78.0,Pulakeshi Nagar,fuzzy,0.933,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,80,Pulikeshinagar
+Pulikeshinagar,pulikeshinagar,78.0,Pulakeshi Nagar,fuzzy,0.897,workorders_2018_2023,80,Pulikeshinagar
+SarvagnNagar,sarvagnnagar,79.0,Sarvagna Nagar,fuzzy,0.923,workorders_2018_2023,120,Hoysala Nagar
+Sarvagna Nagar,sarvagna nagar,79.0,Sarvagna Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,120,Hoysala Nagar
+HoysalNagar,hoysalnagar,80.0,Hoysala Nagar,fuzzy,0.917,workorders_2018_2023,121,Old Thippasandra
+Hoysala Nagar,hoysala nagar,80.0,Hoysala Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,121,Old Thippasandra
+Vignana Nagar,vignana nagar,81.0,Vijnana Nagar,fuzzy,0.923,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,88,Basavanapura
+VijnanNagar,vijnannagar,81.0,Vijnana Nagar,fuzzy,0.917,workorders_2018_2023,88,Basavanapura
+GarudachaPlaya,garudachaplaya,82.0,Garudachar palya,fuzzy,0.867,workorders_2018_2023,105,Belathur
+Garudacharpalya,garudacharpalya,82.0,Garudachar palya,fuzzy,0.968,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,105,Belathur
+Kadugodi,kadugodi,83.0,Kadugodi,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,106,Hudi
+Hagadooru,hagadooru,84.0,Hagadur,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,107,Garudachar Playa
+Hagadur,hagadur,84.0,Hagadur,exact,1.0,workorders_2018_2023,107,Garudachar Playa
+DoddNekkundi,doddnekkundi,85.0,Dodda Nekkundi,fuzzy,0.923,workorders_2018_2023,108,Dodda Nekkundi
+Doddanekkundi,doddanekkundi,85.0,Dodda Nekkundi,fuzzy,0.963,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,108,Dodda Nekkundi
+Marathahalli,marathahalli,86.0,Marathahalli,exact,1.0,workorders_2018_2023,109,AECS Layout
+Marathalli,marathalli,86.0,Marathahalli,fuzzy,0.909,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,109,AECS Layout
+HAAirport,haairport,87.0,HAL Airport,fuzzy,0.9,workorders_2018_2023,89,Devasandra
+HAL Airport,hal airport,87.0,HAL Airport,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,89,Devasandra
+JeevanbhimNagar,jeevanbhimnagar,88.0,Jeevanbhima Nagar,fuzzy,0.938,workorders_2018_2023,122,New Thippasandara
+Jeevanbhima Nagar,jeevanbhima nagar,88.0,Jeevanbhima Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,122,New Thippasandara
+Jogupalya,jogupalya,89.0,Jogupalya,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,178,Domlur
+Halsoor,halsoor,90.0,Halsoor,exact,1.0,workorders_2018_2023,128,Vasanth Nagar
+Ulsoor,ulsoor,90.0,Halsoor,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,128,Vasanth Nagar
+BharathNagar,bharathnagar,91.0,Bharathi Nagar,fuzzy,0.923,workorders_2018_2023,129,Sampangiram Nagar
+Bharathi Nagar,bharathi nagar,91.0,Bharathi Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,129,Sampangiram Nagar
+Shivaji Nagar,shivaji nagar,92.0,Shivaji Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,130,Bharathi Nagar
+VasantNagar,vasantnagar,93.0,Vasanth Nagar,fuzzy,0.917,workorders_2018_2023,131,Ulsoor
+Vasanth Nagar,vasanth nagar,93.0,Vasanth Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,131,Ulsoor
+Gandhi Nagar,gandhi nagar,94.0,Gandhi Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,133,Gandhinagar
+Gandhinagar,gandhinagar,94.0,Gandhi Nagar,fuzzy,0.957,workorders_2018_2023,133,Gandhinagar
+SubhasNagar,subhasnagar,95.0,Subhash Nagar,fuzzy,0.917,workorders_2018_2023,134,Subhash Nagar
+Subhash Nagar,subhash nagar,95.0,Subhash Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,134,Subhash Nagar
+Okalipuram,okalipuram,96.0,Okalipuram,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,135,Okalipuram
+DayanandNagar,dayanandnagar,97.0,Dayananda Nagar,fuzzy,0.929,workorders_2018_2023,139,Dayananda Nagar
+Dayananda Nagar,dayananda nagar,97.0,Dayananda Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,139,Dayananda Nagar
+PrakasNagar,prakasnagar,98.0,Prakash Nagar,fuzzy,0.917,workorders_2018_2023,140,Prakash Nagar
+Prakash Nagar,prakash nagar,98.0,Prakash Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,140,Prakash Nagar
+RajajNagar,rajajnagar,99.0,Rajaji Nagar,fuzzy,0.909,workorders_2018_2023,141,Rajaji Nagar
+Rajaji Nagar,rajaji nagar,99.0,Rajaji Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,141,Rajaji Nagar
+BasaveshwarNagar,basaveshwarnagar,100.0,Basaveshwara Nagar,fuzzy,0.941,workorders_2018_2023,142,Sriramamandir
+Basaveshwara Nagar,basaveshwara nagar,100.0,Basaveshwara Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,142,Sriramamandir
+Kamakshipalya,kamakshipalya,101.0,Kamakshipalya,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,143,Shivanagara
+VrisabhavathNagar,vrisabhavathnagar,102.0,Vrisahbhavathi Nagar,fuzzy,0.919,workorders_2018_2023,56,Shankar Matt
+Vrushabhavati Nagar,vrushabhavati nagar,102.0,Vrisahbhavathi Nagar,fuzzy,0.872,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,56,Shankar Matt
+Kaveripura,kaveripura,103.0,Kaveripura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,146,Dr. Raj Kumar Ward
+GovindarajNagar,govindarajnagar,104.0,Govindaraja Nagar,fuzzy,0.938,workorders_2018_2023,147,Agrahara Dasarahalli
+Govindraja Nagara,govindraja nagara,104.0,Govindaraja Nagar,fuzzy,0.941,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,147,Agrahara Dasarahalli
+AgraharDasarahalli,agrahardasarahalli,105.0,Agrahara Dasarahalli,fuzzy,0.947,workorders_2018_2023,148,Govindraja Nagar
+Agrahara Dasarahalli,agrahara dasarahalli,105.0,Agrahara Dasarahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,148,Govindraja Nagar
+Dr.Rajkumar Ward,dr rajkumar,106.0,Dr.Raj Kumar Ward,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,149,Kaveripura
+Shiva Nagar,shiva nagar,107.0,Shiva Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,144,Basaveshwara Nagar
+Shivanagara,shivanagara,107.0,Shiva Nagar,fuzzy,0.909,workorders_2018_2023,144,Basaveshwara Nagar
+Sri Rammandira,sri rammandira,108.0,Sri Rama Mandir Ward,fuzzy,0.897,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,145,Kamakshipalya
+Sriramamandir,sriramamandir,108.0,Sri Rama Mandir Ward,fuzzy,0.929,workorders_2018_2023,145,Kamakshipalya
+Chickpete,chickpete,109.0,Chickpete,exact,1.0,workorders_2018_2023,136,Binnipete
+Chikpete,chikpete,109.0,Chickpete,fuzzy,0.941,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,136,Binnipete
+SampangiraNagar,sampangiranagar,110.0,Sampangiram Nagar,fuzzy,0.938,workorders_2018_2023,,
+Sampangiram Nagar,sampangiram nagar,110.0,Sampangiram Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,,
+ShantalNagar,shantalnagar,111.0,Shantala Nagar,fuzzy,0.923,workorders_2018_2023,179,Jogupalya
+Shanthala Nagar,shanthala nagar,111.0,Shantala Nagar,fuzzy,0.966,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,179,Jogupalya
+Domlur,domlur,112.0,Domlur,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,180,Agara
+KonenAgrahara,konenagrahara,113.0,Konena Agrahara,fuzzy,0.929,workorders_2018_2023,123,Jalakanteshwara Nagara
+Konena Agrahara,konena agrahara,113.0,Konena Agrahara,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,123,Jalakanteshwara Nagara
+Agaram,agaram,114.0,Agaram,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,181,Shantala Nagar
+Vannarpet,vannarpet,115.0,Vannar Pet,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,182,Shanthi Nagar
+Neelasandra,neelasandra,116.0,Nilasandra,fuzzy,0.857,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,183,Nilasandra
+Nilasandra,nilasandra,116.0,Nilasandra,exact,1.0,workorders_2018_2023,183,Nilasandra
+ShanthNagar,shanthnagar,117.0,Shanthi Nagar,fuzzy,0.917,workorders_2018_2023,184,Vannarapete
+Shanthi Nagar,shanthi nagar,117.0,Shanthi Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,184,Vannarapete
+Sudam Nagar,sudam nagar,118.0,Sudham Nagar,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,171,Sudham Nagara
+SudhaNagara,sudhanagara,118.0,Sudham Nagar,fuzzy,0.87,workorders_2018_2023,171,Sudham Nagara
+DharmaraySwamTemplwa,dharmarayswamtemplwa,119.0,Dharmaraya Swamy Temple,fuzzy,0.837,workorders_2018_2023,172,Dharmaraya Swamy Temple Ward
+Dharmarayaswamy Temple Ward,dharmarayaswamy temple,119.0,Dharmaraya Swamy Temple,fuzzy,0.978,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,172,Dharmaraya Swamy Temple Ward
+Cottonpet,cottonpet,120.0,Cottonpete,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,137,Cottonpete
+Cottonpete,cottonpete,120.0,Cottonpete,exact,1.0,workorders_2018_2023,137,Cottonpete
+Binnipet,binnipet,121.0,Binni Pete,fuzzy,0.889,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,138,Chickpete
+Binnipete,binnipete,121.0,Binni Pete,fuzzy,0.947,workorders_2018_2023,138,Chickpete
+KempapurAgrahara,kempapuragrahara,122.0,Kempapura Agrahara,fuzzy,0.941,workorders_2018_2023,156,Kempapura Agrahara
+Kempapura Agrahara,kempapura agrahara,122.0,Kempapura Agrahara,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,156,Kempapura Agrahara
+Vijay Nagar,vijay nagar,123.0,ViJayanagar,fuzzy,0.909,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,157,Vijayanagar
+Vijayanagar,vijayanagar,123.0,ViJayanagar,exact,1.0,workorders_2018_2023,157,Vijayanagar
+Hosahalli,hosahalli,124.0,Hosahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,158,Hosahalli
+Marenahalli,marenahalli,125.0,Marenahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,150,Marenahalli
+MaruthMandiward,maruthmandiward,126.0,Maruthi Mandir Ward,fuzzy,0.828,workorders_2018_2023,151,Maruthi Mandir Ward
+Maruthi Mandira Ward,maruthi mandira,126.0,Maruthi Mandir Ward,fuzzy,0.966,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,151,Maruthi Mandir Ward
+Moodalapalya,moodalapalya,127.0,Mudalapalya,fuzzy,0.87,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,152,Mudalapalya
+Mudalapalya,mudalapalya,127.0,Mudalapalya,exact,1.0,workorders_2018_2023,152,Mudalapalya
+Nagarabhavi,nagarabhavi,128.0,Nagarabhavi,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,153,Nagarabhavi
+Jnanabharathi Ward,jnanabharathi,129.0,Jnana Bharathi Ward,fuzzy,0.963,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,43,Ranadheera Kanteerava
+Ullalu,ullalu,130.0,Ullalu,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,30,Herohalli
+Nayandahalli,nayandahalli,131.0,Nayandahalli,exact,1.0,workorders_2018_2023,154,Chandra Layout
+Nayandanahalli,nayandanahalli,131.0,Nayandahalli,fuzzy,0.923,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,154,Chandra Layout
+Attiguppe,attiguppe,132.0,Attiguppe,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,159,Hampi Nagar
+HampNagar,hampnagar,133.0,Hampi Nagar,fuzzy,0.9,workorders_2018_2023,160,Bapuji Nagar
+Hampi Nagar,hampi nagar,133.0,Hampi Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,160,Bapuji Nagar
+BapujNagar,bapujnagar,134.0,Bapuji Nagar,fuzzy,0.909,workorders_2018_2023,161,Attiguppe
+Bapuji Nagar,bapuji nagar,134.0,Bapuji Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,161,Attiguppe
+Padarayanapura,padarayanapura,135.0,Padarayanapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,165,Chamrajpet
+Jagajeevanram Nagar,jagajeevanram nagar,136.0,Jagajivanaram Nagar,fuzzy,0.895,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,166,Chalavadipalya
+Jagajivanaramnagar,jagajivanaramnagar,136.0,Jagajivanaram Nagar,fuzzy,0.973,workorders_2018_2023,166,Chalavadipalya
+Rayapuram,rayapuram,137.0,Rayapuram,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,167,Jagajivanaram Nagar
+Chalavadipalya,chalavadipalya,138.0,Chelavadi Palya,fuzzy,0.897,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,168,Padarayanapura
+K.R.Market,k r market,139.0,KR Market,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,169,Devaraj Urs Nagar
+Chamrajapet,chamrajapet,140.0,Chamraja Pet,fuzzy,0.957,workorders_2018_2023,170,Azad Nagar
+Chamrajpet,chamrajpet,140.0,Chamraja Pet,fuzzy,0.909,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,170,Azad Nagar
+AzaNagar,azanagar,141.0,Azad Nagar,fuzzy,0.889,workorders_2018_2023,,
+Azad Nagar,azad nagar,141.0,Azad Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,,
+Sunkenahalli,sunkenahalli,142.0,Sunkenahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,173,Sunkenahalli
+VishveshwarPuram,vishveshwarpuram,143.0,Vishveshwara Puram,fuzzy,0.941,workorders_2018_2023,174,Vishveshwara Puram
+Visvesvarapuram,visvesvarapuram,143.0,Vishveshwara Puram,fuzzy,0.848,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,174,Vishveshwara Puram
+Siddapura,siddapura,144.0,Siddapura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,175,Ashoka Pillar
+HombegowdNagara,hombegowdnagara,145.0,Hombegowda Nagar,fuzzy,0.903,workorders_2018_2023,176,Someshwara Nagar
+Hombegowda Nagar,hombegowda nagar,145.0,Hombegowda Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,176,Someshwara Nagar
+Lakkasandra,lakkasandra,146.0,Lakkasandra,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,185,Ejipura
+Adugodi,adugodi,147.0,Adugodi,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,186,Koramangala
+Ejipura,ejipura,148.0,Ejipura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,187,Adugodi
+Varthur,varthur,149.0,Varthur,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,110,Whitefield
+Varthuru,varthuru,149.0,Varthur,fuzzy,0.933,workorders_2018_2023,110,Whitefield
+Bellandur,bellandur,150.0,Bellanduru,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,111,Hagadur
+Bellanduru,bellanduru,150.0,Bellanduru,exact,1.0,workorders_2018_2023,111,Hagadur
+Koramangala,koramangala,151.0,Koramangala,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,188,Lakkasandra
+SuddaguntPalya,suddaguntpalya,152.0,Suddagunte Palya,fuzzy,0.933,workorders_2018_2023,189,Suddagunte Palya
+Sudduguntepalya,sudduguntepalya,152.0,Suddagunte Palya,fuzzy,0.903,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,189,Suddagunte Palya
+Jayanagar,jayanagar,153.0,Jayanagar,exact,1.0,workorders_2018_2023,177,Hombegowda Nagara
+Jayangar,jayangar,153.0,Jayanagar,fuzzy,0.941,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,177,Hombegowda Nagara
+Basavanagudi,basavanagudi,154.0,Basavanagudi,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,210,Basavanagudi
+HanumantNagar,hanumantnagar,155.0,Hanumanth Nagar,fuzzy,0.929,workorders_2018_2023,211,Hanumanth Nagar
+Hanumantha Nagar,hanumantha nagar,155.0,Hanumanth Nagar,fuzzy,0.968,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,211,Hanumanth Nagar
+Sri Nagar,sri nagar,156.0,Sri Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,212,Srinivasa Nagar
+Srinagar,srinagar,156.0,Sri Nagar,fuzzy,0.941,workorders_2018_2023,212,Srinivasa Nagar
+Gali Anjaneya Swamy Temple Ward,gali anjaneya swamy temple,157.0,Gali Anjenaya Temple Ward,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,162,Gali Anjenaya Temple Ward
+DeepanjalNagar,deepanjalnagar,158.0,Deepanjali Nagar,fuzzy,0.933,workorders_2018_2023,163,Veerabhadranagar
+Deepanjali Nagar,deepanjali nagar,158.0,Deepanjali Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,163,Veerabhadranagar
+Kengeri,kengeri,159.0,Kengeri,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,31,Doddagollarahatti
+RajarajeshwarNagar,rajarajeshwarnagar,160.0,Raja Rajeshawari Nagar,fuzzy,0.9,workorders_2018_2023,44,Verra Sindura Lakshamana
+Rajarajeshwari Nagar,rajarajeshwari nagar,160.0,Raja Rajeshawari Nagar,fuzzy,0.952,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,44,Verra Sindura Lakshamana
+Hosakerehalli,hosakerehalli,161.0,Hosakerehalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,200,Yediyur
+Giri Nagar,giri nagar,162.0,Giri Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,213,Srinagar
+Girinagar,girinagar,162.0,Giri Nagar,fuzzy,0.947,workorders_2018_2023,213,Srinagar
+Katriguppe,katriguppe,163.0,Katriguppe,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,214,Girinagar
+Vidyapeetha,vidyapeetha,164.0,Vidya Peeta Ward,fuzzy,0.909,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,215,Katriguppe
+Vidyapeetward,vidyapeetward,164.0,Vidya Peeta Ward,fuzzy,0.833,workorders_2018_2023,215,Katriguppe
+Ganeshmandira Ward,ganeshmandira,165.0,Ganesh Mandir Ward,fuzzy,0.923,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,201,Umamaheshwara
+Karisandra,karisandra,166.0,Kari Sandra,fuzzy,0.952,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,202,Ganesh Mandir Ward
+Yadiyuru,yadiyuru,167.0,Yediyur,manual,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,203,Banashankari Temple
+Yediyur,yediyur,167.0,Yediyur,exact,1.0,workorders_2018_2023,203,Banashankari Temple
+PattabhiraNagar,pattabhiranagar,168.0,Pattabhi Ram Nagar,fuzzy,0.909,workorders_2018_2023,194,Gurappanapalya
+Pattabhiram Nagar,pattabhiram nagar,168.0,Pattabhi Ram Nagar,fuzzy,0.971,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,194,Gurappanapalya
+Byrasandra,byrasandra,169.0,Byra Sandra,fuzzy,0.952,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,195,Tilak Nagar
+JayanagaEast,jayanagaeast,170.0,Jayanagar East,fuzzy,0.923,workorders_2018_2023,196,Byrasandra
+Jayanagar East,jayanagar east,170.0,Jayanagar East,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,196,Byrasandra
+Gurappanapalya,gurappanapalya,171.0,Gurappana Palya,fuzzy,0.966,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,197,Shakambari Nagar
+Madivala,madivala,172.0,Madivala,exact,1.0,workorders_2018_2023,190,Madivala
+Madiwala,madiwala,172.0,Madivala,fuzzy,0.875,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,190,Madivala
+Jakkasandra,jakkasandra,173.0,Jakka Sandra,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,191,Jakkasandra
+HSLayout,hslayout,174.0,HSR Layout,fuzzy,0.889,workorders_2018_2023,116,Doddakanahalli
+HSR Layout,hsr layout,174.0,HSR Layout,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,116,Doddakanahalli
+Bommanahalli,bommanahalli,175.0,Bommanahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,230,Agara
+BTLayout,btlayout,176.0,BTM Layout,fuzzy,0.889,workorders_2018_2023,192,BTM Layout
+BTM Layout,btm layout,176.0,BTM Layout,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,192,BTM Layout
+J.P.Nagar,j p nagar,177.0,JP Nagar,fuzzy,0.941,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,198,J P Nagar
+Sarakki,sarakki,178.0,Sarakki,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,199,Sarakki
+ShakambarNagar,shakambarnagar,179.0,Shakambari Narar,fuzzy,0.867,workorders_2018_2023,,
+Shakambari Nagar,shakambari nagar,179.0,Shakambari Narar,fuzzy,0.938,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,,
+BanashankarTemplward,banashankartemplward,180.0,Banashankari Temple Ward,fuzzy,0.821,workorders_2018_2023,204,Kumaraswamy Layout
+Banashankari Temple Ward,banashankari temple,180.0,Banashankari Temple Ward,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,204,Kumaraswamy Layout
+KumaraswamLayout,kumaraswamlayout,181.0,Kumara Swamy Layout,fuzzy,0.914,workorders_2018_2023,205,Vikram Nagar
+Kumaraswamy Layout,kumaraswamy layout,181.0,Kumara Swamy Layout,fuzzy,0.973,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,205,Vikram Nagar
+PadmanabhNagar,padmanabhnagar,182.0,Padmanabha Nagar,fuzzy,0.933,workorders_2018_2023,206,Padmanabha Nagar
+Padmanabha Nagar,padmanabha nagar,182.0,Padmanabha Nagar,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,206,Padmanabha Nagar
+Chikkalasandra,chikkalasandra,183.0,Chikkala Sandra,fuzzy,0.966,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,207,Kamakya Nagar
+Chikkalsandra,chikkalsandra,183.0,Chikkala Sandra,fuzzy,0.929,workorders_2018_2023,207,Kamakya Nagar
+Uttarahalli,uttarahalli,184.0,Uttarahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,217,Uttarahalli
+Yelachenahalli,yelachenahalli,185.0,Yelchenahalli,fuzzy,0.963,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,218,Subramanyapura
+Yelchenahalli,yelchenahalli,185.0,Yelchenahalli,exact,1.0,workorders_2018_2023,218,Subramanyapura
+Jaraganahalli,jaraganahalli,186.0,Jaraganahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,231,Mangammanapalya
+Puttenahalli,puttenahalli,187.0,Puttenahalli,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,232,HSR Singasandra
+Bilekahalli,bilekahalli,188.0,Bilekhalli,fuzzy,0.952,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,233,Rupenaagrahara
+Bilekhalli,bilekhalli,188.0,Bilekhalli,exact,1.0,workorders_2018_2023,233,Rupenaagrahara
+Hongasandra,hongasandra,189.0,Honga Sandra,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,234,Hongasandra
+Mangammanapalya,mangammanapalya,190.0,Mangammana Palya,fuzzy,0.968,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,235,Bommanahalli
+Singasandra,singasandra,191.0,Singa Sandra,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,243,Kudlu
+Begur,begur,192.0,Begur,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,219,Vasanthpura
+Arakere,arakere,193.0,Arakere,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,236,Devarachikkanahalli
+Gottigere,gottigere,194.0,Gottigere,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,220,Yelchenahalli
+Konanakunte,konanakunte,195.0,Konankunte,fuzzy,0.952,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,221,Konanakunte
+Konankunte,konankunte,195.0,Konankunte,exact,1.0,workorders_2018_2023,221,Konanakunte
+Anjanapur,anjanapur,196.0,Anjanapura,fuzzy,0.947,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,222,RBI Layout
+Anjanapura,anjanapura,196.0,Anjanapura,exact,1.0,workorders_2018_2023,222,RBI Layout
+Vasanthapura,vasanthapura,197.0,Vasanthpura,fuzzy,0.957,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,223,Chunchaghatta
+Vasanthpura,vasanthpura,197.0,Vasanthpura,exact,1.0,workorders_2018_2023,223,Chunchaghatta
+Hemmigepura,hemmigepura,198.0,Hemmigepura,exact,1.0,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024;workorders_2018_2023,32,Ullal
+ChowdeswarWard,chowdeswarward,,,unresolved,0.8,workorders_2018_2023,,
+DrRaKumaWard,drrakumaward,,,unresolved,0.75,workorders_2018_2023,,
+GalAnjenayTemplward,galanjenaytemplward,,,unresolved,0.769,workorders_2018_2023,,
+GanesMandiward,ganesmandiward,,,unresolved,0.815,workorders_2018_2023,,
+Garden,garden,,,unresolved,0.8,workorders_2018_2023,,
+HMWard,hmward,,,unresolved,0.471,workorders_2018_2023,,
+JnanBharathward,jnanbharathward,,,unresolved,0.759,workorders_2018_2023,,
+Market,market,,,unresolved,0.8,workorders_2018_2023,,
+Nagar,nagar,,,unresolved,0.769,workorders_2018_2023,,
+Park,park,,,unresolved,0.667,workorders_2018_2023,,
+Puram,puram,,,unresolved,0.769,workorders_2018_2023,,
+RamaNagar,ramanagar,,,unresolved,0.783,workorders_2018_2023,,
+ShivajNagar,shivajnagar,,,ambiguous,0.917,workorders_2018_2023,,
+Someshwara,someshwara,,,unresolved,0.727,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,,
+Subedarapalya,subedarapalya,,,unresolved,0.75,grievances_2020;grievances_2021;grievances_2022;grievances_2023;grievances_2024,,
