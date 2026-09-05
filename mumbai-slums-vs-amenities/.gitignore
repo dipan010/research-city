@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Raw source data is fetched, not committed (~23 MB). The manifest records the
+# exact resolved URL for every file, so any run can be traced to its snapshot.
+# Note the trailing /* - excluding "data/raw/" outright stops git descending
+# into it and the negation below would silently never apply.
+data/raw/*
+!data/raw/manifest.json
+
+# Regenerated on every run
+data/interim/
