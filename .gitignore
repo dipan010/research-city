@@ -2,6 +2,3 @@
 **/.venv/
 **/__pycache__/
 *.pyc
-
-# outreach draft - not for publication
-bbmp-complaints-vs-spending/NOTE-TO-OPENCITY.md
