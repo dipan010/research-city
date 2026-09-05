@@ -131,3 +131,53 @@ Order of work: Bengaluru first (it carries the project), Mumbai second, Kolkata 
 **Two reusable artifacts worth publishing separately** — both are small and neither exists publicly today:
 - The BBMP ward-name crosswalk (198 names ↔ numbers ↔ 225/243 vintages)
 - The AQI unpivot function — those hourly files are stored in a wide pivot (`Year,2017` header, rows = months, columns = 24 hours), *consistently* across all three cities, so one function cleans Bengaluru's 27, Mumbai's 60, and Kolkata's 14 station files
+
+---
+
+# Carried forward from the Bengaluru build
+
+*Added after `bbmp-complaints-vs-spending` shipped. These cost real time; they
+will recur on Mumbai and Kolkata.*
+
+**The denominator decides the conclusion.** Raw counts, per km², and per resident
+gave three *opposite* geographic answers from the same two columns. Mumbai's
+wards vary in size and density at least as much as Bengaluru's, so never publish
+a ward-level claim without naming its denominator — and check all three before
+believing any of them.
+
+**Check for summary rows before summing a government CSV.** A `GranTotal` row in
+BBMP's work-order file got summed along with the data and put a headline figure
+2× out. Reconcile the parts against the stated total every time.
+
+**Verify boundary regimes match across datasets.** BBMP has 198, 225 and 243-ward
+regimes in circulation, the grievance extracts mixed labels from two of them, and
+the KML filenames did not match their actual ward counts (the file named "2022"
+holds 243 wards; "2023" holds 225). Count the features before trusting a name.
+
+**Look identifiers up; never infer them.** Six ward numbers guessed from name
+similarity silently misassigned data into the wrong wards. Exact lookup against
+the master, or leave it unresolved and document it.
+
+**Check prior work before claiming novelty.** Two findings that looked original
+had already been published by Citizen Matters in 2023. Search their archive and
+OpenCity's 186 articles first — it changes the framing from "I discovered" to
+"I extended", which is both accurate and more defensible.
+
+**Bound caveats, don't just state them.** Every judgement call got a sensitivity
+test in `robustness.py`. "We excluded 1.7% of records" is weak; "excluding them
+moves ρ from 0.341 to 0.350" is finished work.
+
+**Small mechanical traps.** Indian digit grouping (`72,63,34,02,610`) makes
+`pd.to_numeric` return NaN. KML rings carry a z coordinate, so
+`for x, y in ring.coords` raises. A `.gitignore` line excluding a directory
+outright stops git descending into it, so any `!negation` beneath it silently
+never applies. Standalone HTML needs its own `<meta charset="utf-8">` or every
+₹, — and ² breaks when opened from disk.
+
+## Suggested Mumbai scaffold
+
+Copy the shape of `bbmp-complaints-vs-spending/`: `fetch.py` resolving CKAN
+resources by title and name, a build step per stage, `robustness.py` alongside
+the analysis, and `web/template.html` built into the repo's `docs/`. The
+crosswalk step is Bengaluru-specific and Mumbai may not need it — but check
+whether BMC ward names are consistent across its datasets before assuming so.
