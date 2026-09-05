@@ -316,7 +316,7 @@ python3 -m venv .venv && ./.venv/bin/pip install pandas matplotlib requests scip
 ./.venv/bin/python src/analyse.py          # -> figures/, prints every number above
 ./.venv/bin/python src/make_map.py         # -> ward choropleths (needs geopandas)
 ./.venv/bin/python src/export_web.py       # -> data/out/web_data.json (ward SVG paths + panel)
-./.venv/bin/python src/build_web.py        # -> web/index.html
+./.venv/bin/python src/build_web.py        # -> ../docs/<project>/index.html
 ./.venv/bin/python src/robustness.py       # sensitivity tests, prints the tables above
 ```
 
@@ -325,14 +325,18 @@ The whole chain is deterministic: from a clean checkout it regenerates
 
 ### The web page
 
-`web/index.html` is a **generated, self-contained file** — all data and geometry
-are inlined, so it opens straight from disk with no server:
+Live at
+**[dipan010.github.io/research-city/bbmp-complaints-vs-spending](https://dipan010.github.io/research-city/bbmp-complaints-vs-spending/)**.
+
+The page is a **generated, self-contained file** — all data and geometry are
+inlined, so it also opens straight from disk with no server:
 
 ```bash
-open web/index.html      # macOS   (xdg-open on Linux)
+open ../docs/bbmp-complaints-vs-spending/index.html
 ```
 
-Edit `web/template.html`, not `web/index.html`. The template holds a single
+Edit `web/template.html`; the built page is written to the repository's `docs/`
+directory, which GitHub Pages serves. The template holds a single
 `__DATA__` placeholder that `build_web.py` replaces with the exported payload;
 regenerating is what keeps the page's numbers in step with the analysis. The
 only network dependency is Google Fonts, which falls back to a system stack

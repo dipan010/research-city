@@ -1,5 +1,7 @@
 # research-city
 
+**Live: [dipan010.github.io/research-city](https://dipan010.github.io/research-city/)**
+
 Data research on Indian cities, built on public municipal data — chiefly the
 [OpenCity](https://data.opencity.in) urban data portal (a programme of Oorvani
 Foundation) and the government sources it republishes.
@@ -18,8 +20,11 @@ geography of both flips depending on whether you divide by area or by population
 Includes a correction to a published analysis, and a reusable BBMP ward-name
 crosswalk that did not previously exist publicly.
 
+[**Read the analysis →**](https://dipan010.github.io/research-city/bbmp-complaints-vs-spending/)
+
 Reproducible end to end — `src/fetch.py` through `src/build_web.py` regenerates
-every figure and the web page from the source files.
+every figure and the web page from the source files. `build_web.py` writes into
+this repo's `docs/`, which is what GitHub Pages serves.
 
 ## Working notes
 
