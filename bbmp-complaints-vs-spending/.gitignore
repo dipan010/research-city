@@ -1,0 +1,6 @@
+.venv/
+data/raw/
+!data/raw/manifest.json
+data/interim/
+__pycache__/
+*.pyc
