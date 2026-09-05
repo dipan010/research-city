@@ -1,0 +1,200 @@
+{
+  "wards.kml": {
+    "dataset": "Mumbai Wards Map",
+    "resource": "Mumbai Wards Map",
+    "url": "https://data.opencity.in/dataset/60f27371-717e-40b6-8554-fdc7e6c10437/resource/0318c3e8-1530-4bf4-b29b-7281573dee8a/download/e7a671e2-1f71-4219-a83c-556334bc9021.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:25:15.220256",
+    "resource_modified": "2025-11-25T15:25:15.190808",
+    "dataset_modified": "2025-11-27T12:38:52.868676"
+  },
+  "slums.kml": {
+    "dataset": "Mumbai - Slum Cluster Map",
+    "resource": "Mumbai - Slum Clusters Map 2015",
+    "url": "https://data.opencity.in/dataset/14d06506-9463-446a-b28f-d2ce0fd0c131/resource/b85ea681-22c8-406d-9fae-8c0bd28387cf/download/5d6f72ed-a290-4931-821f-5476c148407b.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:23:19.567168",
+    "resource_modified": "2025-11-25T15:23:19.544256",
+    "dataset_modified": "2025-11-25T15:23:19.553256"
+  },
+  "toilets.kml": {
+    "dataset": "Mumbai Public Toilets",
+    "resource": "Map of Public Toilets in Mumbai",
+    "url": "https://data.opencity.in/dataset/8bdae802-bb45-446e-98d7-aa7bff0b6acb/resource/8c4bcb72-21de-44a7-a776-ffefceb450f1/download/057c0e2f-9528-426e-9c8c-5fc1720c139b.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:22:29.582452",
+    "resource_modified": "2025-11-25T15:22:29.554128",
+    "dataset_modified": "2025-11-27T12:36:41.211787"
+  },
+  "health_dispensaries.kml": {
+    "dataset": "Mumbai City Public Health Centres",
+    "resource": "Mumbai City Dispensaries Map",
+    "url": "https://data.opencity.in/dataset/739b0e74-04a5-467b-b356-75374b5ab156/resource/1db8a954-6802-4f28-82a6-706bfa98e3ee/download/5bf84c1c-6eea-4cdc-be35-b4755fafc9a3.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:13:29.305322",
+    "resource_modified": "2025-11-25T15:13:29.274123",
+    "dataset_modified": "2025-11-27T12:40:04.832132"
+  },
+  "health_uphc.kml": {
+    "dataset": "Mumbai City Public Health Centres",
+    "resource": "Mumbai City UPHCs Map",
+    "url": "https://data.opencity.in/dataset/739b0e74-04a5-467b-b356-75374b5ab156/resource/7162b31a-fd4a-4f70-b73a-9a690b2b4f06/download/d0ef983c-2d2f-498b-b9e9-724a7872fbff.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:13:29.593177",
+    "resource_modified": "2025-11-25T15:13:29.555677",
+    "dataset_modified": "2025-11-27T12:40:04.832132"
+  },
+  "health_hospitals.kml": {
+    "dataset": "Mumbai City Public Health Centres",
+    "resource": "Mumbai City Public Hospitals Map",
+    "url": "https://data.opencity.in/dataset/739b0e74-04a5-467b-b356-75374b5ab156/resource/a0e84658-483d-45bf-8637-fa09a8f4ba98/download/23d3867f-3604-4b8b-b3b0-7c9770777f18.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:13:29.944617",
+    "resource_modified": "2025-11-25T15:13:29.903142",
+    "dataset_modified": "2025-11-27T12:40:04.832132"
+  },
+  "health_maternity.kml": {
+    "dataset": "Mumbai City Public Health Centres",
+    "resource": "Mumbai City Public Maternity Hospitals Map",
+    "url": "https://data.opencity.in/dataset/739b0e74-04a5-467b-b356-75374b5ab156/resource/22e98b01-82ca-43cc-8bce-f82797ff0a1c/download/3866f702-d906-412c-91fe-25c03c7dcd4b.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:13:30.569611",
+    "resource_modified": "2025-11-25T15:13:30.504503",
+    "dataset_modified": "2025-11-27T12:40:04.832132"
+  },
+  "schools_municipal.kml": {
+    "dataset": "Mumbai Schools Locations",
+    "resource": "Mumbai Municipal Primary and Secondary Schools Map",
+    "url": "https://data.opencity.in/dataset/12b66346-5f5e-4980-bdea-b41465f3c883/resource/c5a238c6-69d5-49ed-a1b1-812ca4037697/download/a1e7a777-bf13-4799-8cfe-09a46247aed9.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:23:07.735894",
+    "resource_modified": "2025-11-25T15:23:07.699623",
+    "dataset_modified": "2025-11-27T12:37:22.474666"
+  },
+  "schools_aided.kml": {
+    "dataset": "Mumbai Schools Locations",
+    "resource": "Mumbai Aided Schools Map",
+    "url": "https://data.opencity.in/dataset/12b66346-5f5e-4980-bdea-b41465f3c883/resource/f92e6632-c921-4645-9abc-d4cbbeedd74a/download/8c3cb0d6-b9c9-43f3-be85-8d167f83518c.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:23:07.120856",
+    "resource_modified": "2025-11-25T15:23:07.095345",
+    "dataset_modified": "2025-11-27T12:37:22.474666"
+  },
+  "schools_unaided.kml": {
+    "dataset": "Mumbai Schools Locations",
+    "resource": "Mumbai Unaided Schools Map",
+    "url": "https://data.opencity.in/dataset/12b66346-5f5e-4980-bdea-b41465f3c883/resource/c0ad04ae-156a-4b7d-a943-609d16d07d91/download/04e77044-423a-404c-b432-19dee5b96a47.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:23:07.391171",
+    "resource_modified": "2025-11-25T15:23:07.363571",
+    "dataset_modified": "2025-11-27T12:37:22.474666"
+  },
+  "parks.kml": {
+    "dataset": "Mumbai - Public Gardens, Parks and Zoos",
+    "resource": "Mumbai City Public Parks, Gardens and Zoos Map",
+    "url": "https://data.opencity.in/dataset/c7e1a0bf-ac1f-42c3-bd86-a6b272176858/resource/8267750f-1710-44b1-87d9-e88209f1eeee/download/26922e2f-6c2a-4e99-b2a6-59318c5f9d83.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:22:17.689569",
+    "resource_modified": "2025-11-25T15:22:17.660671",
+    "dataset_modified": "2025-11-27T12:38:03.284860"
+  },
+  "fire_stations.kml": {
+    "dataset": "Mumbai Fire Stations",
+    "resource": "Mumbai Fire Stations Map",
+    "url": "https://data.opencity.in/dataset/fcc98df6-0ec9-41cb-ac2c-62fc2239d1a5/resource/f63ffd99-167a-4051-92ff-aec139d453eb/download/02b7168c-a860-46f7-9fa2-98f4c2bc9320.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:20:21.023848",
+    "resource_modified": "2025-11-25T15:20:20.998962",
+    "dataset_modified": "2025-11-27T12:36:31.245881"
+  },
+  "police_stations.kml": {
+    "dataset": "Police Station Locations in Mumbai",
+    "resource": "Mumbai Police Stations Location Map",
+    "url": "https://data.opencity.in/dataset/62b0ed0b-4823-4419-99e9-6ab1670f6fdd/resource/8108052d-25fd-4f0d-a9f4-8b2cbc63f5a2/download/fbe6a2e1-64ee-459b-ab45-be1de84f603b.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:40:38.125003",
+    "resource_modified": "2025-11-25T15:40:38.098452",
+    "dataset_modified": "2025-11-27T12:36:21.629198"
+  },
+  "best_stops.kml": {
+    "dataset": "Mumbai BEST Bus Stops and Depots Data",
+    "resource": "Mumbai BEST Stops and Depots Map",
+    "url": "https://data.opencity.in/dataset/c2a2de1e-a017-4fb9-9e46-de6fbfbb393b/resource/514eadc2-7fa8-4749-87e5-ebe486487f09/download/b34111da-5b73-45e9-82d0-78da9d153b1c.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:12:53.384109",
+    "resource_modified": "2025-11-25T15:12:53.351416",
+    "dataset_modified": "2025-11-27T12:40:45.635947"
+  },
+  "funeral_sites.kml": {
+    "dataset": "Mumbai Funeral and Cremation Sites",
+    "resource": "Mumbai Funeral and Cremation Sites Map",
+    "url": "https://data.opencity.in/dataset/36a72661-5725-42d9-8059-ceb84f2c9436/resource/c08b1545-af80-4ded-b1df-f600de3aa9bb/download/d8811870-5e39-4d24-8ac4-089b4a0724cf.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:20:32.968257",
+    "resource_modified": "2025-11-25T15:20:32.938655",
+    "dataset_modified": "2025-11-27T12:36:41.555943"
+  },
+  "parking.kml": {
+    "dataset": "Mumbai Parking",
+    "resource": "Mumbai Parking Lots",
+    "url": "https://data.opencity.in/dataset/84505f49-7ac8-4fe6-a986-b988713933c0/resource/c99a8c04-4bb3-4065-bd02-434244c3bff2/download/43c7137e-9874-4680-a311-908774a1b2b5.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:22:05.833809",
+    "resource_modified": "2025-11-25T15:22:05.804616",
+    "dataset_modified": "2025-11-27T12:40:43.560493"
+  },
+  "rail_stations.kml": {
+    "dataset": "Mumbai Suburban Network 2025",
+    "resource": "Suburban Line Stations",
+    "url": "https://data.opencity.in/dataset/50851056-1954-459f-a747-09366dcd416d/resource/142fbd25-9ceb-41b2-900d-72479cdc179e/download/5baa7e83-2855-4d17-86a9-9954b044ec08.kml",
+    "format": "KML",
+    "resource_created": "2025-11-25T15:23:31.899516",
+    "resource_modified": "2025-11-25T15:23:31.863053",
+    "dataset_modified": "2025-11-27T12:40:19.919063"
+  },
+  "census_wards.csv": {
+    "dataset": "Mumbai - Ward wise Census Data",
+    "resource": "Mumbai - Census Data 2011",
+    "url": "https://data.opencity.in/dataset/1a81291d-369d-43e6-97b1-e62680434437/resource/fcfeacdc-aa80-4028-a468-f0267fa05d23/download/95e22d97-7f59-4214-b244-2abbf52e6027.csv",
+    "format": "CSV",
+    "resource_created": "2025-11-25T15:25:01.722278",
+    "resource_modified": "2025-11-25T15:25:01.688235",
+    "dataset_modified": "2025-11-27T12:38:28.420759"
+  },
+  "pca_city.csv": {
+    "dataset": "Mumbai - Ward wise Census Data",
+    "resource": "Mumbai City Primary Census Abstract",
+    "url": "https://data.opencity.in/dataset/1a81291d-369d-43e6-97b1-e62680434437/resource/b2261b97-db46-4d14-a1a7-a2a14976cede/download/fca87e9a-f012-41fe-93bc-cd1ae7e1f82a.csv",
+    "format": "CSV",
+    "resource_created": "2025-11-25T15:25:02.057253",
+    "resource_modified": "2025-11-25T15:25:02.031101",
+    "dataset_modified": "2025-11-27T12:38:28.420759"
+  },
+  "pca_suburban.csv": {
+    "dataset": "Mumbai - Ward wise Census Data",
+    "resource": "Mumbai Suburban District Primary Census Abstract",
+    "url": "https://data.opencity.in/dataset/1a81291d-369d-43e6-97b1-e62680434437/resource/a33e01ed-6dec-458b-af70-395c59d4f89e/download/43c17944-e918-4270-ae91-63f986adfb93.csv",
+    "format": "CSV",
+    "resource_created": "2025-11-25T15:25:02.419544",
+    "resource_modified": "2025-11-25T15:25:02.386204",
+    "dataset_modified": "2025-11-27T12:38:28.420759"
+  },
+  "houselisting_city.xlsx": {
+    "dataset": "Mumbai - Ward wise Census Data",
+    "resource": "Mumbai City Houselisting and Housing Census Data",
+    "url": "https://data.opencity.in/dataset/1a81291d-369d-43e6-97b1-e62680434437/resource/d4c2d2ff-6f4d-46c5-8c1d-01f086e86e18/download/882eff2a-804a-4ba8-a7af-3553b208983b.xlsx",
+    "format": "XLSX",
+    "resource_created": "2025-11-25T15:25:02.798713",
+    "resource_modified": "2025-11-25T15:25:02.755525",
+    "dataset_modified": "2025-11-27T12:38:28.420759"
+  },
+  "houselisting_suburban.xlsx": {
+    "dataset": "Mumbai - Ward wise Census Data",
+    "resource": "Mumbai Suburban Houselisting and Housing Census Data",
+    "url": "https://data.opencity.in/dataset/1a81291d-369d-43e6-97b1-e62680434437/resource/29285391-f972-4a9d-8d2f-3f997cec5619/download/c5f1b779-e62f-4ec6-b7b1-aadc4feb9882.xlsx",
+    "format": "XLSX",
+    "resource_created": "2025-11-25T15:25:03.215755",
+    "resource_modified": "2025-11-25T15:25:03.171045",
+    "dataset_modified": "2025-11-27T12:38:28.420759"
+  }
+}
