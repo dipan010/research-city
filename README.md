@@ -26,16 +26,31 @@ Reproducible end to end — `src/fetch.py` through `src/build_web.py` regenerate
 every figure and the web page from the source files. `build_web.py` writes into
 this repo's `docs/`, which is what GitHub Pages serves.
 
+### [mumbai-slums-vs-amenities](mumbai-slums-vs-amenities/)
+
+Overlays 2,541 Mumbai slum cluster polygons on ten of BMC's amenity layers, per
+ward and per cluster, asking whether the densest and poorest settlements are
+furthest from public services.
+
+They are not: slum land is *closer* to every one of ten service types than the
+rest of the city, and to a public toilet in 21 of 21 wards — because 51.5% of
+Mumbai's toilet seats stand on 7.1% of its land. The deficit is real but
+invisible to a distance measure; against Census 2011's public-latrine dependence
+it is 14.0 households per seat. Also documents a disagreement between BMC's
+published map layer and BMC's own RTI replies about the female share of seats.
+
+[**Read the analysis →**](https://dipan010.github.io/research-city/mumbai-slums-vs-amenities/)
+
 ## Working notes
 
-Research that preceded and framed the project above:
+Research that preceded and framed the projects above:
 
 - [opencity-background.md](opencity-background.md) — what OpenCity holds (1,098
   datasets) and how its data stories relate to it, from a full API sweep
 - [project-ideas-blr-mum-kol.md](project-ideas-blr-mum-kol.md) — feasibility of
   cross-city work across Bengaluru, Mumbai and Kolkata
-- [per-city-project-plan.md](per-city-project-plan.md) — the per-city plan the
-  BBMP project came out of
+- [per-city-project-plan.md](per-city-project-plan.md) — the per-city plan both
+  projects came out of
 
 ## Conventions
 
