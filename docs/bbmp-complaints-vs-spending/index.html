@@ -2,7 +2,7 @@
 <title>Do Complaints Follow the Money?</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,600;0,700;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
 :root{
   color-scheme: light;
@@ -45,12 +45,12 @@
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--paper); color:var(--ink);
-  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
 .col{max-width:660px; margin-left:auto; margin-right:auto}
-h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif; text-wrap:balance; margin:0}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif; text-wrap:balance; margin:0}
 h1{font-size:clamp(2.3rem,5.4vw,3.7rem); line-height:1.06; font-weight:700; letter-spacing:-.015em}
 h2{font-size:clamp(1.55rem,3vw,2.1rem); line-height:1.16; font-weight:600; letter-spacing:-.01em}
 h3{font-size:1.16rem; font-weight:600; line-height:1.3}
@@ -58,16 +58,16 @@ p{margin:0 0 1.05em}
 a{color:var(--accent); text-underline-offset:2px; text-decoration-thickness:1px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
 strong{font-weight:600}
-.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   font-variant-numeric:tabular-nums}
-.eyebrow{font-family:"IBM Plex Mono",monospace; font-size:.705rem; font-weight:500;
+.eyebrow{font-family:"JetBrains Mono",monospace; font-size:.705rem; font-weight:500;
   letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
 
 /* ---------- masthead ---------- */
 header.top{border-bottom:1px solid var(--rule); background:var(--surface)}
 .top-in{padding:76px 0 52px}
 .kicker{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; margin-bottom:20px}
-.dek{font-family:Newsreader,Georgia,serif; font-size:1.29rem; line-height:1.5;
+.dek{font-family:"Source Serif 4",Georgia,serif; font-size:1.29rem; line-height:1.5;
   color:var(--ink-2); margin-top:20px; max-width:60ch}
 .byline{margin-top:26px; font-size:.83rem; color:var(--ink-3); display:flex;
   gap:8px; flex-wrap:wrap; align-items:center}
@@ -77,7 +77,7 @@ header.top{border-bottom:1px solid var(--rule); background:var(--surface)}
   border-top:1px solid var(--rule); background:var(--surface)}
 .fig{padding:22px 24px; border-right:1px solid var(--rule)}
 .fig:last-child{border-right:0}
-.fig .n{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+.fig .n{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums;
   font-size:1.62rem; font-weight:500; letter-spacing:-.02em; display:block; line-height:1.1}
 .fig .l{font-size:.775rem; color:var(--ink-3); margin-top:5px; display:block; line-height:1.35}
 .fig.flag .n{color:var(--flag)}
@@ -87,7 +87,7 @@ main{padding:0 0 40px}
 section{padding:60px 0 8px}
 .lede{font-size:1.09rem; color:var(--ink-2)}
 .num{display:flex; align-items:center; gap:12px; margin-bottom:14px}
-.num b{font-family:"IBM Plex Mono",monospace; font-size:.72rem; font-weight:600;
+.num b{font-family:"JetBrains Mono",monospace; font-size:.72rem; font-weight:600;
   letter-spacing:.09em; color:var(--accent); background:var(--accent-soft);
   padding:4px 8px; border-radius:3px}
 .rule{height:1px; background:var(--rule); border:0; margin:0}
@@ -105,11 +105,11 @@ figcaption{font-size:.83rem; color:var(--ink-3); margin-top:16px; line-height:1.
 .cmp{display:grid; grid-template-columns:1fr 1fr; gap:34px}
 @media(max-width:680px){.cmp{grid-template-columns:1fr; gap:26px}}
 .cmp h4{margin:0 0 16px; font-size:.79rem; font-weight:600; letter-spacing:.08em;
-  text-transform:uppercase; color:var(--ink-3); font-family:"IBM Plex Mono",monospace}
+  text-transform:uppercase; color:var(--ink-3); font-family:"JetBrains Mono",monospace}
 .bar-row{display:grid; grid-template-columns:1fr; gap:5px; margin-bottom:16px}
 .bar-top{display:flex; justify-content:space-between; align-items:baseline; gap:12px}
 .bar-name{font-size:.9rem; font-weight:500}
-.bar-val{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+.bar-val{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums;
   font-size:.9rem; font-weight:500}
 .bar-track{height:11px; background:var(--surface-2); border-radius:2px; overflow:hidden}
 .bar-fill{height:100%; border-radius:2px}
@@ -119,14 +119,14 @@ figcaption{font-size:.83rem; color:var(--ink-3); margin-top:16px; line-height:1.
   gap:20px; flex-wrap:wrap; margin-bottom:18px}
 .toggle{display:inline-flex; background:var(--surface-2); border-radius:6px;
   padding:3px; gap:2px; border:1px solid var(--rule)}
-.toggle button{font-family:"IBM Plex Sans",sans-serif; font-size:.82rem; font-weight:500;
+.toggle button{font-family:Manrope,sans-serif; font-size:.82rem; font-weight:500;
   border:0; background:transparent; color:var(--ink-2); padding:7px 15px;
   border-radius:4px; cursor:pointer; transition:background .13s, color .13s}
 .toggle button[aria-pressed="true"]{background:var(--accent); color:#fff}
 .maps{display:grid; grid-template-columns:1fr 1fr; gap:26px}
 @media(max-width:720px){.maps{grid-template-columns:1fr}}
 .map-t{font-size:.79rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
-  color:var(--ink-3); font-family:"IBM Plex Mono",monospace; margin-bottom:2px}
+  color:var(--ink-3); font-family:"JetBrains Mono",monospace; margin-bottom:2px}
 .map-u{font-size:.82rem; color:var(--ink-3); margin-bottom:12px; min-height:1.3em}
 svg.map{width:100%; height:auto; display:block; overflow:visible}
 svg.map path{stroke:var(--ward-line); stroke-width:1.15; stroke-linejoin:round;
@@ -135,7 +135,7 @@ svg.map path:hover{stroke:var(--ink); stroke-width:2.4}
 .legend{display:flex; gap:2px; margin-top:14px; align-items:center; flex-wrap:wrap}
 .legend .sw{width:26px; height:11px; border-radius:1px;
   box-shadow:inset 0 0 0 1px var(--rule)}
-.legend .lb{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--ink-3);
+.legend .lb{font-family:"JetBrains Mono",monospace; font-size:.7rem; color:var(--ink-3);
   margin-left:7px; margin-right:11px; font-variant-numeric:tabular-nums}
 .tip{position:fixed; pointer-events:none; z-index:60; background:var(--ink);
   color:var(--paper); padding:9px 12px; border-radius:5px; font-size:.79rem;
@@ -143,23 +143,23 @@ svg.map path:hover{stroke:var(--ink); stroke-width:2.4}
   box-shadow:0 8px 24px -8px rgba(0,0,0,.5)}
 .tip b{display:block; font-size:.87rem; margin-bottom:3px; font-weight:600}
 .tip .r{display:flex; justify-content:space-between; gap:16px;
-  font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+  font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums}
 .tip .r span:first-child{opacity:.65}
 
 /* ---------- scatter / quintiles ---------- */
-.chart-txt{font-family:"IBM Plex Mono",monospace; font-size:10.5px; fill:var(--ink-3);
+.chart-txt{font-family:"JetBrains Mono",monospace; font-size:10.5px; fill:var(--ink-3);
   font-variant-numeric:tabular-nums}
 .chart-grid{stroke:var(--rule); stroke-width:1}
 .dot{fill:var(--s1); fill-opacity:.68; stroke:var(--surface); stroke-width:1.1}
 .qbar{fill:var(--s1)}
-.qlab{font-family:"IBM Plex Mono",monospace; font-size:11.5px; font-weight:500;
+.qlab{font-family:"JetBrains Mono",monospace; font-size:11.5px; font-weight:500;
   fill:var(--ink); font-variant-numeric:tabular-nums}
 
 /* ---------- untagged split ---------- */
 .split{display:flex; height:62px; border-radius:5px; overflow:hidden; gap:2px}
 .split div{display:flex; flex-direction:column; align-items:center;
   justify-content:center; color:#fff; line-height:1.25}
-.split .amt{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:.95rem;
+.split .amt{font-family:"JetBrains Mono",monospace; font-weight:600; font-size:.95rem;
   font-variant-numeric:tabular-nums}
 .split .pct{font-size:.75rem; opacity:.85}
 
@@ -171,22 +171,22 @@ svg.map path:hover{stroke:var(--ink); stroke-width:2.4}
 .note{border-left:3px solid var(--rule-2); padding:2px 0 2px 20px; margin:28px 0;
   color:var(--ink-2); font-size:.95rem}
 .note p:last-child{margin-bottom:0}
-blockquote{margin:0 0 1em; font-family:Newsreader,Georgia,serif; font-size:1.06rem;
+blockquote{margin:0 0 1em; font-family:"Source Serif 4",Georgia,serif; font-size:1.06rem;
   font-style:italic; color:var(--ink-2); border-left:2px solid var(--rule-2);
   padding-left:18px}
 .tbl-w{overflow-x:auto; margin:26px 0}
 table{border-collapse:collapse; width:100%; font-size:.89rem; min-width:440px}
 th,td{text-align:left; padding:10px 14px 10px 0; border-bottom:1px solid var(--rule)}
-th{font-family:"IBM Plex Mono",monospace; font-size:.7rem; letter-spacing:.08em;
+th{font-family:"JetBrains Mono",monospace; font-size:.7rem; letter-spacing:.08em;
   text-transform:uppercase; color:var(--ink-3); font-weight:600;
   border-bottom:1px solid var(--rule-2)}
-td.n,th.n{text-align:right; font-family:"IBM Plex Mono",monospace;
+td.n,th.n{text-align:right; font-family:"JetBrains Mono",monospace;
   font-variant-numeric:tabular-nums; padding-right:0}
 td.hi{color:var(--flag); font-weight:600}
 ol.adds{padding-left:0; list-style:none; counter-reset:a; margin:22px 0}
 ol.adds li{counter-increment:a; padding-left:38px; position:relative; margin-bottom:15px}
 ol.adds li::before{content:counter(a); position:absolute; left:0; top:1px;
-  font-family:"IBM Plex Mono",monospace; font-size:.72rem; font-weight:600;
+  font-family:"JetBrains Mono",monospace; font-size:.72rem; font-weight:600;
   color:var(--accent); background:var(--accent-soft); width:23px; height:23px;
   border-radius:50%; display:grid; place-items:center}
 .prior{display:grid; gap:2px; margin:24px 0}
