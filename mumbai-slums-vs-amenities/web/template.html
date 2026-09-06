@@ -14,7 +14,7 @@
   --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
   --r1:#d6e4f5; --r2:#b0cdeb; --r3:#7fb0dd; --r4:#4d8ecb; --r5:#2a6fc4;
   --nodata:#c9cfd6; --ward-line:#ffffff;
-  --shadow:0 1px 2px rgba(20,24,31,.06), 0 8px 24px -12px rgba(20,24,31,.16);
+  --shadow:0 1px 2px rgba(20,24,31.06), 0 8px 24px -12px rgba(20,24,31.16);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -27,7 +27,7 @@
     --s1:#3987e5; --s2:#d95926; --s3:#199e70;
     --r1:#27364a; --r2:#2f4d73; --r3:#38689c; --r4:#4285c6; --r5:#5aa3f0;
     --nodata:#3a434f; --ward-line:#0f1319;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+    --shadow:0 1px 2px rgba(0,0,0.4), 0 10px 30px -14px rgba(0,0,0.7);
   }
 }
 :root[data-theme="dark"]{
@@ -40,7 +40,7 @@
   --s1:#3987e5; --s2:#d95926; --s3:#199e70;
   --r1:#27364a; --r2:#2f4d73; --r3:#38689c; --r4:#4285c6; --r5:#5aa3f0;
   --nodata:#3a434f; --ward-line:#0f1319;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+  --shadow:0 1px 2px rgba(0,0,0.4), 0 10px 30px -14px rgba(0,0,0.7);
 }
 *{box-sizing:border-box}
 body{
@@ -140,7 +140,7 @@ svg.map path:hover{stroke:var(--ink); stroke-width:2.4}
 .tip{position:fixed; pointer-events:none; z-index:60; background:var(--ink);
   color:var(--paper); padding:9px 12px; border-radius:5px; font-size:.79rem;
   line-height:1.5; opacity:0; transition:opacity .1s; max-width:260px;
-  box-shadow:0 8px 24px -8px rgba(0,0,0,.5)}
+  box-shadow:0 8px 24px -8px rgba(0,0,0.5)}
 .tip b{display:block; font-size:.87rem; margin-bottom:3px; font-weight:600}
 .tip .r{display:flex; justify-content:space-between; gap:16px;
   font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums}
@@ -210,7 +210,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
       <h1>Mumbai's toilets are where the slums are</h1>
       <p class="dek">Overlaying 2,541 slum clusters on ten of BMC's amenity
         layers. Mumbai's slums are three times closer to a public toilet than
-        the inhabited city around them — and no closer to a park, a police
+        the inhabited city around them, and no closer to a park, a police
         station or a train. The sanitation is aimed. The shortage is not
         distance but how many households share the door.</p>
       <div class="byline">
@@ -223,17 +223,17 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 </header>
 
 <div class="figures wrap" style="border-left:1px solid var(--rule); border-right:1px solid var(--rule)">
-  <div class="fig"><span class="n mono" id="k-clusters">—</span><span class="l">slum clusters mapped</span></div>
-  <div class="fig"><span class="n mono" id="k-share">—</span><span class="l">of Mumbai's land is slum</span></div>
-  <div class="fig flag"><span class="n mono" id="k-seatshare">—</span><span class="l">of all toilet seats sit on it</span></div>
-  <div class="fig flag"><span class="n mono" id="k-hhseat">—</span><span class="l">households per toilet seat</span></div>
+  <div class="fig"><span class="n mono" id="k-clusters"></span><span class="l">slum clusters mapped</span></div>
+  <div class="fig"><span class="n mono" id="k-share"></span><span class="l">of Mumbai's land is slum</span></div>
+  <div class="fig flag"><span class="n mono" id="k-seatshare"></span><span class="l">of all toilet seats sit on it</span></div>
+  <div class="fig flag"><span class="n mono" id="k-hhseat"></span><span class="l">households per toilet seat</span></div>
 </div>
 
 <main>
 <section class="col">
   <div class="wrap"><div class="col">
     <p class="lede">Mumbai publishes the best geospatial holdings of any Indian
-    city on OpenCity — fifteen layers, including a polygon map of every slum
+    city on OpenCity, fifteen layers, including a polygon map of every slum
     cluster in the city. Set those against the amenity layers and the obvious
     question is whether the poorest, densest settlements are the furthest from
     public services.</p>
@@ -248,16 +248,17 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div class="wrap"><div class="col">
     <div class="num"><b>01</b></div>
     <h2>Aimed at sanitation, not at services in general</h2>
-    <p>A 100&nbsp;metre lattice over Greater Mumbai gives <span id="t-cells">—</span>
-    cells, <span id="t-slumcells">—</span> of which fall inside a slum cluster.
+    <p>A 100&nbsp;metre lattice over Greater Mumbai gives <span id="t-cells"></span>
+    cells, <span id="t-slumcells"></span> of which fall inside a slum cluster.
     Measured against <em>all</em> non-slum land, slum cells come out closer to
-    every one of ten service types — but that baseline is not a fair one. It
+    every one of ten service types, but that baseline is not a fair one. It
     includes Sanjay Gandhi National Park, the mangroves, the salt pans and the
     airport: land with no services near it and no slums in it.</p>
-    <p>Restricting the comparison to inhabited land — non-slum cells within
-    300&nbsp;m of a BEST stop or 400&nbsp;m of a school, <span id="t-inhab">—</span>
-    of the <span id="t-nonslum">—</span> non-slum cells — most of the advantage
-    disappears. What is left is specific.</p>
+    <p>Restrict the baseline to inhabited land only: non-slum cells within
+    300&nbsp;m of a BEST stop or 400&nbsp;m of a school, which is
+    <span id="t-inhab"></span> of the <span id="t-nonslum"></span> non-slum
+    cells. Most of the advantage then disappears, and what is left is
+    specific.</p>
   </div></div>
 
   <div class="wrap"><figure class="wide">
@@ -274,7 +275,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div class="wrap"><div class="col">
     <div class="callout">
       <span class="eyebrow">What survives a fair baseline</span>
-      <p><strong>Public toilets, at 0.31 — slum land is three times closer.</strong>
+      <p><strong>Public toilets, at 0.31, slum land is three times closer.</strong>
       Schools follow at 0.67, municipal schools at 0.80. Health centres and
       funeral sites sit at parity. Parks, police stations, fire stations,
       suburban stations and bus stops all come out <em>slightly further</em>,
@@ -282,10 +283,10 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     </div>
     <p>The toilet result is the one that does not move. Across three
     independently-defined baselines it ranges only from 0.19 to 0.35, and it is
-    the sole service that is never near parity. Within each ward — where both
-    groups share the same surrounding geography — slum land is closer to a
-    public toilet in <strong>21 of 21 wards</strong>, to a school in 19, to a
-    health centre in 17.</p>
+    the sole service that is never near parity. Within each ward, where both
+    groups share the same surrounding geography, slum land is closer to a
+    public toilet in <strong>21 of 21 wards</strong>. Closer to a school in 19
+    of them, and to a health centre in 17.</p>
     <p>This is what a targeted programme looks like in data. BMC builds
     community toilets in slums, because that is where households have no latrine
     of their own. It has not similarly aimed its parks or its fire stations, and
@@ -299,12 +300,12 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     <div class="maps">
       <div>
         <div class="map-t">Slum clusters</div>
-        <div class="map-u" id="u-slum">—</div>
+        <div class="map-u" id="u-slum"></div>
         <svg class="map" id="map-slum" role="img" aria-label="Map of Mumbai slum clusters"></svg>
       </div>
       <div>
         <div class="map-t">Share of ward land that is slum</div>
-        <div class="map-u" id="u-share">—</div>
+        <div class="map-u" id="u-share"></div>
         <svg class="map" id="map-share" role="img" aria-label="Choropleth of slum share of ward land"></svg>
         <div class="legend" id="leg-share"></div>
       </div>
@@ -320,12 +321,12 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div class="wrap"><div class="col">
     <div class="num"><b>02</b></div>
     <h2>Half the city's toilet seats stand on seven per cent of its land</h2>
-    <p>Slum clusters cover <span id="t-slumkm">—</span>&nbsp;km² — <span id="t-slumshare">—</span>
-    of Greater Mumbai. Inside that footprint sit <span id="t-seatsinslum">—</span>
-    toilet seats, <strong><span id="t-seatpct">—</span> of every seat in the city</strong>.</p>
+    <p>Slum clusters cover <span id="t-slumkm"></span>&nbsp;km², <span id="t-slumshare"></span>
+    of Greater Mumbai. Inside that footprint sit <span id="t-seatsinslum"></span>
+    toilet seats, <strong><span id="t-seatpct"></span> of every seat in the city</strong>.</p>
     <p>That concentration is the mechanism behind finding 01, and it is the
     strongest evidence here that BMC's toilet programme is aimed where it should
-    be — it needs no baseline and no denominator at all. A third of clusters have
+    be, it needs no baseline and no denominator at all. A third of clusters have
     a toilet block inside their own boundary; the median cluster is
     23&nbsp;metres from one. No other service is remotely as concentrated: 7.4%
     of clusters contain a school, 1.0% a health centre, none a fire station.</p>
@@ -353,11 +354,16 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     inside the premises that depend on a public one.</p>
     <div class="callout">
       <span class="eyebrow">The number that matters</span>
-      <p><strong><span id="t-pctpub">—</span> of Greater Mumbai's households —
-      <span id="t-dephh">—</span> of them — depended on a public latrine.</strong>
-      Against <span id="t-seats">—</span> seats on BMC's own layer, that is
-      <strong><span id="t-hhseat">—</span> households sharing every seat</strong>,
-      or <strong>at least 63 people per seat</strong> — a lower bound, since it applies a household share to a population count and latrine-dependent households are, if anything, larger than average.</p>
+      <p><strong><span id="t-pctpub"></span> of Greater Mumbai's households, <span id="t-dephh"></span> of them, depended on a public latrine.</strong>
+      Against <span id="t-seats"></span> seats on BMC's own layer, that is
+      <strong><span id="t-hhseat"></span> households sharing every seat</strong>,
+      or <strong>at least 63 people per seat</strong>.</p>
+      <p style="margin-bottom:0; font-size:.94rem; color:var(--ink-2)">Read that
+      as an upper bound on a 2011 population, not a measurement of today. It
+      divides Census 2011 households by a toilet layer BMC has not dated, whose
+      sibling layers carry edit timestamps up to 2023. If public-latrine
+      dependence has fallen since 2011, as it almost certainly has, the figure
+      today is lower.</p>
     </div>
     <p>Distance is measured in tens of metres. Load is measured in dozens of
     households. Only one of those is a shortage.</p>
@@ -389,12 +395,12 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     </div>
     <figcaption>Switching the measure re-ranks the map. Raw seats, seats per km²
       and households per seat are three readings of one column, and they do not
-      agree — the denominator decides the answer.</figcaption>
+      agree. The denominator decides the answer.</figcaption>
   </figure></div>
 
   <div class="wrap"><div class="col">
-    <p>Ward E — Byculla and Mazgaon — carries 29 households per seat, three times
-    ward T's 10. E is not a ward with much slum land (3.4%); it is an old, dense,
+    <p>Ward E (Byculla and Mazgaon) carries 29 households per seat, three
+    times ward T's 10. E is not a ward with much slum land (3.4%); it is an old, dense,
     chawl-and-tenement ward where a quarter of households still share a public
     latrine and only 637 seats serve them.</p>
     <div class="note">
@@ -418,17 +424,17 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     Right to Information Act. Their
     <a href="https://data.opencity.in/dataset/report-on-the-status-of-civic-issues-in-mumbai-may-2025">May 2025 report</a>
     gives <strong>846 public toilet blocks and 12,517 seats as of December
-    2024</strong>, about one seat in four for women — a 6:1 male-to-female ratio
-    in C ward, 4:1 in B, 3:1 in A.</p>
+    2024</strong>. About one seat in four is for women: a 6:1 male-to-female
+    ratio in C ward, 4:1 in B, 3:1 in A.</p>
     <p>The layer used here holds <strong>8,411 blocks and 79,700 seats at
-    <span id="t-fshare">—</span> female</strong>. Roughly six times the seats,
+    <span id="t-fshare"></span> female</strong>. Roughly six times the seats,
     and twice the female share. The two are not counting the same thing.</p>
     <div class="tbl-w">
       <table>
         <thead><tr><th>Praja, from BMC RTI</th><th class="n">Blocks</th><th class="n">Seats</th><th>Female share</th></tr></thead>
         <tbody>
           <tr><td>Public toilets (Dec 2024)</td><td class="n">846</td><td class="n">12,517</td><td>~25%</td></tr>
-          <tr><td>Community toilets (Dec 2023)</td><td class="n">~6,676</td><td class="n">—</td><td>near parity (A ward 298M/367F)</td></tr>
+          <tr><td>Community toilets (Dec 2023)</td><td class="n">~6,676</td><td class="n"></td><td>near parity (A ward 298M/367F)</td></tr>
           <tr><td><strong>This layer</strong></td><td class="n"><strong>8,411</strong></td><td class="n"><strong>79,700</strong></td><td><strong>48.6%</strong></td></tr>
         </tbody>
       </table>
@@ -436,18 +442,18 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     <div class="callout">
       <span class="eyebrow">What explains it</span>
       <p>846 public plus roughly 6,676 community blocks is about 7,522, against
-      this layer's 8,411 — and blending a 25%-female public stock with a
+      this layer's 8,411, and blending a 25%-female public stock with a
       near-parity community stock lands close to the 48.6% observed here.
       <strong>The layer appears to pool both types.</strong> Nothing on it
       says so.</p>
       <p>That is the finding. The resource is named "Mumbai Public Toilets" and
       carries no scope statement, no vintage and no type field. Anyone comparing
-      it against BMC's published public-toilet figures — the natural thing to do,
-      given the name — will be out by a factor of six on capacity and by half on
-      the gender ratio.</p>
+      it against BMC's published public-toilet figures, which is the natural
+      thing to do given the name, will be out by a factor of six on capacity and
+      by half on the gender ratio.</p>
       <p><strong>One ward does not reconcile even so.</strong> C ward has zero
       community toilets in Praja's table, so pooling cannot explain anything
-      there — yet Praja gives C 416 public seats against this layer's 207. Either
+      there, yet Praja gives C 416 public seats against this layer's 207. Either
       the layer is incomplete for C or the ward assignment differs. Left open.</p>
     </div>
   </div></div>
@@ -472,7 +478,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     positioned against that work rather than around it.</p>
     <div class="prior">
       <a href="https://www.praja.org/praja_docs/praja_downloads/Key%20Highlights%20of%20Report%20on%20Civic%20Issues%20in%20Mumbai%202024.pdf">
-        <div class="t">Status of Civic Issues in Mumbai — Praja Foundation, May 2024</div>
+        <div class="t">Status of Civic Issues in Mumbai, Praja Foundation, May 2024</div>
         <div class="d">The definitive prior work. One seat per 752 men and 1,820
           women; community toilet seats adequate for a third of the slum
           population; 69% of blocks without a water connection. Sourced by RTI,
@@ -480,7 +486,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
           wise slum population is not available."</em></div>
       </a>
       <a href="https://opencity.in/delhi-slums-comparative-look-public-facilities/">
-        <div class="t">Delhi Slums: a comparative look at public facilities — OpenCity</div>
+        <div class="t">Delhi Slums: a comparative look at public facilities, OpenCity</div>
         <div class="d">The nearest methodological precedent on the platform, for
           a different city. No Mumbai equivalent has been published.</div>
       </a>
@@ -488,7 +494,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     <p>What this adds:</p>
     <ol class="adds">
       <li><strong>The spatial join itself.</strong> Slum polygons against ten
-        amenity layers, per cluster and per 100 m cell — a measurement Praja's
+        amenity layers, per cluster and per 100 m cell, a measurement Praja's
         ward-level RTI tables cannot make and OpenCity has not published for
         Mumbai.</li>
       <li><strong>A measured denominator where Praja records a gap.</strong>
@@ -497,8 +503,8 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
         from the cluster map, and households dependent on a public latrine from
         Census HH-14. Both are stated, neither is modelled.</li>
       <li><strong>The proximity result, with its control.</strong> That slum land
-        is closer to services — and that this survives a within-ward
-        comparison — reframes the question from siting to capacity.</li>
+        is closer to services, and that this survives a within-ward
+        comparison, reframes the question from siting to capacity.</li>
       <li><strong>A discrepancy between two BMC sources</strong> on the female
         seat share, which is visible only by putting the map layer and the RTI
         figures side by side.</li>
@@ -506,84 +512,6 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   </div></div>
 </section>
 
-<hr class="rule">
-
-<section class="col">
-  <div class="wrap"><div class="col">
-    <div class="num"><b>06</b></div>
-    <h2>How this was built, and where it is weak</h2>
-    <p>Wards are assigned by spatial join, never by the ward field the layers
-    carry — geometry is what is being analysed. The two were compared anyway,
-    and the disagreement rate is itself a data-quality finding: 3.1% on the
-    toilet layer, 13.9% on health UPHCs. Per-ward counts rank almost identically
-    either way (ρ ≥ 0.81), so the tables here do not depend on the choice.</p>
-    <h3 style="margin:34px 0 10px">Data vintages</h3>
-    <p>Every figure here is a stock comparison across sources of different ages,
-    and the spread is wide. Two of the findings depend on it, so it is stated
-    plainly rather than buried.</p>
-    <div class="tbl-w">
-      <table>
-        <thead><tr><th>Source</th><th>Vintage</th><th>How that is known</th></tr></thead>
-        <tbody>
-          <tr><td>Census population, households, HH-14 latrine access</td><td><strong>2011</strong></td><td>stated by the source</td></tr>
-          <tr><td>Slum cluster polygons</td><td><strong>2015</strong></td><td>named in the resource</td></tr>
-          <tr><td>BMC amenity GIS layers</td><td><strong>undated, likely ~2023</strong></td><td>the fire and police layers in the same export family carry edit timestamps running 2016 to 2023-05; the toilet and park layers carry no date fields at all</td></tr>
-          <tr><td>Praja reference — public toilets</td><td><strong>Dec 2024</strong></td><td>Praja, May 2025 report</td></tr>
-          <tr><td>Praja reference — community toilets</td><td><strong>Dec 2023</strong></td><td>same report</td></tr>
-          <tr><td>Uploaded to OpenCity</td><td>2025-11-25</td><td>CKAN dates, all 22 resources in one batch</td></tr>
-          <tr><td>Fetched for this analysis</td><td>2026-09-06</td><td><code>data/raw/manifest.json</code></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p><strong>What that costs each finding.</strong> The proximity results
-    compare a 2015 slum footprint against ~2023 amenity layers. The load figure
-    divides 2011 households by ~2023 seats — if public-latrine dependence has
-    fallen since 2011, as it almost certainly has, <strong>14.0 households per
-    seat overstates today's load</strong> and should be read as an upper bound on
-    a 2011 population, not a current measurement. Finding 02 is the least
-    vintage-sensitive, since both sides of it are geographies rather than counts.</p>
-
-    <h3 style="margin:34px 0 10px">Limitations</h3>
-    <div class="tbl-w">
-      <table>
-        <thead><tr><th>Limitation</th><th>What was done about it</th></tr></thead>
-        <tbody>
-          <tr><td>The toilet layer's scope is inferred, not stated</td>
-              <td>That it pools public and community toilets is the best
-                  explanation for the six-fold seat gap and the gender profile,
-                  and the arithmetic supports it — but BMC publishes no scope
-                  field, so this is inference from Praja's separately-tabulated
-                  figures. C ward does not reconcile under it.</td></tr>
-          <tr><td>No published ward-wise slum population</td>
-              <td>Not estimated. Slum <em>area</em> and census public-latrine
-                  dependence are used instead, both measured.</td></tr>
-          <tr><td>Census ward code 1045 (H/E) has no HH-14 row; HH-14 carries a code 3837 that appears nowhere else</td>
-              <td>Left unpaired rather than guessed. H/E's latrine figure covers
-                  68.2% of its households; pairing them moves the city figure by
-                  0.04pp and no reported ranking.</td></tr>
-          <tr><td>36 toilet points record no seat count</td>
-              <td>Treated as zero. Giving them the median 8 seats leaves
-                  households-per-seat at 14.0 — the deficit is a lower bound.</td></tr>
-          <tr><td>Slum polygons overlap slightly</td>
-              <td>0.56% of summed area is double-counted; the grid uses the
-                  geometric union, so the slum/non-slum split is overlap-free.</td></tr>
-          <tr><td>16 police placemarks and 1 slum placemark carry no geometry</td>
-              <td>Counted and reported rather than silently dropped.</td></tr>
-          <tr><td>Comparing slum land against all non-slum land flatters it — the baseline holds parkland, mangroves and salt pans</td>
-              <td>An inhabited-land baseline is used throughout, and the
-                  unrestricted figure shown alongside it. Only the results that
-                  survive the fair baseline are reported as findings.</td></tr>
-          <tr><td>Distance is straight-line, not walking distance</td>
-              <td>Understates real travel everywhere, and most in dense lanes.
-                  Ranking, not level, is what is read from it.</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Every judgement call above has a sensitivity test in
-    <code>src/robustness.py</code>, which prints the alternative for each. A
-    caveat that is not bounded is not finished work.</p>
-  </div></div>
-</section>
 </main>
 
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
@@ -597,6 +525,8 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     <p>Public-toilet access in slum settlements is a real-stakes subject. The
     rates here are reported against measured denominators, the layer vintages
     are stated, and no causal claim is made about any ward.</p>
+    <p>Full method, data vintages, robustness tests and limitations are in the
+    <a href="https://github.com/dipan010/research-city/tree/main/mumbai-slums-vs-amenities">project README</a>.</p>
     <p><a href="https://github.com/dipan010/research-city">Source, data and
     method</a> · <a href="../">Other analyses in this series</a></p>
   </div></div>
@@ -605,7 +535,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 <script>
 const DATA = __DATA__;
 const $ = s => document.querySelector(s);
-const fmt = n => n === null || n === undefined ? "—" : n.toLocaleString("en-IN");
+const fmt = n => n === null || n === undefined ? ", " : n.toLocaleString("en-IN");
 const RAMP = ["--r1","--r2","--r3","--r4","--r5"].map(v => `var(${v})`);
 const T = DATA.totals;
 

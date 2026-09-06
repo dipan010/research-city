@@ -2,7 +2,7 @@
 
 **Live: [dipan010.github.io/research-city](https://dipan010.github.io/research-city/)**
 
-Data research on Indian cities, built on public municipal data — chiefly the
+Data research on Indian cities, built on public municipal data, chiefly the
 [OpenCity](https://data.opencity.in) urban data portal (a programme of Oorvani
 Foundation) and the government sources it republishes.
 
@@ -15,7 +15,7 @@ across the city's 198 wards, asking whether the wards that complain most are the
 wards that get spent on.
 
 Headline result: the geography of both is a property of the denominator, not the
-city — raw counts favour the periphery, per square kilometre favours the core,
+city, raw counts favour the periphery, per square kilometre favours the core,
 per resident favours the periphery again. Also: a third of BBMP's work-order
 spending is attributable to no ward at all, and complaint volume and spending
 point at different categories. Ships a reusable BBMP ward-name crosswalk that did
@@ -24,7 +24,7 @@ analysis as a consequence.
 
 [**Read the analysis →**](https://dipan010.github.io/research-city/bbmp-complaints-vs-spending/)
 
-Reproducible end to end — `src/fetch.py` through `src/build_web.py` regenerates
+Reproducible end to end, `src/fetch.py` through `src/build_web.py` regenerates
 every figure and the web page from the source files. `build_web.py` writes into
 this repo's `docs/`, which is what GitHub Pages serves.
 
@@ -35,10 +35,10 @@ ward and per cluster, asking whether the densest and poorest settlements are
 furthest from public services.
 
 They are not: slum land is *closer* to every one of ten service types than the
-rest of the city, and to a public toilet in 21 of 21 wards — because 51.5% of
+rest of the city, and to a public toilet in 21 of 21 wards, because 51.5% of
 Mumbai's toilet seats stand on 7.1% of its land. The deficit is real but
 invisible to a distance measure; against Census 2011's public-latrine dependence
-it is 14.0 households per seat — an upper bound, since it divides 2011 households
+it is 14.0 households per seat, an upper bound, since it divides 2011 households
 by a ~2023 toilet layer. Also shows that the "Mumbai Public Toilets" layer
 silently pools public and community toilets, making it six-fold misleading
 against BMC's own published public-toilet figures.
@@ -49,15 +49,15 @@ against BMC's own published public-toilet figures.
 
 Research that preceded and framed the projects above:
 
-- [opencity-background.md](opencity-background.md) — what OpenCity holds (1,098
+- [opencity-background.md](opencity-background.md), what OpenCity holds (1,098
   datasets) and how its data stories relate to it, from a full API sweep
-- [project-ideas-blr-mum-kol.md](project-ideas-blr-mum-kol.md) — feasibility of
+- [project-ideas-blr-mum-kol.md](project-ideas-blr-mum-kol.md), feasibility of
   cross-city work across Bengaluru, Mumbai and Kolkata
-- [per-city-project-plan.md](per-city-project-plan.md) — the per-city plan both
+- [per-city-project-plan.md](per-city-project-plan.md), the per-city plan both
   projects came out of
 
 ## Conventions
 
 Each project is self-contained: its own `src/`, `data/`, virtualenv and README.
-Raw data is never committed — fetch scripts pull it from source and record the
+Raw data is never committed, fetch scripts pull it from source and record the
 resolved URLs in a manifest, so any run can be traced to its snapshot.

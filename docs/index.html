@@ -9,21 +9,21 @@
   color-scheme: light;
   --paper:#f4f6f8; --surface:#ffffff; --ink:#14181f; --ink-2:#4a535f; --ink-3:#78838f;
   --rule:#dde2e8; --accent:#2a78d6; --accent-soft:#e7f0fb;
-  --shadow:0 1px 2px rgba(20,24,31,.06), 0 8px 24px -14px rgba(20,24,31,.18);
+  --shadow:0 1px 2px rgba(20,24,31.06), 0 8px 24px -14px rgba(20,24,31.18);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme: dark;
     --paper:#0f1319; --surface:#171c24; --ink:#e9edf2; --ink-2:#a4b0bd; --ink-3:#78838f;
     --rule:#28303a; --accent:#4a92ea; --accent-soft:#16243a;
-    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -16px rgba(0,0,0,.7);
+    --shadow:0 1px 2px rgba(0,0,0.4), 0 10px 30px -16px rgba(0,0,0.7);
   }
 }
 :root[data-theme="dark"]{
   color-scheme: dark;
   --paper:#0f1319; --surface:#171c24; --ink:#e9edf2; --ink-2:#a4b0bd; --ink-3:#78838f;
   --rule:#28303a; --accent:#4a92ea; --accent-soft:#16243a;
-  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -16px rgba(0,0,0,.7);
+  --shadow:0 1px 2px rgba(0,0,0.4), 0 10px 30px -16px rgba(0,0,0.7);
 }
 *{box-sizing:border-box}
 body{margin:0; background:var(--paper); color:var(--ink);
@@ -65,14 +65,14 @@ footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--rule);
   <span class="eyebrow">Dipan Ghosh</span>
   <h1>research-city</h1>
   <p class="dek">Data research on Indian cities, built from public municipal
-  records — chiefly the OpenCity urban data portal and the government sources it
+  records, chiefly the OpenCity urban data portal and the government sources it
   republishes.</p>
 
   <h2>Projects</h2>
   <a class="card" href="bbmp-complaints-vs-spending/">
     <h3>Do complaints follow the money?</h3>
     <p>Joins 618,202 Bengaluru citizen grievances to ₹23,241 crore of BBMP work
-    orders across 198 wards. The two only loosely correspond — and the geography
+    orders across 198 wards. The two only loosely correspond, and the geography
     of both turns out to be a property of the denominator rather than the city.
     Raw counts favour the periphery, per square kilometre favours the core, per
     resident favours the periphery again: the same two columns, three opposite
@@ -89,7 +89,7 @@ footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--rule);
     <h3>Mumbai's toilets are where the slums are</h3>
     <p>Overlays 2,541 slum cluster polygons on ten of BMC's amenity layers. Slum
     land turns out to be <em>closer</em> to every service than the rest of the
-    city — in 21 of 21 wards for public toilets — because half of Mumbai's toilet
+    city, in 21 of 21 wards for public toilets, because half of Mumbai's toilet
     seats stand on 7% of its land. The sanitation deficit is real but invisible to
     a distance measure: it is 14 households sharing every seat.</p>
     <div class="stats">
@@ -102,12 +102,12 @@ footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--rule);
 
   <h2>Working notes</h2>
   <ul class="notes">
-    <li><strong>OpenCity background</strong> — what the portal holds (1,098
+    <li><strong>OpenCity background</strong>, what the portal holds (1,098
     datasets, 186 articles) and how its data stories relate to it, from a full
     API sweep.</li>
-    <li><strong>Tri-city feasibility</strong> — which datasets genuinely span
+    <li><strong>Tri-city feasibility</strong>, which datasets genuinely span
     Bengaluru, Mumbai and Kolkata, and why most do not.</li>
-    <li><strong>Per-city plan</strong> — the scoping the BBMP project came out
+    <li><strong>Per-city plan</strong>, the scoping the BBMP project came out
     of.</li>
   </ul>
 
