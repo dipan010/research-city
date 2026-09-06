@@ -212,12 +212,29 @@ the *comparison set*, not the divisor. Define the baseline as deliberately as
 the denominator, and score each service against a proxy it does not itself
 define or the test is circular.
 
-**Rule out the obvious explanation before publishing it as one.** A gap between
-BMC's map layer and BMC's RTI replies on female toilet seats was nearly shipped
-with "the layer probably pools public and community toilets" attached. The data
-already refuted it: the female share is 49.2% inside slum clusters and 48.0%
-outside, so there is no male-skewed subset to be the RTI figure. A conjecture
-that the data can test is not a caveat — test it.
+**Check for a newer edition of your prior-work source, then re-check.** The
+Mumbai page shipped publicly claiming a BMC map-vs-RTI toilet discrepancy was
+unexplained, having "ruled out" the obvious pooling explanation. It was wrong on
+both counts. Praja's **May 2025** report — on the same OpenCity portal already
+swept, while only the **May 2024** edition had been read — tabulates public and
+community toilets separately and shows the layer plainly pools them. The claim
+had to be retracted after publication.
+
+**A negative result from an untested proxy is not evidence.** The "ruled out"
+argument was: pooling would leave a male-skewed subset, none was found inside
+versus outside slum polygons, therefore no pooling. That test assumes public
+toilets sit outside slum polygons and community toilets inside — which is false,
+since public toilets serve markets, stations and streets often inside dense slum
+areas. The proxy could never have detected what it was asked to detect. Before
+trusting a null, ask whether the measurement could have found the thing at all.
+
+**State data vintages as a table, not as scattered caveats.** Mumbai mixed a 2011
+census denominator, a 2015 slum footprint, undated ~2023 amenity layers and 2024
+reference figures. CKAN's dates were the bulk-upload date and carried no vintage
+information at all; the real ages had to be recovered from resource names and
+from embedded edit timestamps in the two layers that happened to carry them.
+Every headline ratio spans at least two vintages, and one of them (households per
+seat) is an upper bound purely because of it.
 
 **Polygon distance, not centroid distance.** Measuring from a cluster's centroid
 overstated distance-to-toilet by a median 33 m overall and 54 m for the largest

@@ -38,8 +38,10 @@ They are not: slum land is *closer* to every one of ten service types than the
 rest of the city, and to a public toilet in 21 of 21 wards — because 51.5% of
 Mumbai's toilet seats stand on 7.1% of its land. The deficit is real but
 invisible to a distance measure; against Census 2011's public-latrine dependence
-it is 14.0 households per seat. Also documents a disagreement between BMC's
-published map layer and BMC's own RTI replies about the female share of seats.
+it is 14.0 households per seat — an upper bound, since it divides 2011 households
+by a ~2023 toilet layer. Also shows that the "Mumbai Public Toilets" layer
+silently pools public and community toilets, making it six-fold misleading
+against BMC's own published public-toilet figures.
 
 [**Read the analysis →**](https://dipan010.github.io/research-city/mumbai-slums-vs-amenities/)
 

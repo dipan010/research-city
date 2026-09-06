@@ -198,7 +198,7 @@ def fig_gender(w, path):
             fontsize=9, color=MUTED)
     ax.plot([-.7, edge], [25, 25], color=FLAG, lw=1.6, ls=(0, (4, 3)), zorder=5)
     ax.text(edge + .3, 25.0,
-            "25% - what BMC reported\nto Praja Foundation\nunder RTI, 2023",
+            "25% - BMC's public toilets\nonly, via RTI to Praja\nFoundation, Dec 2024",
             ha="left", va="center", fontsize=8.8, color=FLAG,
             fontweight="bold", linespacing=1.45)
     ax.set_xticks(x, d["ward"])
@@ -206,8 +206,8 @@ def fig_gender(w, path):
     ax.set_ylim(0, 62)
     ax.grid(axis="x", visible=False)
     style(ax, "Female share of toilet seats on BMC's published map layer",
-          "Against the 25% BMC reported to Praja Foundation under RTI for the same city",
-          None, "% of seats for women")
+          "The layer pools public and community toilets; BMC's public-toilet-only "
+          "figures sit at 25%.", None, "% of seats for women")
     fig.savefig(path)
     plt.close(fig)
 
@@ -332,20 +332,28 @@ def main():
               f"   {r['slum_area_share']:6.1%} slum land")
 
     print("\n" + "=" * 72)
-    print("5. THE GENDER GAP, AND A DISAGREEMENT")
+    print("5. WHAT THE TOILET LAYER ACTUALLY COUNTS")
     print("=" * 72)
     fs = w["toilet_seats_f"].sum() / w["toilet_seats"].sum()
     print(f"  female share of seats, published layer : {fs:.1%}")
     print(f"  female share inside slum clusters      : "
           f"{cluster['toilet_seats_f'].sum()/cluster['toilet_seats'].sum():.1%}")
-    print(f"  BMC via RTI to Praja Foundation (2023) : 25.0%")
+    print(f"  BMC public toilets only, via RTI       : 25.0%"
+          f"  (846 blocks / 12,517 seats, Dec 2024)")
+    print(f"  this layer                             : "
+          f"{int(w['n_toilet'].sum()):,} blocks / {int(w['toilet_seats'].sum()):,} seats")
+    print(f"  Praja community toilets (Dec 2023)     : ~6,676 blocks, near parity")
+    print(f"  -> 846 + 6,676 = 7,522 vs this layer's 8,411, and the blended")
+    print(f"     gender share lands near 48.6%. The layer pools both types.")
     print("\n  worst wards on the published layer:")
     for _, r in w.sort_values("female_share").head(5).iterrows():
         ratio = (1 - r["female_share"]) / r["female_share"]
         print(f"    {r['ward']:4s} {r['female_share']:6.1%} female"
               f"   = {ratio:.1f}:1 male:female"
               f"   ({int(r['toilet_seats']):,} seats)")
-    print("  Praja reports C 6:1, B 4:1, A 3:1 from the same authority's RTI replies.")
+    print("  Praja reports C 6:1, B 4:1, A 3:1 for public toilets alone.")
+    print("  C ward does not reconcile: Praja gives it 416 public seats against")
+    print("  this layer's 207, and C has zero community toilets. Left open.")
 
     print("\n" + "=" * 72)
     print("6. THE DENOMINATOR DECIDES THE ANSWER")

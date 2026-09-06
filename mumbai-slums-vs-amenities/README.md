@@ -118,42 +118,48 @@ Three readings of one column, and they disagree almost completely:
 
 ![Ward maps](figures/fig7_ward_maps.png)
 
-### 5. BMC's map and BMC's RTI replies disagree about BMC's toilets
+### 5. The toilet layer does not say what it counts, and it matters
 
 ![Gender gap](figures/fig4_gender_gap.png)
 
-Praja Foundation obtained ward-wise toilet figures from BMC under RTI and
-reported in May 2024 that only **one public toilet seat in four is for women** —
-a 6:1 male-to-female ratio in C ward, 4:1 in B, 3:1 in A.
+Praja Foundation obtained ward-wise toilet figures from BMC under RTI. Their
+[May 2025 report](https://data.opencity.in/dataset/report-on-the-status-of-civic-issues-in-mumbai-may-2025)
+gives **846 public toilet blocks and 12,517 seats as of December 2024**, about
+one seat in four for women — a 6:1 male-to-female ratio in C ward, 4:1 in B, 3:1
+in A.
 
-The published GIS layer, from the same authority, records **48.6% of seats as
-female**. Its worst ward is also C, at 2.2:1, followed by B — the same ordering,
-less than half the magnitude.
+The layer used here holds **8,411 blocks and 79,700 seats at 48.6% female**.
+Roughly six times the seats, and twice the female share.
 
-These figures cannot both describe the same toilets, and the obvious explanation
-does not hold. If the map layer pooled public toilets with community toilets in
-slums, it should contain a male-skewed subset corresponding to Praja's 25%. It
-does not:
+**The two are not counting the same thing.** Praja reports public and community
+toilets separately, and their gender profiles are opposite:
 
-| Seats | Count | Female share |
-|---|---:|---:|
-| Inside slum clusters | 40,749 | 49.2% |
-| Outside slum clusters | 39,072 | 48.0% |
-| All | 79,821 | 48.6% |
+| Praja, from BMC RTI | Blocks | Seats | Female share |
+|---|---:|---:|---:|
+| Public toilets (Dec 2024) | 846 | 12,517 | ~25% |
+| Community toilets (Dec 2023) | ~6,676 | not tabulated citywide | near parity — A ward 298M/367F, D ward 318M/232F |
+| **This layer** | **8,411** | **79,700** | **48.6%** |
 
-The layer is uniformly near-parity everywhere and contains no sub-population that
-could be the RTI figure. So the ranking agrees, the level does not, and a
-public-versus-community split within this layer does not account for the gap.
-Neither source states its scope on its face. **Anyone using either number for
-policy needs that resolved first, and it is not resolvable from the published
-data.**
+846 + 6,676 ≈ 7,522 blocks against this layer's 8,411, and blending a ~25%-female
+public stock with a ~50%-female community stock lands close to the 48.6% observed.
+**The layer appears to pool both types.** Nothing on it says so.
 
----
+That is the finding: *the resource is named "Mumbai Public Toilets" and carries no
+scope statement, no vintage and no type field.* Anyone comparing it against BMC's
+published public-toilet figures — the natural thing to do, given the name — will
+be out by a factor of six on capacity and by half on the gender ratio.
+
+**One ward does not reconcile even so.** C ward has zero community toilets in
+Praja's table (it records 0% slum population), so pooling cannot explain anything
+there — yet Praja gives C 416 public seats against this layer's 207. Either the
+layer is incomplete for C or the ward assignment differs. Left open.
 
 ## Relation to prior work
 
-**Praja Foundation, [Status of Civic Issues in Mumbai](https://www.praja.org/praja_docs/praja_downloads/Key%20Highlights%20of%20Report%20on%20Civic%20Issues%20in%20Mumbai%202024.pdf)
-(May 2024)** is the definitive prior work on Mumbai sanitation and this project
+**Praja Foundation, Status of Civic Issues in Mumbai** —
+[May 2025](https://data.opencity.in/dataset/report-on-the-status-of-civic-issues-in-mumbai-may-2025),
+and the [May 2024](https://www.praja.org/praja_docs/praja_downloads/Key%20Highlights%20of%20Report%20on%20Civic%20Issues%20in%20Mumbai%202024.pdf)
+edition before it — is the definitive prior work on Mumbai sanitation and this project
 does not displace it. It reports one seat per 752 men and 1,820 women, community
 toilet seats adequate for only a third of the slum population, and 69% of blocks
 without a water connection — all sourced by RTI, per ward, non-spatial.
@@ -180,10 +186,43 @@ slum-versus-amenity analysis.
 3. **The proximity result with its baseline controls**, which reframes the
    question from siting to capacity — and separates the services BMC has aimed
    at slums from the ones it has not.
-4. **The discrepancy between two BMC sources** on the female seat share, visible
-   only by setting the map layer against the RTI figures.
+4. **That the toilet layer pools public and community toilets without saying so.**
+   Visible only by setting the layer against Praja's RTI figures, which separate
+   them. It makes the resource straightforwardly misleading to anyone who takes
+   its name at face value.
 
 ---
+
+## Data vintages
+
+Every figure here is a *stock* comparison across sources of different ages, and
+the spread is wide. Stating it plainly, because two of the findings depend on it.
+
+| Source | Vintage | How that is known |
+|---|---|---|
+| Census population, households, HH-14 latrine access | **2011** | stated by the source |
+| Slum cluster polygons | **2015** | named in the resource: "Mumbai - Slum Clusters Map 2015" |
+| BMC amenity GIS layers (toilets, schools, health, parks, BEST, funeral, parking) | **undated; most likely ~2023** | no vintage published. The fire-station and police layers in the same export family carry embedded edit timestamps running 2016 to 2023, latest 2023-05-15. The toilet and park layers carry no date fields at all. |
+| Suburban rail stations | **2025** | named in the dataset title |
+| Praja reference figures — public toilets | **December 2024** | Praja, Status of Civic Issues in Mumbai, May 2025 |
+| Praja reference figures — community toilets | **December 2023** | same report |
+| Uploaded to OpenCity | 2025-11-25 | CKAN resource dates, all 22 in one batch |
+| Fetched for this analysis | 2026-09-06 | `data/raw/manifest.json` |
+
+**What this costs each finding.** The proximity results (finding 1) compare a 2015
+slum footprint against ~2023 amenity layers — an eight-year gap, and any cluster
+cleared or built since 2015 is misplaced. The load figure (finding 3) divides 2011
+households by ~2023 seats: if public-latrine dependence has fallen since 2011, as
+it almost certainly has, **14.0 households per seat overstates today's load** and
+should be read as an upper bound on a 2011 population, not a current measurement.
+Finding 2 — 51.5% of seats on 7.1% of land — compares the 2015 slum map against
+the ~2023 toilet layer and is the least vintage-sensitive, since both are
+geographies rather than counts.
+
+Praja's most recent Mumbai report is *Status of Civic Services, Environmental &
+Climate Issues in Mumbai 2026* (30 June 2026), but it shifts focus to environment
+and climate and does not appear to update the toilet tables — established from
+press coverage of the launch, not the report PDF, so treat that as unconfirmed.
 
 ## Method
 
@@ -287,15 +326,12 @@ is overlap-free.
 
 ## Known limitations
 
-- **Layer vintages differ.** The slum map is 2015, the census 2011, the amenity
-  layers undated BMC extracts. Every resource's CKAN dates are recorded in
-  `data/raw/manifest.json`. The gap between a 2011 denominator and a 2015
-  footprint is real and is not corrected for.
-- **Census 2011 is fifteen years old.** Mumbai's public-latrine dependence has
-  almost certainly fallen since, so households-per-seat is an upper bound on
-  today's load — as the toilet layer is newer than the denominator, the ratio is
-  conservative in one direction and stale in the other. It is a stock comparison,
-  not a current-state measurement.
+- **Layer vintages span 2011 to 2025** and are set out in full in the Data
+  vintages section above, with what each costs each finding. In short: the load
+  figure divides 2011 households by ~2023 seats and is an upper bound on today's
+  load, not a current measurement; the proximity results compare a 2015 slum
+  footprint against ~2023 amenity layers. CKAN's own dates are the 2025-11-25
+  bulk-upload date for all 22 resources and carry no vintage information.
 - **No ward-wise slum population exists**, as Praja also records. Slum area and
   census latrine dependence are used instead. Neither is a population.
 - **The "inhabited land" baseline is a proxy, not a measurement.** No built-up
@@ -312,10 +348,11 @@ is overlap-free.
   every ward polygon (121 seats).
 - **The BEST, rail and school layers carry almost no ward labels**, so the
   attribute-vs-geometry check is only meaningful for the four layers tabled above.
-- **The Praja discrepancy is documented, not resolved.** The public-versus-
-  community-toilet explanation is ruled out here, but what does account for the
-  gap between BMC's map layer and BMC's RTI replies is not determined, and cannot
-  be from published data alone.
+- **The toilet layer's scope is inferred, not stated.** That it pools public and
+  community toilets is the best explanation for the six-fold seat gap and the
+  gender profile, and the arithmetic supports it — but BMC publishes no scope
+  field, so this is inference from Praja's separately-tabulated figures rather
+  than something the layer confirms. C ward does not reconcile under it.
 - **`Count_of_M` / `Count_of_F` are taken at face value.** Whether they count
   seats, or something else, is not documented on the layer — finding 5 is partly
   about exactly that ambiguity.

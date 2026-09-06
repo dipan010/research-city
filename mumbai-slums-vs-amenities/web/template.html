@@ -215,7 +215,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
         distance but how many households share the door.</p>
       <div class="byline">
         <span>Built from <a href="https://data.opencity.in">data.opencity.in</a></span>
-        <span>·</span><span>Census 2011 · BMC GIS layers · slum map 2015</span>
+        <span>·</span><span>Census 2011 · slum map 2015 · BMC GIS layers undated (~2023)</span>
         <span>·</span><span><a href="https://github.com/dipan010/research-city">Source and data</a></span>
       </div>
     </div>
@@ -413,29 +413,42 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 <section class="col">
   <div class="wrap"><div class="col">
     <div class="num"><b>04</b></div>
-    <h2>BMC's map and BMC's RTI replies disagree about BMC's toilets</h2>
+    <h2>The toilet layer does not say what it counts, and it matters</h2>
     <p>Praja Foundation obtained ward-wise toilet figures from BMC under the
-    Right to Information Act and reported, in
-    <a href="https://www.praja.org/praja_docs/praja_downloads/Key%20Highlights%20of%20Report%20on%20Civic%20Issues%20in%20Mumbai%202024.pdf">May 2024</a>,
-    that only one public toilet seat in four is for women — a 6:1 male-to-female
-    ratio in C ward, 4:1 in B, 3:1 in A.</p>
-    <p>The published GIS layer, from the same authority, records
-    <strong><span id="t-fshare">—</span> of seats as female</strong>. Its worst
-    ward is also C, at 2.2:1, followed by B — the same ordering, less than half
-    the magnitude.</p>
+    Right to Information Act. Their
+    <a href="https://data.opencity.in/dataset/report-on-the-status-of-civic-issues-in-mumbai-may-2025">May 2025 report</a>
+    gives <strong>846 public toilet blocks and 12,517 seats as of December
+    2024</strong>, about one seat in four for women — a 6:1 male-to-female ratio
+    in C ward, 4:1 in B, 3:1 in A.</p>
+    <p>The layer used here holds <strong>8,411 blocks and 79,700 seats at
+    <span id="t-fshare">—</span> female</strong>. Roughly six times the seats,
+    and twice the female share. The two are not counting the same thing.</p>
+    <div class="tbl-w">
+      <table>
+        <thead><tr><th>Praja, from BMC RTI</th><th class="n">Blocks</th><th class="n">Seats</th><th>Female share</th></tr></thead>
+        <tbody>
+          <tr><td>Public toilets (Dec 2024)</td><td class="n">846</td><td class="n">12,517</td><td>~25%</td></tr>
+          <tr><td>Community toilets (Dec 2023)</td><td class="n">~6,676</td><td class="n">—</td><td>near parity (A ward 298M/367F)</td></tr>
+          <tr><td><strong>This layer</strong></td><td class="n"><strong>8,411</strong></td><td class="n"><strong>79,700</strong></td><td><strong>48.6%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class="callout">
-      <span class="eyebrow">Unresolved</span>
-      <p>These figures cannot both describe the same toilets, and the obvious
-      explanation does not hold. If the map layer pooled public toilets with
-      community toilets in slums, it should contain a male-skewed subset
-      corresponding to Praja's 25%. It does not: seats inside slum clusters are
-      <strong>49.2%</strong> female and seats outside them <strong>48.0%</strong>
-      — the layer is uniformly near-parity everywhere, with no sub-population
-      that could be the RTI figure.</p>
-      <p>So the ranking agrees, the level does not, and a public-versus-community
-      split within this layer does not account for the gap. Neither source states
-      its scope on its face. Anyone using either number for policy needs that
-      resolved first, and it is not resolvable from the published data.</p>
+      <span class="eyebrow">What explains it</span>
+      <p>846 public plus roughly 6,676 community blocks is about 7,522, against
+      this layer's 8,411 — and blending a 25%-female public stock with a
+      near-parity community stock lands close to the 48.6% observed here.
+      <strong>The layer appears to pool both types.</strong> Nothing on it
+      says so.</p>
+      <p>That is the finding. The resource is named "Mumbai Public Toilets" and
+      carries no scope statement, no vintage and no type field. Anyone comparing
+      it against BMC's published public-toilet figures — the natural thing to do,
+      given the name — will be out by a factor of six on capacity and by half on
+      the gender ratio.</p>
+      <p><strong>One ward does not reconcile even so.</strong> C ward has zero
+      community toilets in Praja's table, so pooling cannot explain anything
+      there — yet Praja gives C 416 public seats against this layer's 207. Either
+      the layer is incomplete for C or the ward assignment differs. Left open.</p>
     </div>
   </div></div>
 
@@ -504,14 +517,43 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     and the disagreement rate is itself a data-quality finding: 3.1% on the
     toilet layer, 13.9% on health UPHCs. Per-ward counts rank almost identically
     either way (ρ ≥ 0.81), so the tables here do not depend on the choice.</p>
+    <h3 style="margin:34px 0 10px">Data vintages</h3>
+    <p>Every figure here is a stock comparison across sources of different ages,
+    and the spread is wide. Two of the findings depend on it, so it is stated
+    plainly rather than buried.</p>
+    <div class="tbl-w">
+      <table>
+        <thead><tr><th>Source</th><th>Vintage</th><th>How that is known</th></tr></thead>
+        <tbody>
+          <tr><td>Census population, households, HH-14 latrine access</td><td><strong>2011</strong></td><td>stated by the source</td></tr>
+          <tr><td>Slum cluster polygons</td><td><strong>2015</strong></td><td>named in the resource</td></tr>
+          <tr><td>BMC amenity GIS layers</td><td><strong>undated, likely ~2023</strong></td><td>the fire and police layers in the same export family carry edit timestamps running 2016 to 2023-05; the toilet and park layers carry no date fields at all</td></tr>
+          <tr><td>Praja reference — public toilets</td><td><strong>Dec 2024</strong></td><td>Praja, May 2025 report</td></tr>
+          <tr><td>Praja reference — community toilets</td><td><strong>Dec 2023</strong></td><td>same report</td></tr>
+          <tr><td>Uploaded to OpenCity</td><td>2025-11-25</td><td>CKAN dates, all 22 resources in one batch</td></tr>
+          <tr><td>Fetched for this analysis</td><td>2026-09-06</td><td><code>data/raw/manifest.json</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>What that costs each finding.</strong> The proximity results
+    compare a 2015 slum footprint against ~2023 amenity layers. The load figure
+    divides 2011 households by ~2023 seats — if public-latrine dependence has
+    fallen since 2011, as it almost certainly has, <strong>14.0 households per
+    seat overstates today's load</strong> and should be read as an upper bound on
+    a 2011 population, not a current measurement. Finding 02 is the least
+    vintage-sensitive, since both sides of it are geographies rather than counts.</p>
+
+    <h3 style="margin:34px 0 10px">Limitations</h3>
     <div class="tbl-w">
       <table>
         <thead><tr><th>Limitation</th><th>What was done about it</th></tr></thead>
         <tbody>
-          <tr><td>Layer vintages differ — slum map 2015, census 2011, amenity layers undated</td>
-              <td>Recorded per resource in <code>data/raw/manifest.json</code>. The
-                  gap between a 2011 denominator and a 2015 footprint is real and
-                  is not corrected for.</td></tr>
+          <tr><td>The toilet layer's scope is inferred, not stated</td>
+              <td>That it pools public and community toilets is the best
+                  explanation for the six-fold seat gap and the gender profile,
+                  and the arithmetic supports it — but BMC publishes no scope
+                  field, so this is inference from Praja's separately-tabulated
+                  figures. C ward does not reconcile under it.</td></tr>
           <tr><td>No published ward-wise slum population</td>
               <td>Not estimated. Slum <em>area</em> and census public-latrine
                   dependence are used instead, both measured.</td></tr>
