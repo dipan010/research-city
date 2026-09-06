@@ -1,0 +1,15 @@
+file,category,points,placemarks_no_geometry
+toilets.kml,toilet,8411,1
+health_dispensaries.kml,health,186,0
+health_uphc.kml,health,211,0
+health_hospitals.kml,health,31,0
+health_maternity.kml,health,27,1
+schools_municipal.kml,school,1134,0
+schools_aided.kml,school,404,0
+schools_unaided.kml,school,709,0
+parks.kml,park,990,1
+fire_stations.kml,fire,36,0
+police_stations.kml,police,118,16
+best_stops.kml,bus,6267,0
+rail_stations.kml,rail,106,0
+funeral_sites.kml,funeral,206,0
