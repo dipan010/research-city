@@ -181,3 +181,63 @@ resources by title and name, a build step per stage, `robustness.py` alongside
 the analysis, and `web/template.html` built into the repo's `docs/`. The
 crosswalk step is Bengaluru-specific and Mumbai may not need it — but check
 whether BMC ward names are consistent across its datasets before assuming so.
+
+---
+
+# Carried forward from the Mumbai build
+
+*Added after `mumbai-slums-vs-amenities` shipped. Kolkata is next and has 4
+geospatial layers and 141 wards — a different shape again, so check which of
+these apply before assuming.*
+
+**Match the inference unit to the n you actually have.** Mumbai has 24 wards.
+At n=24 a Spearman coefficient needs ~0.41 to clear the 5% level, so the whole
+correlation-and-quintile structure that carried the Bengaluru project could not
+be reused. Inference moved to the slum cluster (n=2,541) and a 100 m grid cell
+(n=47,450); wards were kept for the map and the table only. Kolkata's 141 wards
+sit awkwardly between the two — check the critical value before reporting a rho.
+
+**A big nominal n is not a big effective n.** Grid cells 100 m apart are heavily
+spatially autocorrelated. Mann–Whitney on 47,450 of them returned p < 1e-140,
+which is an artifact of treating neighbours as independent, and reporting it
+would have undercut the n=24 discipline in the same document. The defensible
+statistic was "closer in 21 of 21 wards".
+
+**Choose the comparison group, or it chooses your answer.** Slum land looked
+closer to all ten services than "the rest of Mumbai" — but that baseline held
+the national park, mangroves, salt pans and the airport. Against inhabited land
+only three of ten survived, and four reversed. The first version of this finding
+was wrong in exactly the way the denominator trap is wrong, one level up: it was
+the *comparison set*, not the divisor. Define the baseline as deliberately as
+the denominator, and score each service against a proxy it does not itself
+define or the test is circular.
+
+**Rule out the obvious explanation before publishing it as one.** A gap between
+BMC's map layer and BMC's RTI replies on female toilet seats was nearly shipped
+with "the layer probably pools public and community toilets" attached. The data
+already refuted it: the female share is 49.2% inside slum clusters and 48.0%
+outside, so there is no male-skewed subset to be the RTI figure. A conjecture
+that the data can test is not a caveat — test it.
+
+**Polygon distance, not centroid distance.** Measuring from a cluster's centroid
+overstated distance-to-toilet by a median 33 m overall and 54 m for the largest
+decile of clusters, and reported 0% of clusters as containing a toilet against
+the true 32.8%. The shortcut penalises exactly the biggest settlements.
+
+**Verify positional column indices in a merged-header government sheet.**
+Census table HH-14 has a four-row merged header pandas cannot parse into names,
+so its columns are addressed by position — with an assertion that the header
+text still reads "not having latrine" and "Public latrine" before any number is
+taken out of them.
+
+**Normalise labels by lookup across every layer.** The same 24 BMC wards are
+spelled `K/E`, `KE`, `K-E` and lowercase across layers. One `norm_ward()` strips
+separators and looks the result up against the canonical list, returning None
+rather than guessing. Assign the unit spatially and keep the attribute only to
+measure how often the two disagree — 3.1% on toilets, 13.9% on health UPHCs,
+which is a publishable data-quality finding in itself.
+
+**Count placemarks against geometries.** 16 of 134 police placemarks, and 1 slum
+placemark, carry no geometry at all. Report the drop; do not let a layer quietly
+shrink.
+
