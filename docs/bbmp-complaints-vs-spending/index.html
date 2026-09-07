@@ -209,11 +209,12 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
         <span class="eyebrow">Ward-level analysis</span>
       </div>
       <h1>Do complaints follow the money?</h1>
-      <p class="dek">BBMP publishes both halves of its own accountability loop — what
-      residents complain about, and what it spends money on. Joining 618,202
+      <p class="dek">BBMP publishes both halves of its own accountability loop —
+      what residents complain about, and what it spends money on. Joining 618,202
       grievances to ₹23,241 crore of work orders across 198 wards shows the two
-      only loosely correspond, and that a third of the money cannot be traced to
-      a ward at all.</p>
+      only loosely correspond. It also shows that the geography of both is a
+      property of the denominator rather than the city: the same two columns give
+      three opposite answers depending on what you divide them by.</p>
       <div class="byline">
         <span>Grievances 2020–24</span><span>·</span>
         <span>Work orders 2018–23</span><span>·</span>
@@ -414,41 +415,9 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   spread over more land, so area and population pull in opposite directions, and
   a ward-level claim is only meaningful once it names its denominator.</p>
 
-  <div class="callout">
-    <span class="eyebrow">This corrects a published analysis</span>
-    <p>OpenCity's
-    <a href="https://opencity.in/decoding-bengalurus-civic-complaints-a-deep-dive-into-bbmp-grievances-data-2025/">Decoding Bengaluru's Civic Complaints</a>
-    (July 2025) describes complaints as clustering in “peripheral growth areas”
-    and labels its ward map complaint <em>density</em>. It maps raw counts.</p>
-    <div class="tbl-w">
-      <table>
-        <thead><tr><th>Ward named as a hotspot</th><th class="n">Area</th>
-          <th class="n">Count rank</th><th class="n">Density rank</th></tr></thead>
-        <tbody>
-          <tr><td>Hemmigepura</td><td class="n">28.5 km²</td><td class="n">6</td><td class="n hi">177</td></tr>
-          <tr><td>Horamavu</td><td class="n">17.7 km²</td><td class="n">3</td><td class="n hi">149</td></tr>
-          <tr><td>Uttarahalli</td><td class="n">9.1 km²</td><td class="n">9</td><td class="n hi">119</td></tr>
-          <tr><td>Thanisandra</td><td class="n">10.1 km²</td><td class="n">5</td><td class="n hi">102</td></tr>
-          <tr><td>Jnana Bharathi</td><td class="n">12.2 km²</td><td class="n">1</td><td class="n hi">99</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Against a median ward of 1.7 km², every ward named is an outsized
-    peripheral one, and Hemmigepura — the largest in BBMP — sits in the bottom
-    fifth by density. The rank correlation between complaint count and complaint
-    density is <strong>ρ = 0.04</strong>: the count ranking carries almost no
-    information about the density ranking. The density leaders are small core
-    wards — Chickpete, Manorayana Palya, Sri Nagar — none of which appear in that
-    article's top ten. OpenCity's own
-    <a href="https://opencity.in/road-infrastructure-density-mapping-for-bengaluru/">road-density piece</a>,
-    published 18 days later, uses the correct normalisation.</p>
-    <p><strong>The narrow claim, to be fair to it:</strong> the labelling is
-    wrong, not necessarily the conclusion. Per <em>resident</em>, peripheral
-    wards genuinely do lead — so “peripheral growth areas” survives as a finding
-    under a denominator that article did not use. What does not survive is
-    calling a map of raw counts a density map, and naming the largest wards as
-    hotspots on that basis.</p>
-  </div>
+  <p>This is the load-bearing finding here, and it is the one with consequences
+  for work already published on this data — see <a href="#provenance">what was
+  already known</a>.</p>
 </section>
 
 <hr class="rule">
@@ -473,7 +442,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 
 <!-- prior work -->
 <section class="col">
-  <div class="num"><b>PROVENANCE</b></div>
+  <div class="num" id="provenance"><b>PROVENANCE</b></div>
   <h2>What was already known</h2>
   <p>Most of the spending side of this analysis is already published, by OpenCity
   and by Citizen Matters — both programmes of Oorvani Foundation. This work was
@@ -505,16 +474,47 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   population.”</em> This project does both.</p>
 
   <ol class="adds">
+    <li><strong>Area <em>and</em> population normalisation.</strong> Named as
+    future work in 2023 and not taken up since. It is the finding above, and it
+    changes the geographic conclusion.</li>
     <li><strong>The complaints join, systematically.</strong> 618,202 grievances
     against ward spending, quantified per ward across all three mappable
     categories over five years — rather than one category, qualitatively, in a day.</li>
-    <li><strong>Area normalisation of both sides.</strong> Named as future work in
-    2023 and not taken up since. It changes the geographic conclusion.</li>
-    <li><strong>A correction</strong> to the July 2025 grievances analysis, above.</li>
     <li><strong>Resolution rate against spending.</strong> No prior version found.</li>
     <li><strong>A published ward-name crosswalk</strong> and a pipeline
     reproducible from download to figure.</li>
   </ol>
+
+  <h3 style="margin-top:34px; margin-bottom:12px">A consequence for the July 2025 piece</h3>
+  <p>Applying that denominator point to
+  <a href="https://opencity.in/decoding-bengalurus-civic-complaints-a-deep-dive-into-bbmp-grievances-data-2025/">Decoding
+  Bengaluru's Civic Complaints</a> turns up a labelling error. It describes
+  complaints as clustering in “peripheral growth areas” and calls its ward map
+  complaint <em>density</em>; the map plots raw counts, and every ward it names
+  as a hotspot is an outsized peripheral one.</p>
+  <div class="tbl-w">
+    <table>
+      <thead><tr><th>Ward named as a hotspot</th><th class="n">Area</th>
+        <th class="n">Count rank</th><th class="n">Density rank</th></tr></thead>
+      <tbody>
+        <tr><td>Hemmigepura</td><td class="n">28.5 km²</td><td class="n">6</td><td class="n hi">177</td></tr>
+        <tr><td>Horamavu</td><td class="n">17.7 km²</td><td class="n">3</td><td class="n hi">149</td></tr>
+        <tr><td>Uttarahalli</td><td class="n">9.1 km²</td><td class="n">9</td><td class="n hi">119</td></tr>
+        <tr><td>Thanisandra</td><td class="n">10.1 km²</td><td class="n">5</td><td class="n hi">102</td></tr>
+        <tr><td>Jnana Bharathi</td><td class="n">12.2 km²</td><td class="n">1</td><td class="n hi">99</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Against a median ward of 1.7 km², Hemmigepura — the largest in BBMP — sits
+  in the bottom fifth by density, and across all 198 wards the rank correlation
+  between count and density is <strong>ρ = 0.04</strong>. The density leaders are
+  small core wards: Chickpete, Manorayana Palya, Sri Nagar.</p>
+  <p>The conclusion survives, though, which is worth saying plainly. Per
+  <em>resident</em> peripheral wards genuinely do lead, so “peripheral growth
+  areas” holds under a denominator that piece did not use — it is the measure
+  that does not hold, not the claim. OpenCity's own
+  <a href="https://opencity.in/road-infrastructure-density-mapping-for-bengaluru/">road-density
+  piece</a>, published 18 days later, normalises correctly.</p>
 </section>
 
 <hr class="rule">

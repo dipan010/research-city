@@ -14,11 +14,13 @@ Joins 618,202 Bengaluru citizen grievances to ₹23,241 crore of BBMP work order
 across the city's 198 wards, asking whether the wards that complain most are the
 wards that get spent on.
 
-Headline results: a third of BBMP's work-order spending is attributable to no
-ward at all; complaint volume and spending point at different categories; and the
-geography of both flips depending on whether you divide by area or by population.
-Includes a correction to a published analysis, and a reusable BBMP ward-name
-crosswalk that did not previously exist publicly.
+Headline result: the geography of both is a property of the denominator, not the
+city — raw counts favour the periphery, per square kilometre favours the core,
+per resident favours the periphery again. Also: a third of BBMP's work-order
+spending is attributable to no ward at all, and complaint volume and spending
+point at different categories. Ships a reusable BBMP ward-name crosswalk that did
+not previously exist publicly, and turns up a labelling error in a published
+analysis as a consequence.
 
 [**Read the analysis →**](https://dipan010.github.io/research-city/bbmp-complaints-vs-spending/)
 

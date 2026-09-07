@@ -85,7 +85,7 @@ complaints at the same rate as the lowest-spending ones.
 Complaint volume itself rose sharply: the median ward saw **2.17× more
 complaints in 2024 than in 2020** (91,620 → 207,016 city-wide).
 
-### 5. The geography depends entirely on the denominator
+### 5. The geography depends entirely on the denominator — the central finding
 
 ![Ward maps](figures/fig5_ward_maps.png)
 
@@ -189,7 +189,7 @@ This project does both, and adds a correction:
    years — rather than one category, qualitatively, on one day.
 2. **Area normalisation of both sides.** Named as future work in 2023 and not
    taken up since. It changes the geographic conclusion (finding 5).
-3. **A correction to the July 2025 grievances analysis.** That piece describes
+3. **A consequence for the July 2025 grievances analysis.** That piece describes
    complaints as clustering in "peripheral growth areas" and labels its ward map
    complaint *density*, but maps raw counts. Every ward it names as a top
    complaint generator is an outsized peripheral ward — Hemmigepura (28.5 km²,
