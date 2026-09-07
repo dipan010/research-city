@@ -209,7 +209,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
         <span class="eyebrow">Ward-level analysis</span>
       </div>
       <h1>Do complaints follow the money?</h1>
-      <p class="dek">BBMP publishes both halves of its own accountability loop —
+      <p class="dek">BBMP publishes both halves of its own accountability loop:
       what residents complain about, and what it spends money on. Joining 618,202
       grievances to ₹23,241 crore of work orders across 198 wards shows the two
       only loosely correspond. It also shows that the geography of both is a
@@ -241,7 +241,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   places that get spent on.</p>
   <p>The short answer is: loosely, and less than the headline correlation
   suggests. But two things found along the way matter more than the correlation
-  itself — where the money goes untracked, and what happens to the geography
+  itself: where the money goes untracked, and what happens to the geography
   once you account for how differently sized BBMP's wards are.</p>
 </section>
 
@@ -252,7 +252,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div class="num"><b>FINDING 01</b></div>
   <h2>A third of the money belongs to no ward</h2>
   <p>Of ₹23,241 crore in gross work orders, ₹8,023 crore is booked to
-  <span class="mono">Untagged&nbsp;Expenses/Multiple&nbsp;Wards</span> — spending
+  <span class="mono">Untagged&nbsp;Expenses/Multiple&nbsp;Wards</span>, spending
   across functional departments and non-ward projects that cannot be traced to
   any of the 198 wards.</p>
 </section>
@@ -276,7 +276,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     ₹8,023 cr / ₹15,217 cr split in
     <a href="https://citizenmatters.in/opencity-bbmp-spending-by-constituency/">May 2023</a>.
     It is reproduced here independently from the raw files, as a check that the
-    pipeline reads BBMP's ledger the same way — and because it bounds everything
+    pipeline reads BBMP's ledger the same way, and because it bounds everything
     below.</p>
   </div>
 </section>
@@ -305,14 +305,14 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <figcaption>Complaints 2020–24 against gross work orders 2018–23, across the
   196 wards carrying both datasets. The two panels use separate scales and are
   not comparable in width. Roads legitimately cost more per unit than a
-  streetlight — the point is not that this is misallocation, but that complaint
+  streetlight. The point is not that this is misallocation, but that complaint
   volume is not what drives the budget.</figcaption>
 </figure>
 
 <section class="col">
   <p>Streetlighting draws the most complaints by a wide margin and receives about
-  a seventh of what roads do. For waste management — the second-largest complaint
-  category — the ward-level correlation between complaints and spending is
+  a seventh of what roads do. For waste management, the second-largest complaint
+  category, the ward-level correlation between complaints and spending is
   <strong>ρ = −0.05</strong>, statistically indistinguishable from zero.</p>
   <p>The category mapping was checked against the grievance sub-category field
   rather than assumed: BBMP's <span class="mono">Electrical</span> category is
@@ -326,7 +326,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 <section class="col">
   <div class="num"><b>FINDING 03</b></div>
   <h2>The correlation is weaker than it looks</h2>
-  <p>Plotted against each other, complaints and spending trend together — but the
+  <p>Plotted against each other, complaints and spending trend together, but the
   linear fit is carried by a handful of outlier wards at the top right.</p>
 </section>
 
@@ -336,13 +336,13 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div id="scatter"></div>
   <figcaption>Pearson r = 0.64 against Spearman ρ = 0.34. The gap between them is
   the finding: knowing a ward's complaint rank tells you comparatively little
-  about its spending rank. Ward spending runs from ₹12 crore to ₹436 crore — a
+  about its spending rank. Ward spending runs from ₹12 crore to ₹436 crore, a
   35× spread against a median of ₹59 crore.</figcaption>
 </figure>
 
 <hr class="rule">
 
-<!-- 4 — the centrepiece -->
+<!-- 4: the centrepiece -->
 <section class="col">
   <div class="num"><b>FINDING 04</b></div>
   <h2>The geography depends entirely on the denominator</h2>
@@ -351,7 +351,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   wards are several times larger than its core wards, and distance from the
   centre correlates with ward <em>area</em> (ρ = +0.60) more strongly than with
   either variable of interest.</p>
-  <p>Divide by area and both maps reverse — the dense old core leads. Divide by
+  <p>Divide by area and both maps reverse, and the dense old core leads. Divide by
   <em>residents</em> instead and they reverse again, back to the periphery. All
   three views are computed from the same two numbers.</p>
   <p><strong>Use the toggle.</strong> No single view is the correct one; the
@@ -408,7 +408,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     </table>
   </div>
   <p>Read by area, both densities fall outward (spend ρ = −0.35, complaints
-  ρ = −0.36) — the core leads. Read by resident, both rise outward (ρ = +0.28 and
+  ρ = −0.36), so the core leads. Read by resident, both rise outward (ρ = +0.28 and
   ρ = +0.32): an outer-ward resident lodges <strong>93.3 complaints per thousand
   against the inner ring's 44.1</strong>, and has ₹19,181 of work orders behind
   them against ₹12,760. Neither reading is wrong. Outer wards hold more people
@@ -416,7 +416,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   a ward-level claim is only meaningful once it names its denominator.</p>
 
   <p>This is the load-bearing finding here, and it is the one with consequences
-  for work already published on this data — see <a href="#provenance">what was
+  for work already published on this data. See <a href="#provenance">what was
   already known</a>.</p>
 </section>
 
@@ -434,7 +434,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div id="quint"></div>
   <figcaption>Closure rates sit between 94.4% and 95.1% across every quintile,
   with no trend. The highest-spending wards close complaints at the same rate as
-  the lowest. Complaint volume itself rose sharply over the window — the median
+  the lowest. Complaint volume itself rose sharply over the window: the median
   ward saw 2.17× more complaints in 2024 than in 2020.</figcaption>
 </figure>
 
@@ -445,14 +445,14 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div class="num" id="provenance"><b>PROVENANCE</b></div>
   <h2>What was already known</h2>
   <p>Most of the spending side of this analysis is already published, by OpenCity
-  and by Citizen Matters — both programmes of Oorvani Foundation. This work was
+  and by Citizen Matters, both programmes of Oorvani Foundation. This work was
   built after checking theirs, and is positioned against it deliberately.</p>
 
   <div class="prior">
     <a href="https://citizenmatters.in/opencity-bbmp-spending-by-constituency/">
       <div class="t">What Rs 23,000 crore of BBMP work orders show · May 2023</div>
       <div class="d">Same ₹23,241 cr total, same untagged split, same
-      roads-versus-waste disparity — aggregated by assembly constituency.</div></a>
+      roads-versus-waste disparity, aggregated by assembly constituency.</div></a>
     <a href="https://opencity.in/decoding-bengalurus-civic-complaints-a-deep-dive-into-bbmp-grievances-data-2025/">
       <div class="t">Decoding Bengaluru's Civic Complaints · July 2025</div>
       <div class="d">126,974 grievances across 198 wards for H1 2025: ward
@@ -461,14 +461,14 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
       <div class="t">Open letter to the BBMP Commissioner on potholes · 2023</div>
       <div class="d">Found pothole spending “was not in the areas that citizens
       complained about.” One category, Fix My Street as the source, spatial and
-      observational — no correlation quantified, no normalisation.</div></a>
+      observational, with no correlation quantified and no normalisation.</div></a>
     <a href="https://opencity.in/bbmp-work-orders-budgets-and-processes-datajam-july-2023/">
       <div class="t">BBMP Work Orders &amp; Processes Datajam · July 2023</div>
       <div class="d">Where the pothole comparison originated, over a single day.
       No data or code published.</div></a>
   </div>
 
-  <p>The May 2023 article names two limitations of its own — that it
+  <p>The May 2023 article names two limitations of its own. It says it
   <em>“does not correlate spending to citizen complaints or service outcomes,”</em>
   and that it <em>“can be further expanded by normalising for the area as well as
   population.”</em> This project does both.</p>
@@ -479,7 +479,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     changes the geographic conclusion.</li>
     <li><strong>The complaints join, systematically.</strong> 618,202 grievances
     against ward spending, quantified per ward across all three mappable
-    categories over five years — rather than one category, qualitatively, in a day.</li>
+    categories over five years, rather than one category, qualitatively, in a day.</li>
     <li><strong>Resolution rate against spending.</strong> No prior version found.</li>
     <li><strong>A published ward-name crosswalk</strong> and a pipeline
     reproducible from download to figure.</li>
@@ -505,13 +505,13 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
       </tbody>
     </table>
   </div>
-  <p>Against a median ward of 1.7 km², Hemmigepura — the largest in BBMP — sits
+  <p>Against a median ward of 1.7 km², Hemmigepura, the largest in BBMP, sits
   in the bottom fifth by density, and across all 198 wards the rank correlation
   between count and density is <strong>ρ = 0.04</strong>. The density leaders are
   small core wards: Chickpete, Manorayana Palya, Sri Nagar.</p>
   <p>The conclusion survives, though, which is worth saying plainly. Per
   <em>resident</em> peripheral wards genuinely do lead, so “peripheral growth
-  areas” holds under a denominator that piece did not use — it is the measure
+  areas” holds under a denominator that piece did not use. It is the measure
   that does not hold, not the claim. OpenCity's own
   <a href="https://opencity.in/road-infrastructure-density-mapping-for-bengaluru/">road-density
   piece</a>, published 18 days later, normalises correctly.</p>
@@ -524,13 +524,13 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <div class="num"><b>METHOD</b></div>
   <h2>How the join works, and where it breaks</h2>
   <p>BBMP's grievance extracts carry a ward <em>name</em> and no number, spelled
-  differently from the ward master — <span class="mono">Bellandur</span> against
+  differently from the ward master: <span class="mono">Bellandur</span> against
   <span class="mono">Bellanduru</span>, <span class="mono">Binnipet</span> against
   <span class="mono">Binni Pete</span>. Only 51% match exactly. A crosswalk
   resolves them in three passes: exact match on a normalised key (136 names),
   fuzzy match accepted only when the best candidate clearly beats the runner-up
   (175), and seven hand-verified entries. <strong>196 of 198 ward names resolve,
-  with no collisions.</strong> The work-order file needs none of this — it
+  with no collisions.</strong> The work-order file needs none of this, because it
   carries its own ward numbers.</p>
 
   <h3 style="margin-top:30px; margin-bottom:10px">Robustness</h3>
@@ -555,21 +555,21 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <p>The per-resident reading is the one genuinely exposed assumption: it rests
   on Census 2011 counts applied to a periphery that has grown since. For the
   outer ring's complaint rate to fall to the inner ring's, outer wards would need
-  <strong>2.11× their 2011 population</strong> — 5.9% compounded annually for
+  <strong>2.11× their 2011 population</strong>, or 5.9% compounded annually for
   thirteen years. At a doubling it still leads, but only by 46.7 to 44.1. The
   per-km² and raw readings do not depend on population at all.</p>
 
   <h3 style="margin-top:30px; margin-bottom:10px">Known limitations</h3>
-  <p>Two grievance ward names — <span class="mono">Someshwara</span> (9,262
-  complaints) and <span class="mono">Subedarapalya</span> (1,683) — match no ward
+  <p>Two grievance ward names, <span class="mono">Someshwara</span> (9,262
+  complaints) and <span class="mono">Subedarapalya</span> (1,683), match no ward
   in BBMP's 198-ward master. Someshwara turns out to exist only in BBMP's
   <em>243-ward</em> map, as ward 3, while ward 3 in the 198-ward regime is
   Atturu: the extracts mix labels from two delimitation regimes. Pairing the
-  leftovers would have merged genuinely different wards, so they are excluded —
+  leftovers would have merged genuinely different wards, so they are excluded, at
   1.7% of complaints.</p>
   <p>The windows do not align: complaints cover 2020–24, work orders 2018–23, so
   this is a stock-against-stock comparison, not a causal one. Correlation is not
-  allocation — roads cost more per unit than streetlights, and these figures show
+  allocation. Roads cost more per unit than streetlights, and these figures show
   where complaints and money diverge, not that any ward was shortchanged.
   Rejected complaints (BBMP's <span class="mono">Non Relevant</span>, about 4%)
   are excluded from the denominator; only <span class="mono">Closed</span> counts
@@ -595,7 +595,7 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 <script>
 const DATA = __DATA__;
 const $ = s => document.querySelector(s);
-const fmt = n => n === null || n === undefined ? "—" : n.toLocaleString("en-IN");
+const fmt = n => n === null || n === undefined ? "–" : n.toLocaleString("en-IN");
 // CSS variables, not resolved hex, so the maps re-colour with the theme.
 const RAMP = ["--r1","--r2","--r3","--r4","--r5"].map(v => `var(${v})`);
 
@@ -693,14 +693,14 @@ function drawMap(svgSel, legSel, key, fmtV){
 function showTip(e, w){
   tip.innerHTML = `<b>${w.name} · Ward ${w.no}</b>
     <div class="r"><span>Area</span><span>${w.area} km²</span></div>
-    <div class="r"><span>Spend</span><span>${w.spend===null?"—":"₹"+fmt(w.spend)+" cr"}</span></div>
+    <div class="r"><span>Spend</span><span>${w.spend===null?"–":"₹"+fmt(w.spend)+" cr"}</span></div>
     <div class="r"><span>Complaints</span><span>${fmt(w.comp)}</span></div>
     <div class="r"><span>Population (2011)</span><span>${fmt(w.pop)}</span></div>
-    <div class="r"><span>Spend / km²</span><span>${w.spendKm===null?"—":"₹"+fmt(w.spendKm)+" cr"}</span></div>
+    <div class="r"><span>Spend / km²</span><span>${w.spendKm===null?"–":"₹"+fmt(w.spendKm)+" cr"}</span></div>
     <div class="r"><span>Complaints / km²</span><span>${fmt(w.compKm)}</span></div>
-    <div class="r"><span>Spend / resident</span><span>${w.spendRes===null?"—":"₹"+fmt(w.spendRes)}</span></div>
-    <div class="r"><span>Complaints / 1k</span><span>${w.compRes===null?"—":fmt(w.compRes)}</span></div>
-    <div class="r"><span>Closed</span><span>${w.res===null?"—":w.res+"%"}</span></div>`;
+    <div class="r"><span>Spend / resident</span><span>${w.spendRes===null?"–":"₹"+fmt(w.spendRes)}</span></div>
+    <div class="r"><span>Complaints / 1k</span><span>${w.compRes===null?"–":fmt(w.compRes)}</span></div>
+    <div class="r"><span>Closed</span><span>${w.res===null?"–":w.res+"%"}</span></div>`;
   tip.style.opacity="1";
   const pad=14, tw=tip.offsetWidth, th=tip.offsetHeight;
   let x=e.clientX+pad, y=e.clientY+pad;
