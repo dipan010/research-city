@@ -147,7 +147,298 @@ has 141 ward polygons and a pile of tables. Expect the shape to be closer to the
 Bengaluru project (join tables to wards) than the Mumbai one (spatial overlay),
 with the water bodies census as the one genuinely spatial asset.
 
-**The honest framing:** "Kolkata publishes enough to locate its amenities, but not enough to audit its spending — there is no KMC equivalent of BBMP's work-order archive." That comparison across your three chapters *is* the cumulative finding, without needing a merged dataset.
+## Feasibility pass, 2026-09-07 — the four open questions, answered
+
+*Everything below was verified by downloading and parsing the actual files. The
+four questions raised by the catalogue sweep above are now closed. Three of the
+four answers are negative, and they close off most of the scoping this document
+originally proposed.*
+
+### 1. `Kolkata Drainage Maps` (80 resources) — scanned PDFs, not data
+
+All 80 resources are **PDF ward drainage-network maps**, one per ward, 160 KB to
+3 MB each. There is no tabular or geospatial resource in the dataset. Coverage is
+**80 of 144 wards**, and the gaps are not random: present are wards 7-100 with
+holes, plus 115 and 133-141. Absent are wards 1-6, most of 101-132, and 142-144 —
+that is, the whole of Boroughs XI, XII, XIII, XIV and XVI barring ward 115.
+
+This dataset does **not** carry the project. Using it at all means georeferencing
+and digitising 80 scanned plans, which is a multi-week GIS effort with no
+guarantee the line work is machine-traceable, and it would still cover only 55%
+of the city. Treat it as context or as a separate digitisation proposal, not as
+an analysis input.
+
+### 2. The ward KML is 141 because it is the pre-2015 boundary set
+
+Not three wards "missing or merged" — a stale vintage. Parsed:
+`Kolkata Wards Map 2022` holds 141 placemarks, all with geometry, `WARD` values
+1-141, **no duplicates**, and exactly wards **142, 143 and 144 absent**.
+
+The election files settle why. `Kolkata KMC Election Results 2010` has exactly
+**141 wards**; `Kolkata KMC Election Results 2015` has exactly **144**. KMC
+expanded from 141 to 144 wards ahead of the 2015 poll, annexing the Joka area
+(Borough XVI now reads `123,124,125,126,142,143 &144`). The file named "2022"
+therefore predates 2015. **This is the Bengaluru filename lesson again: count the
+features, do not trust the name.**
+
+Consequence, and it is the boundary caveat biting exactly as predicted: the water
+bodies census holds **68 records in wards 142-144** that have no polygon to land
+in. Any spatial join silently drops them unless handled.
+
+### 3. `KMC Budget Statement` cannot support a BBMP-style analysis. It is flat by construction.
+
+The 16 resources are all PDFs, but they are text-extractable (`pdftotext -layout`
+works cleanly), so this was checked rather than assumed. The ERP account code has
+`Borough` and `Ward` columns throughout — but they are filled with the aggregate
+placeholders `60` and `333` on essentially every line. Every document is the
+consolidated `BOROUGH I - XVI` statement. There is no per-borough or per-ward
+breakdown of ordinary expenditure.
+
+There is exactly **one** ward-attributed line item in the whole budget:
+**Councillors' Elaka Unnayan Prakalpa**, which lists all 144 wards individually.
+Its allocation is **identical for every ward**:
+
+| Budget | Per-ward allocation | Wards | Variance |
+|---|---|---|---|
+| BE 2019-20 | ₹12.50 lakh | 144 | zero |
+| BE 2021-22 | ₹12.50 lakh | 144 | zero |
+| BE 2025-26 | ₹15.00 lakh | 144 | zero |
+
+It appears under two object codes (400 "Works" and 800 "Supply"), each block
+totalling **₹2,160.00 lakh = ₹21.6 crore**. Whether the two blocks sum to ₹30
+lakh per ward or restate the same money by object code is **not resolvable from
+the PDF** — do not quote a combined total without settling it.
+
+Against KMC's BE 2025-26 total expenditure of **₹5,639.56 crore**, ward-attributed
+spending is **₹21.6 crore, or 0.38% of the budget — and it has no variance at
+all.**
+
+> **This is the cleaner version of the finding this document was reaching for.**
+> BBMP attributes 82.7% of ₹46,481 crore to named wards and shows a 35× spread
+> between top and bottom. KMC attributes 0.38%, equally, by design. There is no
+> ward-level spending variation in Kolkata's published budget to correlate
+> against anything. That is one strong sentence, not a project — and it is the
+> honest answer to "is there a KMC equivalent of the work-order archive?" No.
+
+### 4. The amenity tables mostly cannot be joined to wards, and one of them is the wrong file
+
+**Five of the fourteen amenity CSVs carry a ward column**, and their coverage is
+too sparse to compute per-ward rates:
+
+| Table | Rows | Wards covered (of 144) |
+|---|---|---|
+| KMC Immunization centres | 223 | 127 |
+| KMC Schools | 258 | 106 |
+| KMC Taxi Parking (2018) | 276 | 55 |
+| KMC Parks and Gardens | 92 | 53 |
+| KMC Dispensaries | 22 | 21 |
+
+The rest carry borough only (Malaria Clinics, Birth Registration), a bare address
+(Crematoriums, Chest Clinics, Death Registration), or **nothing but a name** —
+`KMC Markets` is 47 rows of market names with no address, no ward and no
+coordinates. None of the fourteen is geospatial.
+
+**A borough → ward crosswalk does exist** and is worth publishing as a small
+artifact: `KMC Borough Committees Office` lists the ward numbers belonging to
+each of the 16 boroughs, covering 1-144 completely. It places the borough-only
+tables at borough resolution, not ward.
+
+**`KMC Pay-and-use Toilets (2018)` is not a toilets file.** It is a
+**byte-identical duplicate of `KMC Schools`** — same MD5
+(`1c0ce93ca1f54407777bcec4ea582c8e`), same 258 rows, same header
+(`School Code, School Address, School Type, Classes, No of Students`). The
+portal's only Kolkata sanitation resource contains school data. **Kolkata has no
+public-toilet data at all**, so the Mumbai chapter's central question cannot be
+asked here. This is worth reporting to OpenCity regardless of what gets built.
+
+> **The structural-zero problem is what actually rules out ward amenity access.**
+> With 88 of 144 wards absent from the parks table, there is no way to tell "this
+> ward has no park" from "this ward is not in the registry." Every per-ward rate
+> would rest on an ambiguous denominator, and the ambiguity will not be random —
+> it will correlate with whatever is being tested. These tables support a
+> **data-quality audit**, not an access analysis.
+
+### The one asset that does hold up: `Kolkata Water Bodies Census Data`
+
+3,051 placemarks, **all points, all with geometry, none dropped**, from the
+national Jal Shakti water bodies census. 28 attributes with real variance:
+
+- **Ward is encoded in the `village` field** (`KOLKATA (M CORP.) WARD NO.-0108`),
+  so all 3,051 are ward-tagged **and** independently geocoded. That allows the
+  Mumbai discipline: assign spatially, keep the attribute, and report how often
+  the two disagree.
+- Covers **93 of 144 wards**. Of the 51 absent, **37 are wards ≤54** (the dense
+  old-city core), **13 sit in the 55-100 band** (60, 61, 65, 68, 70, 73, 74, 77,
+  83, 84, 86, 87, 88) and one is ward 134 in Garden Reach. Not a clean block.
+- Ownership: **Individual 1,695 · Other private 766 · Group of individuals 315 ·
+  Municipal authority 228 (7.5%) · Panchayat 33**.
+- **906 of 3,051 (29.7%) are recorded as not in use.** Of the 2,145 in use:
+  pisciculture 1,098, domestic/drinking 681, industrial 366.
+- Heavily concentrated: **ward 108 alone holds 453**, ward 58 holds 292.
+
+#### The 51 zero-wards look like real absence, not an enumeration gap
+
+This is the same structural-zero problem that rules out amenity access, so it was
+tested rather than assumed — it decides the inference unit. If the zeros are an
+enumeration gap the usable n is 93 and the sample is biased; if they are real,
+the unit is **144 wards with 51 legitimate zeros**.
+
+The discriminating test is whether the small-pond left tail survives in the core.
+It does, and more strongly than elsewhere:
+
+| Band | n | min (ha) | p10 | median | share ≤0.03 ha |
+|---|---|---|---|---|---|
+| Core, wards ≤54 | 134 | 0.02 | 0.04 | 0.11 | **9.0%** |
+| Mid, 55-100 | 578 | 0.01 | 0.05 | 0.22 | 2.2% |
+| Peripheral, >100 | 2,339 | 0.01 | 0.03 | 0.09 | 13.6% |
+
+Enumerators recorded ponds down to 0.02 ha *in the core*, at a higher small-pond
+share than the mid band, so there was no size threshold suppressing small water
+bodies there. The per-ward counts in covered core wards also form a gradient
+rather than a block — wards 4, 9, 27, 29, 41, 45 and 46 have exactly one record
+each, next to wards 1 (36) and 33 (24) — and no borough is wholly absent
+(Borough I retains wards 1, 2, 4 and 9). Both patterns fit genuine scarcity.
+
+**Counterweight, and keep it in view:** Ray's NATMO figure is 8,731 ponds against
+this census's 3,051. That 3× gap has to live somewhere, and "small ponds in the
+dense core" is the obvious candidate. So treat **n=144 with zeros as primary and
+n=93 as the sensitivity case**, and report both rather than picking one silently.
+
+**Two dead fields — do not report either as a result.** `waterbody_encroached`
+is `No` for all 3,051, and `water_body_nature` is `Man-made` for all 3,051. The
+census instrument collects encroachment nationally, so a uniformly negative
+column in a city with a litigated pond-filling history is evidence the field was
+never populated, not evidence of no encroachment. Reporting "0% encroached", even
+hedged, would repeat the Mumbai retraction shape.
+
+### The EKW framing does not survive the data — say so before anyone commits to it
+
+The idea that this is an East Kolkata Wetlands dataset was tested and **fails**:
+
+| | |
+|---|---|
+| Total water spread area, all 3,051 | **1,175 ha** |
+| Median | 0.10 ha |
+| 95th percentile | 1.28 ha |
+| Largest single body | 38.93 ha |
+| Bodies over 10 ha | 13 |
+| EKW Ramsar site, for comparison | **~12,500 ha** |
+| Easternmost record | 88.458 E |
+
+The file's entire stock is under a tenth of the Ramsar site's area, its largest
+water body is 39 ha against EKW's sewage-fed *bheris* of hundreds of hectares,
+and the coordinates stop at the KMC jurisdictional boundary — **the bheris are
+not in this file.** There is a real eastern concentration (808 records east of
+88.40 E, 692 ha, in wards 108, 58 and 109 — the KMC-side fringe), but that is the
+fringe, not the wetlands.
+
+**Call it what it is: Kolkata's ward-level pond and tank stock.** Naming it East
+Kolkata Wetlands would be a framing the data cannot carry, shipped publicly.
+
+### Prior work — this is an extension, not a discovery
+
+Mohit Ray's CSE deck *Water bodies of Kolkata* is the standing reference. It
+tabulates KMC's own pond counts — **1,786 (1997), 3,873 (2006)** — against NATMO's
+8,731 and 4,889 counted from satellite imagery, and argues **~44% of Kolkata's
+water bodies were filled in two decades.** The loss narrative is published.
+
+What is not published is this census read at ward level. The national count of
+**3,051** sits below KMC's own 2006 list of 3,873, which is the natural hook — but
+it is a *comparison across incompatible instruments and vintages*, so treat it as
+a question, not a finding. No ward-level analysis of the Kolkata Jal Shakti file
+was found on OpenCity or in general search.
+
+### Vintage table — every layer is a different year, and two are mislabelled
+
+| Source | Actual vintage | What the portal says |
+|---|---|---|
+| Ward KML | **pre-2015** (141 wards) | resource named "Kolkata Wards Map 2022" |
+| Water bodies census | **enumerated Nov 2020 – Nov 2021** (from `enumeration_date`) | described "2018-19", resource named "2023" |
+| Amenity CSVs | 2018 or earlier; none has a record above ward 141 | undated |
+| KMC elections | 2010 (141 wards), 2015 (144 wards) | correct |
+| KMC budget | 2017-18 to 2026-27 | correct |
+| Drainage PDFs | undated | undated |
+
+Both the ward file and the water bodies file are mislabelled on the portal, in
+opposite directions. The amenity tables containing no ward above 141 is a useful
+cross-check: they are the same pre-expansion vintage as the ward polygons, so
+joining those two is at least internally consistent.
+
+### Two assets the original scoping missed entirely
+
+`Kolkata KMC Elections Data` (2010 and 2015) is **ward-level, complete, and
+KMC-sourced** — 1,044 and 1,084 candidate rows carrying `Ward_No`,
+`Total_Electors`, `Total_Votes`, `Voter_Turnout_Percentage`, party and gender.
+`Total_Electors` sums to **3.43 M across 141 wards (2010)** and **3.74 M across
+144 wards (2015)**.
+
+That matters more than it looks: it is a **ward-level denominator that is not
+district-sourced**, so it sidesteps the boundary caveat that disqualifies census,
+UDISE+ and RTO data. It is an electorate, not a population, and it is a decade
+old — but it is the only complete per-ward denominator Kolkata publishes.
+(The `District` column reads "South 24-Parganas" on every row of both files; that
+is a source artifact of the election dataset, not geography.)
+
+**`Kolkata - Economic Census` (6th EC, 2012-13) is establishment-level microdata
+with a ward code**, and at 34.7 MB it is the largest tabular Kolkata holding on
+the portal. It is **not** the district-aggregate table it looks like from the
+catalogue. Schema:
+
+```
+State, District, Tehsil, T_V, WC, EB, EBX, C_HOUSE, IN_HH, BACT, NIC3,
+HLOOM_ACT, OWN_SHIP_C, SEX, SG, RELIGION, NOP, SOF, M_H, F_H, M_NH, F_NH,
+TOTAL_WORKER, SECTOR, DISTRICT
+```
+
+`WC` is the ward code and `TOTAL_WORKER`, `M_H`/`F_H`/`M_NH`/`F_NH` give hired
+and non-hired employment by sex; `BACT` is a 21-class broad activity code.
+Estimated **~558,000 rows** (measured from a 400 KB range request: 6,439 rows in
+the first 400 KB). In that sample `WC` runs **0-141** — the pre-2015 regime again,
+consistent with a 2012-13 vintage, and consistent with every other Kolkata ward
+source on the portal.
+
+Caveats before leaning on it: it is **district-sourced** (`DISTRICT` = 1916,
+Kolkata), so the boundary caveat applies and wards 142-144 will be absent; the
+bundled metadata CSV describes `WC` as "0-198 ward no.", which is BBMP's ward
+count, so **the metadata file is generic across cities and is not authoritative
+for Kolkata**; and only the first 6,439 rows were parsed here, so the full ward
+distribution is unverified.
+
+It is a candidate ward-level denominator (establishments and workers per ward,
+independent of electorate) and arguably a project in its own right. It is also
+thirteen years old.
+
+`KMC Drainage Pumping Stations Sewage Treatment Plants` (81 rows: Type, Name,
+No of Pumps, Telephone) is the only other drainage-adjacent table. It has **no
+ward and no coordinates**, so it can be mapped only by geocoding station names.
+
+### Where this leaves Kolkata
+
+- **Drainage maps: no.** 80 scanned PDFs, 55% ward coverage, digitisation project.
+- **Budget: no.** One flat ward line, 0.38% of spend, zero variance. One sentence.
+- **Amenity access: no.** Sparse, ambiguous denominators, and the toilets file is
+  the schools file.
+- **Water bodies: yes, at ward level.** Real attribute variance, a ward key and
+  independent coordinates. Primary unit **n=144 with 51 zeros** (rho critical
+  value ≈ 0.164 at 5%), sensitivity at **n=93** (≈ 0.204).
+- **Economic census: unresolved, and worth resolving.** ~558k establishment rows
+  with a ward code, but 2012-13 and district-sourced.
+
+Inference belongs at the **ward**, not the water body: 453 of 3,051 records sit in
+ward 108 alone, so treating individual water bodies as independent observations
+would repeat the Mumbai 47,450-grid-cell mistake.
+
+
+~~**The honest framing:** "Kolkata publishes enough to locate its amenities, but not enough to audit its spending — there is no KMC equivalent of BBMP's work-order archive."~~
+
+**Superseded by the feasibility pass.** The second half holds and is now
+quantified (0.38% of budget, zero ward variance). The first half does not:
+Kolkata does *not* publish enough to locate its amenities — 88 of 144 wards are
+absent from the parks table, the markets table has names only, and the
+pay-and-use toilets resource is a duplicate of the schools file. The cumulative
+three-chapter comparison stands, but Kolkata's side of it is "cannot audit
+spending **and** cannot locate amenities", with the water bodies census as the
+one exception.
 
 ---
 
