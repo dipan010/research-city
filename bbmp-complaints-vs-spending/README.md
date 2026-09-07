@@ -10,9 +10,13 @@ asks whether the wards that complain most are the wards that get spent on.
 
 ---
 
-## Findings
+## The argument
 
-### 1. A third of the money belongs to no ward
+BBMP publishes the data to answer one question: do the wards that complain most
+get the most spent on them? Each section below narrows what can honestly be
+claimed in reply.
+
+### The premise: a third of the money belongs to no ward
 
 ![Untagged spending](figures/fig1_untagged_spending.png)
 
@@ -26,7 +30,7 @@ It is reproduced here independently from the raw files as a check on the
 pipeline, and because it frames everything below: for over a third of the money,
 the ward-level question cannot be asked at all.
 
-### 2. Complaints and spending point at different problems
+### What the money is for: streetlights draw the complaints, roads draw the money
 
 ![Category mismatch](figures/fig2_category_mismatch.png)
 
@@ -61,7 +65,7 @@ The spending side of this disparity was reported by Citizen Matters in May 2023
 (roads and drains ~74% of ward-level funds, waste management 1.1%). What is
 added here is the complaint side set against it, per ward.
 
-### 3. More complaints, more money, but only loosely
+### How strong the link is: thinner than it looks
 
 ![Complaints vs spend](figures/fig3_complaints_vs_spend.png)
 
@@ -74,18 +78,7 @@ spending rank.
 Ward spending ranges from ₹12 crore (Agaram) to ₹436 crore (Horamavu), a **35×
 spread**, against a median of ₹59 crore.
 
-### 4. Spending more does not resolve more complaints
-
-![Resolution by spend](figures/fig4_resolution_by_spend.png)
-
-Median complaint-closure rate is essentially flat across all five ward spending
-quintiles, from 94.4% to 95.1%, with no trend. The highest-spending wards close
-complaints at the same rate as the lowest-spending ones.
-
-Complaint volume itself rose sharply: the median ward saw **2.17× more
-complaints in 2024 than in 2020** (91,620 → 207,016 city-wide).
-
-### 5. The geography depends entirely on the denominator (the central finding)
+### The central finding: the map you get depends on what you divide by
 
 ![Ward maps](figures/fig5_ward_maps.png)
 
@@ -124,7 +117,18 @@ Neither reading is wrong, and the choice is not neutral. A ward-level claim in
 this data is only meaningful once it names its denominator, the same trap the
 untagged-money and ward-regime problems set in different ways.
 
-### 6. Spend per complaint varies 51× between wards
+### The output side: more money does not close more complaints
+
+![Resolution by spend](figures/fig4_resolution_by_spend.png)
+
+Median complaint-closure rate is essentially flat across all five ward spending
+quintiles, from 94.4% to 95.1%, with no trend. The highest-spending wards close
+complaints at the same rate as the lowest-spending ones.
+
+Complaint volume itself rose sharply: the median ward saw **2.17× more
+complaints in 2024 than in 2020** (91,620 → 207,016 city-wide).
+
+### A footnote: spend per complaint varies 51× between wards
 
 ![Spend per complaint](figures/fig6_spend_per_complaint.png)
 
@@ -188,7 +192,7 @@ This project does both, and adds a correction:
    spending, quantified per ward across all three mappable categories, over five
    years, rather than one category, qualitatively, on one day.
 2. **Area normalisation of both sides.** Named as future work in 2023 and not
-   taken up since. It changes the geographic conclusion (finding 5).
+   taken up since. It changes the geographic conclusion (the central finding).
 3. **A consequence for the July 2025 grievances analysis.** That piece describes
    complaints as clustering in "peripheral growth areas" and labels its ward map
    complaint *density*, but maps raw counts. Every ward it names as a top

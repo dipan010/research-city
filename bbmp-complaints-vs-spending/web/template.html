@@ -236,20 +236,22 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 <section class="col">
   <p class="lede">Bengaluru's municipal corporation runs a grievance system that
   logged over 200,000 complaints in 2024 alone, and issues work orders worth
-  roughly ₹4,650 crore a year. Both datasets are public. This analysis puts them
-  on the same 198 wards and asks whether the places that complain most are the
-  places that get spent on.</p>
-  <p>The short answer is: loosely, and less than the headline correlation
-  suggests. But two things found along the way matter more than the correlation
-  itself: where the money goes untracked, and what happens to the geography
-  once you account for how differently sized BBMP's wards are.</p>
+  roughly ₹4,650 crore a year. Both datasets are public, both are keyed to the
+  same 198 wards, and together they look like they should settle whether the
+  places that complain most are the places that get spent on.</p>
+  <p>They mostly don't. Not because the answer is uncomfortable, but because
+  each step toward it narrows what can honestly be claimed: a third of the money
+  is untraceable before you begin, the link that remains is weaker than it
+  looks, spending and complaints turn out to be aimed at different things, and
+  the geography reverses depending on what you divide by. What follows is that
+  narrowing, in order.</p>
 </section>
 
 <hr class="rule">
 
 <!-- 1 -->
 <section class="col">
-  <div class="num"><b>FINDING 01</b></div>
+  <div class="num"><b>THE PREMISE</b></div>
   <h2>A third of the money belongs to no ward</h2>
   <p>Of ₹23,241 crore in gross work orders, ₹8,023 crore is booked to
   <span class="mono">Untagged&nbsp;Expenses/Multiple&nbsp;Wards</span>, spending
@@ -279,14 +281,17 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
     pipeline reads BBMP's ledger the same way, and because it bounds everything
     below.</p>
   </div>
+  <p>That leaves ₹15,218 crore that can be placed on a ward. The rest of this
+  page is about what that money does, and how little of it tracks what residents
+  actually report.</p>
 </section>
 
 <hr class="rule">
 
 <!-- 2 -->
 <section class="col">
-  <div class="num"><b>FINDING 02</b></div>
-  <h2>Complaints and spending point at different problems</h2>
+  <div class="num"><b>WHAT THE MONEY IS FOR</b></div>
+  <h2>Streetlights draw the complaints, roads draw the money</h2>
   <p>Three categories map cleanly across both datasets. Ranked by complaints they
   come out in almost exactly the reverse order to spending.</p>
 </section>
@@ -318,14 +323,17 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   rather than assumed: BBMP's <span class="mono">Electrical</span> category is
   99.1% street and park lighting, of which 95.0% is literally
   <em>Street Light Not Working</em>.</p>
+  <p>So the two datasets are not aimed at the same problems. The question is
+  whether, setting category aside, the wards that generate the most complaints
+  at least receive the most money.</p>
 </section>
 
 <hr class="rule">
 
 <!-- 3 -->
 <section class="col">
-  <div class="num"><b>FINDING 03</b></div>
-  <h2>The correlation is weaker than it looks</h2>
+  <div class="num"><b>HOW STRONG THE LINK IS</b></div>
+  <h2>And where they do move together, it is thinner than it looks</h2>
   <p>Plotted against each other, complaints and spending trend together, but the
   linear fit is carried by a handful of outlier wards at the top right.</p>
 </section>
@@ -344,8 +352,8 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
 
 <!-- 4: the centrepiece -->
 <section class="col">
-  <div class="num"><b>FINDING 04</b></div>
-  <h2>The geography depends entirely on the denominator</h2>
+  <div class="num"><b>THE CENTRAL FINDING</b></div>
+  <h2>The map you get depends on what you divide by</h2>
   <p>Mapped as raw totals, both spending and complaints appear to concentrate on
   Bengaluru's periphery. That is largely an artefact of ward size: BBMP's outer
   wards are several times larger than its core wards, and distance from the
@@ -357,6 +365,10 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   <p><strong>Use the toggle.</strong> No single view is the correct one; the
   point is that the geography is a property of the denominator, not of the
   city.</p>
+  <p>This is where the question stops being answerable in the way the data
+  invites. A ward-level map of either quantity is a statement about the
+  denominator as much as about Bengaluru, and the three readings below disagree
+  with each other completely.</p>
 </section>
 
 <figure class="wide">
@@ -415,17 +427,19 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   spread over more land, so area and population pull in opposite directions, and
   a ward-level claim is only meaningful once it names its denominator.</p>
 
-  <p>This is the load-bearing finding here, and it is the one with consequences
-  for work already published on this data. See <a href="#provenance">what was
-  already known</a>.</p>
+  <p>This is the load-bearing finding here, and it has consequences for work
+  already published on this data, which are set out in
+  <a href="#provenance">what was already known</a>. It also leaves one thing
+  still worth asking: whatever the money tracks, does spending it resolve
+  anything?</p>
 </section>
 
 <hr class="rule">
 
 <!-- 5 -->
 <section class="col">
-  <div class="num"><b>FINDING 05</b></div>
-  <h2>Spending more does not resolve more</h2>
+  <div class="num"><b>THE OUTPUT SIDE</b></div>
+  <h2>And more money does not close more complaints</h2>
 </section>
 
 <figure class="col">
@@ -437,6 +451,23 @@ footer{border-top:1px solid var(--rule); padding:34px 0 60px; margin-top:50px;
   the lowest. Complaint volume itself rose sharply over the window: the median
   ward saw 2.17× more complaints in 2024 than in 2020.</figcaption>
 </figure>
+
+<section class="col">
+  <p>Put end to end, the question BBMP's own data appears to answer turns out to
+  be one it mostly cannot. A third of the money never reaches a ward in the
+  record. What does reach one is aimed at different problems from the ones
+  residents report, and tracks complaint volume only loosely once you look at
+  ranks rather than the line of best fit. Where it lands is a statement about
+  the denominator before it is a statement about the city. And whatever a ward
+  receives, its complaints close at about 94%.</p>
+  <p>None of that says BBMP is spending badly. Roads genuinely cost more than
+  streetlights, capital works genuinely serve people who never file a complaint,
+  and a 94% closure rate is not a failure. What it says is narrower and harder
+  to design around: <strong>these two datasets, published by the same body about
+  the same wards, do not describe a system that is visibly responding to
+  them.</strong> Whether it responds through some other channel is not something
+  this data can show.</p>
+</section>
 
 <hr class="rule">
 

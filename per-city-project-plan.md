@@ -118,6 +118,35 @@ This is a smaller, self-contained piece — not a third of equal weight.
 
 ⚠️ **Boundary caveat:** Kolkata *district* is smaller than KMC's actual jurisdiction, which extends into South 24 Parganas. Any district-sourced data (UDISE+, Census, RTO) undercounts the city. Note it; don't silently mix it with KMC-sourced data.
 
+## Verified against the catalogue, 2026-09-07
+
+*The scoping above was written before checking. These were confirmed by API sweep
+and by downloading the ward file. Two of them contradict it.*
+
+- **27 Kolkata datasets on the portal**, not 32. Only 3 carry geospatial
+  resources: `Kolkata Wards Information` (KML), `Kolkata Water Bodies Census
+  Data` (KML), `Kolkata Microwatersheds Map` (GeoJSON).
+- **`Kolkata Drainage Maps` has 80 resources.** The scoping above does not
+  mention this dataset at all, and it is the largest Kolkata holding by a wide
+  margin. Check what is in it before accepting the "Kolkata is thin" framing:
+  it may carry the project.
+- **The ward KML holds exactly 141 placemarks**, resource named "Kolkata Wards
+  Map 2022", single attribute `WARD`. KMC's formal ward count is 144, so three
+  are missing or merged. Resolve that before any ward join, and do not assume
+  the file matches the corporation.
+- `Kolkata Schools`, `Kolkata Markets`, `Kolkata Civic Amenities` (4 res),
+  `Kolkata Health Services` (5 res), `Kolkata Public Service Centres` (3 res)
+  are the amenity tables. None is geospatial, so any mapping needs a join or
+  geocoding, which is a materially harder build than Mumbai's ready-made KMLs.
+- `KMC Budget Statement` has 16 resources. Worth checking whether it supports
+  anything like the BBMP work-order analysis before concluding it does not.
+
+**The Mumbai method transfers, the Mumbai data does not.** Mumbai had point
+layers for ten services and a polygon layer for the thing of interest. Kolkata
+has 141 ward polygons and a pile of tables. Expect the shape to be closer to the
+Bengaluru project (join tables to wards) than the Mumbai one (spatial overlay),
+with the water bodies census as the one genuinely spatial asset.
+
 **The honest framing:** "Kolkata publishes enough to locate its amenities, but not enough to audit its spending — there is no KMC equivalent of BBMP's work-order archive." That comparison across your three chapters *is* the cumulative finding, without needing a merged dataset.
 
 ---
