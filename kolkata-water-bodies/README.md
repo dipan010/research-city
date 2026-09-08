@@ -85,6 +85,14 @@ chapter. Most of that turned out to be unanswerable, which is itself reportable.
   is pre-2015; the water bodies file is described as 2018-19, named 2023, and its
   own `enumeration_date` timestamps put fieldwork in November 2020 to November 2021.
 
+## A small artifact worth reusing
+
+`data/out/borough_ward_crosswalk.csv` maps all 16 KMC boroughs to all 144 wards,
+two columns, checked to partition 1-144 exactly once. KMC publishes this only as
+a free-text column (`123,124,125,126,142,143 &144`) inside an office-address
+table, and it is the only way to place the borough-only amenity registries. No
+published version appears to exist.
+
 ## Prior work
 
 Mohit Ray, *Water bodies of Kolkata* (Centre for Science and Environment) is the
@@ -127,4 +135,5 @@ src/export_web.py    geometry -> SVG paths, payload for the page
 src/build_web.py     template + payload -> docs/
 data/raw/            downloads and manifest.json (gitignored)
 data/out/            ward_panel.csv, results.json, robustness.json, web_data.json
+                     borough_ward_crosswalk.csv - 16 boroughs to 144 wards
 ```

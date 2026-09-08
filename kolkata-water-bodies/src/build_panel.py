@@ -192,6 +192,12 @@ def main() -> int:
           f"total spread {panel['area_ha'].sum():.1f} ha")
 
     panel.to_csv(K.OUT / "ward_panel.csv", index=False)
+    # KMC publishes its borough-to-ward mapping only as a free-text column
+    # (`123,124,125,126,142,143 &144`) inside an office-address table. Written
+    # out as a clean two-column CSV because it is the only way to place the
+    # borough-only amenity tables, and nobody appears to publish one.
+    boroughs.sort_values(["ward"]).to_csv(
+        K.OUT / "borough_ward_crosswalk.csv", index=False)
     keep = ["ward", "ward_attr", "ward_geo", "area_ha", "in_use", "municipal",
             "water_body_ownership", "waterbody_use", "enumerated",
             "longitude", "latitude", "geometry"]
