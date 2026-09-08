@@ -1,0 +1,925 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kolkata's Ponds, Ward by Ward</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#f5f6f4; --surface:#ffffff; --surface-2:#eceee9;
+  --ink:#161a18; --ink-2:#4b5450; --ink-3:#78827d;
+  --rule:#dde1dc; --rule-2:#c7cec8;
+  --accent:#1f6f8b; --accent-soft:#e4eef2;
+  --flag:#b4472a; --flag-soft:#f9ece7;
+  --w1:#dbe7ec; --w2:#b3cfda; --w3:#7fb0c4; --w4:#4a8ba7; --w5:#22637f;
+  --d1:#fbe6d8; --d2:#f6c3a1; --d3:#e99a6d; --d4:#d4703f; --d5:#b4472a;
+  --nodata:#cdd2ce; --ward-line:#ffffff;
+  --shadow:0 1px 2px rgba(22,26,24,.06), 0 8px 24px -12px rgba(22,26,24,.16);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#101413; --surface:#181d1c; --surface-2:#1f2624;
+    --ink:#e8ede9; --ink-2:#a3ada8; --ink-3:#78827d;
+    --rule:#28302e; --rule-2:#39423f;
+    --accent:#4d9db8; --accent-soft:#14262d;
+    --flag:#e08560; --flag-soft:#2b1a14;
+    --w1:#1c3038; --w2:#25454f; --w3:#356571; --w4:#458496; --w5:#5aa5bd;
+    --d1:#2e1d16; --d2:#4a2d1f; --d3:#7a462c; --d4:#a95e39; --d5:#d4794c;
+    --nodata:#333b38; --ward-line:#101413;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#101413; --surface:#181d1c; --surface-2:#1f2624;
+  --ink:#e8ede9; --ink-2:#a3ada8; --ink-3:#78827d;
+  --rule:#28302e; --rule-2:#39423f;
+  --accent:#4d9db8; --accent-soft:#14262d;
+  --flag:#e08560; --flag-soft:#2b1a14;
+  --w1:#1c3038; --w2:#25454f; --w3:#356571; --w4:#458496; --w5:#5aa5bd;
+  --d1:#2e1d16; --d2:#4a2d1f; --d3:#7a462c; --d4:#a95e39; --d5:#d4794c;
+  --nodata:#333b38; --ward-line:#101413;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+.col{max-width:664px; margin-left:auto; margin-right:auto}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif; text-wrap:balance; margin:0}
+h1{font-size:clamp(2.3rem,5.4vw,3.7rem); line-height:1.06; font-weight:700; letter-spacing:-.015em}
+h2{font-size:clamp(1.55rem,3vw,2.05rem); line-height:1.16; font-weight:600; letter-spacing:-.01em; margin:0 0 .5em}
+h3{font-size:1.14rem; font-weight:600; line-height:1.3; margin:2em 0 .5em}
+p{margin:0 0 1.05em}
+a{color:var(--accent); text-underline-offset:2px; text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+strong{font-weight:600}
+ul,ol{margin:0 0 1.05em; padding-left:1.25em}
+li{margin:0 0 .45em}
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-variant-numeric:tabular-nums}
+.eyebrow{font-family:"JetBrains Mono",monospace; font-size:.705rem; font-weight:500;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+
+/* ---------- masthead ---------- */
+header.top{border-bottom:1px solid var(--rule); background:var(--surface)}
+.top-in{padding:72px 0 48px}
+.kicker{display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; margin-bottom:18px}
+.dek{font-family:"Source Serif 4",Georgia,serif; font-size:1.27rem; line-height:1.5;
+  color:var(--ink-2); margin:22px 0 0; max-width:40em}
+.byline{margin-top:26px; font-size:.85rem; color:var(--ink-3)}
+
+/* ---------- headline numbers ---------- */
+.figures{display:grid; grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  gap:0; background:var(--surface); border-bottom:1px solid var(--rule)}
+.fig{padding:26px 22px; border-right:1px solid var(--rule)}
+.fig:last-child{border-right:0}
+.fig .n{font-family:"JetBrains Mono",monospace; font-size:1.72rem; font-weight:600;
+  letter-spacing:-.02em; display:block; line-height:1.1}
+.fig .l{font-size:.815rem; color:var(--ink-2); margin-top:8px; display:block; line-height:1.45}
+
+/* ---------- sections ---------- */
+section{padding:52px 0 4px}
+section.tint{background:var(--surface); border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule); padding-bottom:46px; margin-top:44px}
+.lede{font-size:1.09rem; color:var(--ink-2)}
+
+/* ---------- callouts ---------- */
+.note,.flagbox{border-radius:9px; padding:18px 20px; margin:26px 0; font-size:.94rem;
+  line-height:1.55; border:1px solid var(--rule)}
+.note{background:var(--surface-2)}
+.flagbox{background:var(--flag-soft); border-color:color-mix(in srgb,var(--flag) 26%,transparent)}
+.note p:last-child,.flagbox p:last-child{margin-bottom:0}
+.note h4,.flagbox h4{margin:0 0 .5em; font-size:.735rem; font-family:"JetBrains Mono",monospace;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); font-weight:500}
+.flagbox h4{color:var(--flag)}
+
+/* ---------- figures ---------- */
+figure{margin:34px 0 36px; background:var(--surface); border:1px solid var(--rule);
+  border-radius:11px; padding:16px 16px 6px; box-shadow:var(--shadow)}
+figure.wide{max-width:1072px; margin-left:auto; margin-right:auto}
+figure img{width:100%; height:auto; display:block; border-radius:5px}
+figcaption{font-size:.85rem; color:var(--ink-2); padding:13px 4px 10px; line-height:1.5}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto; margin:24px 0 30px; border:1px solid var(--rule);
+  border-radius:9px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:.87rem}
+th,td{padding:9px 13px; text-align:right; border-bottom:1px solid var(--rule);
+  white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:.7rem; font-family:"JetBrains Mono",monospace; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--ink-3); font-weight:500;
+  background:var(--surface-2); position:sticky; top:0}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums}
+tr.dim td{color:var(--ink-3)}
+
+/* ---------- map ---------- */
+.mapcard{background:var(--surface); border:1px solid var(--rule); border-radius:11px;
+  box-shadow:var(--shadow); padding:18px; margin:30px 0 34px}
+.controls{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:16px}
+.controls button{font:inherit; font-size:.815rem; padding:6px 13px; border-radius:99px;
+  border:1px solid var(--rule-2); background:transparent; color:var(--ink-2); cursor:pointer;
+  transition:background .12s,color .12s,border-color .12s}
+.controls button:hover{border-color:var(--accent); color:var(--accent)}
+.controls button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#fff}
+.maplayout{display:grid; grid-template-columns:1fr 236px; gap:20px; align-items:start}
+@media (max-width:760px){.maplayout{grid-template-columns:1fr}}
+.mapsvg{width:100%; height:auto; display:block}
+.mapsvg path.ward{stroke:var(--ward-line); stroke-width:1.1; cursor:pointer}
+.mapsvg path.ward:hover{stroke:var(--ink); stroke-width:1.8}
+.side{font-size:.86rem}
+.side .lab{font-family:"JetBrains Mono",monospace; font-size:.7rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); margin-bottom:8px}
+.side dl{margin:0; display:grid; grid-template-columns:auto auto; gap:5px 12px}
+.side dt{color:var(--ink-2)}
+.side dd{margin:0; text-align:right; font-family:"JetBrains Mono",monospace;
+  font-variant-numeric:tabular-nums}
+.legend{display:flex; align-items:center; gap:0; margin-top:16px; font-size:.74rem;
+  color:var(--ink-3)}
+.legend i{width:26px; height:11px; display:block}
+.legend .lo{margin-right:7px} .legend .hi{margin-left:7px}
+.scalenote{font-size:.78rem; color:var(--ink-3); margin-top:12px; line-height:1.5}
+
+/* ---------- misc ---------- */
+.pill{display:inline-block; font-family:"JetBrains Mono",monospace; font-size:.72rem;
+  padding:2px 8px; border-radius:99px; background:var(--surface-2); color:var(--ink-2);
+  border:1px solid var(--rule)}
+.pill.no{background:var(--flag-soft); color:var(--flag);
+  border-color:color-mix(in srgb,var(--flag) 26%,transparent)}
+.pill.yes{background:var(--accent-soft); color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 26%,transparent)}
+footer{border-top:1px solid var(--rule); background:var(--surface); margin-top:58px;
+  padding:40px 0 60px; font-size:.87rem; color:var(--ink-2)}
+footer code{font-family:"JetBrains Mono",monospace; font-size:.85em;
+  background:var(--surface-2); padding:1px 5px; border-radius:4px}
+hr.rule{border:0; border-top:1px solid var(--rule); margin:44px 0}
+</style>
+
+<header class="top">
+  <div class="wrap top-in">
+    <div class="col">
+      <div class="kicker">
+        <span class="eyebrow">Kolkata</span>
+        <span class="eyebrow" style="color:var(--rule-2)">/</span>
+        <span class="eyebrow">Ward-level civic equity, chapter three</span>
+      </div>
+      <h1>Kolkata's ponds, ward by ward</h1>
+      <p class="dek">India's first water bodies census found 3,051 ponds and tanks
+      inside the Kolkata Municipal Corporation. Nearly a third are recorded as out
+      of use, 93 per cent are privately owned, and half the city's water surface
+      sits in two wards. This is what KMC's published data can and cannot tell you
+      about them.</p>
+      <p class="byline">Built from OpenCity's Kolkata holdings. Every figure below
+      comes from parsing the source files; the code is in the repository.</p>
+    </div>
+  </div>
+</header>
+
+<div class="figures wrap" style="border-left:1px solid var(--rule); border-right:1px solid var(--rule)">
+  <div class="fig"><span class="n" id="f-n"></span><span class="l">water bodies enumerated inside KMC</span></div>
+  <div class="fig"><span class="n" id="f-ha"></span><span class="l">hectares of water surface, all told</span></div>
+  <div class="fig"><span class="n" id="f-dis"></span><span class="l">recorded as not in use</span></div>
+  <div class="fig"><span class="n" id="f-muni"></span><span class="l">owned by KMC itself</span></div>
+  <div class="fig"><span class="n" id="f-zero"></span><span class="l">of 144 wards hold none at all</span></div>
+</div>
+
+<section>
+  <div class="wrap col">
+    <h2>Start with what this is not</h2>
+    <p class="lede">The obvious frame for a Kolkata water dataset is the East
+    Kolkata Wetlands, the Ramsar-listed sewage fishery on the city's eastern
+    edge. That frame does not fit this file, and it is worth settling before
+    anything else.</p>
+    <p>The whole published stock covers <strong id="t-ha"></strong> hectares.
+    The Ramsar site alone is roughly 12,500. The largest single water body in the
+    census is <strong id="t-max"></strong> hectares, where the wetlands' sewage-fed
+    <em>bheris</em> run to hundreds. And the easternmost record sits at
+    <strong id="t-lon"></strong> E, which is where KMC's jurisdiction stops.</p>
+    <p>The wetlands lie mostly beyond that line, in North and South 24 Parganas.
+    They are not in this file. What is in it is the city's pond and tank stock:
+    small, numerous, mostly private, and until now not read ward by ward.</p>
+  </div>
+  <div class="wrap"><figure class="wide">
+    <img src="fig5_not_ekw.png" alt="Left: a scatter of all 3,051 water bodies by longitude and latitude, with the census stopping abruptly at 88.458 East. Right: a bar chart comparing the census total of 1,175 hectares against the East Kolkata Wetlands Ramsar site's 12,500 hectares.">
+    <figcaption>The census stops where KMC does. Roughly a quarter of the records
+    sit east of the EM Bypass, on the wetlands-facing fringe, but the wetlands
+    themselves are outside the corporation and outside this dataset.</figcaption>
+  </figure></div>
+</section>
+
+<section class="tint">
+  <div class="wrap col">
+    <h2>A stock concentrated in a handful of wards</h2>
+    <p>Kolkata's ponds are not spread thinly across the city. Of 144 wards,
+    <strong id="t-cov"></strong> hold at least one and <strong id="t-zero"></strong>
+    hold none. The twenty richest wards hold <strong id="t-top20"></strong> of every
+    water body in the city. Wards 108 and 58 alone account for
+    <strong id="t-two"></strong> of the total water surface.</p>
+    <p>The Gini coefficient across all 144 wards is <strong id="t-gini"></strong>
+    on counts and <strong id="t-ginia"></strong> on area. Restricting to the 93
+    wards that hold anything still leaves <strong id="t-gini93"></strong> and
+    <strong id="t-ginia93"></strong>: the empty wards raise the concentration, they
+    do not create it.</p>
+    <p>Almost every one of these is a small pond. The median is
+    <strong id="t-med"></strong> hectares, the 95th percentile
+    <strong id="t-p95"></strong>, and the smallest recorded is
+    <strong id="t-min"></strong>.</p>
+  </div>
+  <div class="wrap"><figure class="wide">
+    <img src="fig1_distribution.png" alt="Left: wards ranked by water body count, falling steeply from 453 in ward 108 to zero across 51 wards. Right: a log-scale histogram of water body area, peaking around 0.1 hectares.">
+    <figcaption>Left, all 144 wards ranked. Right, the size distribution on a log
+    scale. Half of all the water surface in the city is in two wards, and the
+    largest five per cent of water bodies hold <span id="t-top5" class="mono"></span>
+    of the area.</figcaption>
+  </figure></div>
+</section>
+
+<section>
+  <div class="wrap col">
+    <h2>The same map, five denominators</h2>
+    <p>The Bengaluru chapter of this project found that raw counts, counts per
+    square kilometre and counts per resident gave three opposite geographic
+    answers from the same two columns. That trap does not bite here, and it is
+    worth saying so plainly rather than repeating the warning by reflex.</p>
+    <p id="t-denom"></p>
+    <p>Only one measure genuinely reorders the city: the share of a ward's area
+    under water. That picks out wards holding one or two large ponds rather than
+    wards holding many, which is a different question and a legitimate one. Switch
+    between them below.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="mapcard">
+      <div class="controls" id="controls" role="group" aria-label="Choose a measure"></div>
+      <div class="maplayout">
+        <div>
+          <svg class="mapsvg" id="map" role="img" aria-label="Choropleth map of Kolkata Municipal Corporation wards"></svg>
+          <div class="legend">
+            <span class="lo" id="leg-lo"></span>
+            <i style="background:var(--w1)"></i><i style="background:var(--w2)"></i>
+            <i style="background:var(--w3)"></i><i style="background:var(--w4)"></i>
+            <i style="background:var(--w5)"></i>
+            <span class="hi" id="leg-hi"></span>
+          </div>
+          <p class="scalenote" id="scalenote"></p>
+        </div>
+        <div class="side">
+          <div class="lab">Ward detail</div>
+          <div id="side-body">
+            <p style="color:var(--ink-3);margin:0">Hover or tap a ward.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap col">
+    <div class="flagbox">
+      <h4>Three wards are missing from every map on this page</h4>
+      <p>KMC has had 144 wards since the 2015 election, when the Joka area was
+      annexed into Borough XVI. The boundary file OpenCity publishes, named
+      "Kolkata Wards Map 2022", holds <strong>141</strong>: it is the pre-2015 set.
+      Wards 142, 143 and 144 have no polygon to draw, and between them they hold
+      <strong id="t-missing"></strong> water bodies that a naive spatial join would
+      have dropped without saying so.</p>
+      <p style="margin-top:.8em">The tables and statistics on this page use all
+      144 wards. Only the maps are limited to 141, because that is all the
+      published geometry can draw.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap col">
+    <h2>Overwhelmingly private, and least municipal where there is most water</h2>
+    <p>Of <strong id="t-n2"></strong> water bodies, KMC owns
+    <strong id="t-muni"></strong> outright, or <strong id="t-munipct"></strong>.
+    The rest are held by individuals, groups of individuals and other private
+    bodies. That shapes what the corporation can act on directly: whatever KMC
+    does about a shrinking or disused pond, it does overwhelmingly on land it
+    does not hold.</p>
+    <p>The ownership pattern is not uniform. In Boroughs XIII to XVI, the southern
+    and western fringe that holds <strong id="t-perishare"></strong> of the city's
+    water bodies, KMC owns <strong id="t-peri"></strong>. Across the rest of the
+    city it owns <strong id="t-rest"></strong>.</p>
+    <div class="tablewrap"><table id="own-table">
+      <thead><tr><th>Owner</th><th>Water bodies</th><th>Share</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap col">
+    <h2>Nearly a third are out of use</h2>
+    <p>The census asks whether a water body is in use, and for
+    <strong id="t-dis"></strong> of the 3,051 the answer recorded is no. Of those
+    in use, the largest group is pisciculture, then domestic and drinking use,
+    then industrial.</p>
+    <p>Disuse is very unevenly spread. Boroughs XIV and XV together hold
+    <strong id="t-xivxv-stock"></strong> of the city's water bodies but account
+    for <strong id="t-xivxv-dis"></strong> of every disused one. Borough XV, which
+    covers Garden Reach and Metiabruz, records
+    <strong id="t-xv"></strong> of its water bodies as out of use. Borough VII
+    records <strong id="t-vii"></strong>.</p>
+  </div>
+  <div class="wrap"><figure class="wide">
+    <img src="fig3_boroughs.png" alt="Horizontal bar chart of ten boroughs, showing the share of water bodies not in use and the share owned by KMC. Borough XV is highest on disuse at 61.6 per cent with almost no municipal ownership; Borough X has the highest municipal ownership at 46.3 per cent.">
+    <figcaption>Boroughs holding at least 20 water bodies, so every rate rests on a
+    denominator worth reading. The two bars are shown together because both vary
+    strongly, not because one explains the other. Across the ten boroughs they do
+    not correlate.</figcaption>
+  </figure></div>
+  <div class="wrap"><figure class="wide">
+    <img src="fig2_maps.png" alt="Three choropleth maps of Kolkata's 141 published wards: water bodies per ward, share of ward area under water, and the share recorded not in use. The first two peak in the east, the third in the west.">
+    <figcaption>The same three views the interactive map above offers, side by
+    side. Note that the eastern wards hold the most water and the western wards
+    the most disuse: the two patterns run in opposite directions across the city.
+    </figcaption>
+  </figure></div>
+  <div class="wrap col">
+    <div class="tablewrap"><table id="bor-table">
+      <thead><tr>
+        <th>Borough</th><th>Wards</th><th>Water bodies</th><th>Area (ha)</th>
+        <th>Not in use</th><th>KMC-owned</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <p class="scalenote" id="smalldenom"></p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap col">
+    <h2>The one pattern that survived testing</h2>
+    <p>Disuse falls from west to east across the city. At ward level, restricted
+    to the <strong id="t-gwards"></strong> wards holding at least ten water bodies,
+    the rank correlation between a ward's easting and its disuse share is
+    <strong id="t-grho"></strong> (p = <span id="t-gp" class="mono"></span>). At
+    that sample size the two-sided five per cent critical value is
+    <span id="t-gcrit" class="mono"></span>, so the coefficient clears it.</p>
+    <p>The north-south axis shows nothing: <strong id="t-gnorth"></strong>. The
+    gradient is east-west, and reporting it as anything else would be reading the
+    map rather than the data.</p>
+    <div class="note">
+      <h4>Why the sample has a floor</h4>
+      <p id="t-gnote"></p>
+    </div>
+  </div>
+  <div class="wrap"><figure class="wide">
+    <img src="fig4_gradient.png" alt="Left: scatter of ward disuse share against ward centroid easting, sloping downwards. Right: line chart of Spearman rho against the minimum water bodies per ward, showing the east-west coefficient strengthening past the critical value while north-south stays inside it.">
+    <figcaption>Left, the relationship itself, with point size proportional to how
+    many water bodies the ward holds. Right, the same coefficient computed at six
+    thresholds, against its own critical value. East-west clears at five of six;
+    north-south clears at none.</figcaption>
+  </figure></div>
+  <div class="wrap col">
+    <div class="tablewrap"><table id="grad-table">
+      <thead><tr>
+        <th>Minimum per ward</th><th>Wards</th><th>5% critical rho</th>
+        <th>East-west rho</th><th>p</th><th>North-south rho</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap col">
+    <h2>What was tested and did not hold</h2>
+    <p>Three results looked promising and are reported here as nulls, because a
+    negative that was actually tested is worth more than a caveat that was not.</p>
+
+    <h3>Municipal ownership does not predict lower disuse</h3>
+    <p>Across wards holding at least ten water bodies, the rank correlation
+    between a ward's municipal ownership share and its disuse share is
+    <strong id="t-null-muni"></strong>. Borough X owns 46 per cent of its water
+    bodies and records 15 per cent disused; Borough XVI owns none and records 21
+    per cent. There is no relationship at this resolution to report.</p>
+
+    <h3>The individual water body is the wrong unit</h3>
+    <p>Comparing water bodies one by one, <strong id="t-chi-muni"></strong> of
+    municipally owned water bodies are in use against
+    <strong id="t-chi-priv"></strong> of privately owned ones, and a chi-square
+    test on the 3,051 records returns p = <span id="t-chi-p" class="mono"></span>.
+    That number is not reported as a finding.</p>
+    <p>3,051 points clustered in 93 wards, 453 of them inside ward 108, are not
+    3,051 independent observations. The same question asked at ward level, where
+    the units are closer to independent, returns nothing. The significant version
+    is an artifact of the unit, not evidence about ownership.</p>
+
+    <h3>Pond-rich wards are not more disused</h3>
+    <p>Ward disuse share correlates strongly with ward water-body count when every
+    ward is included, and the relationship dissolves as the floor rises. It was
+    measuring the coarseness of a share computed on one or two water bodies.</p>
+    <div class="tablewrap"><table id="null-table">
+      <thead><tr><th>Minimum per ward</th><th>Wards</th><th>rho</th><th>p</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap col">
+    <h2>How many ponds did Kolkata have?</h2>
+    <p>This census counted <strong id="t-n3"></strong> inside KMC. That sits oddly
+    against the other counts on record, collected in Mohit Ray's work for the
+    Centre for Science and Environment.</p>
+    <div class="tablewrap"><table id="prior-table">
+      <thead><tr><th>Source</th><th>Ponds counted</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <p>Ray's argument, made from these figures, is that roughly 44 per cent of
+    Kolkata's water bodies were filled in over two decades. That case is already
+    published and this page does not restate it as a new finding.</p>
+    <div class="note">
+      <h4>What the gap does and does not show</h4>
+      <p>These are four different instruments across three decades: a municipal
+      register, a national topographic map series, a manual count from satellite
+      imagery, and a national field census. They disagree about what counts as a
+      water body and about where KMC's boundary ran at the time. The gap between
+      3,051 and 8,731 frames a question about what each exercise was measuring. It
+      is not a loss estimate, and treating it as one would be comparing across
+      instruments that were never comparable.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap col">
+    <h2>Two fields that look like findings and are not</h2>
+    <div class="flagbox">
+      <h4>Encroachment is not measured here</h4>
+      <p>The census records whether a water body has been encroached upon. For all
+      <strong id="t-n4"></strong> Kolkata records the answer is <span class="mono">No</span>,
+      without a single exception. The field has no variance at all.</p>
+      <p style="margin-top:.8em">In a city with a long and litigated history of
+      pond filling, a uniformly negative column is evidence that the field was
+      never populated, not evidence that nothing has been encroached. No
+      encroachment figure is reported on this page, and a hedged "0 per cent
+      encroached" would be worse than silence, because it would be quoted without
+      the hedge.</p>
+      <p style="margin-top:.8em">The same applies to <span class="mono">water_body_nature</span>,
+      which reads <span class="mono">Man-made</span> for every record.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap col">
+    <h2>Where the data stops</h2>
+    <p>This project began as a broader question about ward-level access to civic
+    amenities in Kolkata, in the shape of the Mumbai chapter before it. Most of
+    that question turned out to be unanswerable from what KMC publishes. That is
+    a finding about municipal transparency, so it is reported rather than quietly
+    dropped.</p>
+
+    <h3><span class="pill no">no</span> Ward-level spending</h3>
+    <p>KMC's budget statements are consolidated across all sixteen boroughs. The
+    account code carries borough and ward columns, but they hold aggregate
+    placeholders on essentially every line. Exactly one line item is attributed to
+    wards: the Councillors' Elaka Unnayan Prakalpa, which allocates an identical
+    <strong>₹15.00 lakh</strong> to each of the 144 wards, with zero variance. It
+    was ₹12.50 lakh in both 2019-20 and 2021-22, equally flat.</p>
+    <p>That is <strong>₹21.6 crore</strong> against a 2025-26 budgeted expenditure
+    of <strong>₹5,639.56 crore</strong>: <strong>0.38 per cent</strong> of the
+    budget, distributed equally by design. The scheme appears under two object
+    codes; whether those sum or restate the same money is not resolvable from the
+    published PDF, so no combined total is quoted here.</p>
+    <p>For comparison, the Bengaluru chapter of this project could attribute 82.7
+    per cent of ₹46,481 crore of BBMP work orders to named wards, and found a
+    35-fold spread between the top and bottom ward. There is nothing equivalent to
+    analyse in Kolkata, because there is nothing equivalent published.</p>
+
+    <h3><span class="pill no">no</span> Drainage networks</h3>
+    <p>OpenCity's largest Kolkata dataset is 80 ward drainage maps. All 80 are
+    scanned PDFs, and they cover 80 of 144 wards, with Boroughs XI to XVI almost
+    entirely absent. Reading them as data means georeferencing and digitising 80
+    scanned plans for just over half the city.</p>
+
+    <h3><span class="pill no">no</span> Amenity access</h3>
+    <p>Five of the fourteen KMC amenity tables carry a ward column, and they
+    cover 127, 106, 55, 53 and 21 of the 144 wards respectively. With 91 wards
+    absent from the parks table, there is no way to distinguish a ward with no
+    park from a ward that is not in the registry, and that ambiguity would not be
+    randomly distributed. The markets table is 47 names with no address and no
+    ward at all.</p>
+    <div class="flagbox">
+      <h4>The public toilets file is the schools file</h4>
+      <p>OpenCity's <span class="mono">KMC Pay-and-use Toilets (2018)</span>
+      resource is a byte-identical copy of <span class="mono">KMC Schools</span>.
+      Same MD5 (<span class="mono">1c0ce93ca1f54407777bcec4ea582c8e</span>), same
+      258 rows, same columns: school code, school address, school type, classes,
+      number of students.</p>
+      <p style="margin-top:.8em">Kolkata therefore publishes no public toilet data
+      at all, and the central question of this project's Mumbai chapter cannot be
+      asked here. The check runs on every fetch, so if the upload is corrected the
+      repository will say so.</p>
+    </div>
+
+    <h3><span class="pill yes">yes</span> Water bodies</h3>
+    <p>Which is why this chapter is about ponds.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap col">
+    <h2>Vintages, and two files that are mislabelled</h2>
+    <p>Every layer used here is from a different year, and the portal's own dates
+    are upload dates carrying no vintage information. The real ages had to be
+    recovered from the files.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Source</th><th>Actual vintage</th><th>What the portal says</th></tr></thead>
+      <tbody>
+        <tr><td>Ward boundary KML</td><td class="num">pre-2015 (141 wards)</td>
+          <td>resource named "Kolkata Wards Map 2022"</td></tr>
+        <tr><td>Water bodies census</td><td class="num" id="t-vint"></td>
+          <td>described "2018-19", resource named "2023"</td></tr>
+        <tr><td>Elector counts</td><td class="num">2015 KMC election</td><td>correct</td></tr>
+        <tr><td>Borough to ward lookup</td><td class="num">undated</td><td>undated</td></tr>
+        <tr><td>KMC budget</td><td class="num">2017-18 to 2026-27</td><td>correct</td></tr>
+      </tbody>
+    </table></div>
+    <p>The water bodies file carries an enumeration timestamp on every record,
+    which is the only hard vintage evidence available. It puts fieldwork in
+    <strong id="t-vint2"></strong>, so the portal's description is wrong in one
+    direction and the resource name is wrong in the other.</p>
+
+    <h3>The join, and how often the two ward labels disagree</h3>
+    <p>Each water body carries its ward inside a village label and, separately,
+    its own coordinates. Assigning wards spatially and keeping the label allows
+    the two to be compared instead of silently reconciled.</p>
+    <div class="tablewrap"><table id="join-table">
+      <thead><tr><th>Outcome</th><th>Records</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <p id="t-join"></p>
+    <p>The panel is built on the label rather than the geometry, for one reason:
+    the geometry cannot represent wards 142 to 144 at all, and dropping three
+    wards from a 144-ward panel is exactly the failure this page is about. The two
+    orderings agree closely enough for that to be safe: rank correlation
+    <strong id="t-joinrho"></strong> across wards.</p>
+
+    <h3>Are the 51 empty wards real?</h3>
+    <p>This decides whether the analysis has 144 units or 93, so it was tested
+    rather than assumed. If small ponds were being missed in the dense old-city
+    core, the left tail of the size distribution would thin out there. It does
+    not.</p>
+    <div class="tablewrap"><table id="zero-table">
+      <thead><tr>
+        <th>Band</th><th>Records</th><th>Smallest</th><th>10th pct</th>
+        <th>Median</th><th>Share ≤ 0.03 ha</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <p>Enumerators recorded ponds down to 0.02 hectares inside the core, at a
+    higher small-pond share than the middle band. Nothing was suppressing small
+    water bodies there, so a ward with none plausibly has none. The 51 empty wards
+    are carried as real zeros, and the 93-ward restriction is reported alongside
+    every concentration figure.</p>
+    <p>One caveat stays open. The NATMO count of 8,731 has to live somewhere, and
+    small ponds in the dense core are the obvious candidate. This test shows the
+    census was not applying a size threshold; it cannot show the census found
+    everything.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap col">
+    <h2>Method</h2>
+    <ul>
+      <li>Every source is resolved from OpenCity's CKAN API by dataset title and
+      resource name, so the pipeline survives re-uploads under new identifiers.</li>
+      <li>Distances and areas are computed in UTM zone 45N, checked against the
+      census's own longitude range rather than assumed.</li>
+      <li>The published area column is confirmed to be hectares by ratio against
+      total ward area: as hectares the city is <strong id="t-wshare"></strong>
+      under water, and as square kilometres it would be six times larger than
+      Kolkata.</li>
+      <li>Ward numbers are parsed and range-checked, never inferred from
+      similarity.</li>
+      <li>Placemarks are counted against geometries. All 3,051 water bodies and
+      all 141 ward polygons carry geometry; none was dropped.</li>
+      <li>Seven judgement calls are re-run across their alternatives in
+      <code>robustness.py</code>, and the ranges rather than the caveats are quoted
+      above. Removing wards 108 and 58, which hold over half the water surface,
+      moves the citywide disuse share from <strong id="t-r1"></strong> and the
+      municipal share from <strong id="t-r2"></strong>.</li>
+    </ul>
+    <h3>Denominator note</h3>
+    <p id="t-elec"></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap col">
+    <p><strong>Sources.</strong> All from <a href="https://data.opencity.in">OpenCity</a>:
+    Kolkata Water Bodies Census Data, Kolkata Wards Information, Kolkata KMC
+    Elections Data, Kolkata Municipal Corporation Offices, KMC Budget Statement,
+    Kolkata Civic Amenities, Kolkata Schools, Kolkata Drainage Maps. The water
+    bodies census is the first census of water bodies conducted by the Department
+    of Water Resources, River Development and Ganga Rejuvenation.</p>
+    <p><strong>Prior work.</strong> Mohit Ray, "Water bodies of Kolkata", Centre
+    for Science and Environment, for the historical pond counts and the filling
+    argument. This page extends that record by reading the national census ward by
+    ward; it does not restate the loss estimate as its own.</p>
+    <p><strong>Boundary caveat.</strong> Kolkata district is smaller than KMC's
+    jurisdiction, which extends into South 24 Parganas. Nothing on this page uses
+    a district-sourced denominator. Elector counts come from KMC's own election
+    returns for that reason.</p>
+    <p><strong>Reproducing.</strong> <code>src/fetch.py</code> then
+    <code>build_panel.py</code>, <code>analyse.py</code>, <code>robustness.py</code>,
+    <code>make_figures.py</code>, <code>export_web.py</code>, <code>build_web.py</code>.
+    Chapter three of three, after Bengaluru and Mumbai.</p>
+  </div>
+</footer>
+
+<script>
+const DATA = __DATA__;
+const R = DATA.results, RB = DATA.robustness;
+const $ = id => document.getElementById(id);
+const nf = n => n.toLocaleString("en-IN");
+const pc = v => v.toFixed(1) + "%";
+const set = (id, v) => { const e = $(id); if (e) e.textContent = v; };
+
+/* ---------- headline figures ---------- */
+set("f-n", nf(R.scale.n_water_bodies));
+set("f-ha", nf(Math.round(R.scale.total_area_ha)));
+set("f-dis", pc(R.disuse.pct));
+set("f-muni", pc(R.ownership.municipal_pct));
+set("f-zero", R.scale.wards_zero);
+
+/* ---------- inline numbers ---------- */
+set("t-ha", nf(R.scale.total_area_ha));
+set("t-max", R.scale.max_area_ha);
+set("t-lon", R.not_ekw.max_longitude);
+set("t-cov", R.scale.wards_with_any);
+set("t-zero", R.scale.wards_zero);
+set("t-top20", pc(R.scale.top20_share_pct));
+set("t-two", pc(R.scale.ward108_58_area_pct));
+set("t-gini", R.scale.gini_count);
+set("t-ginia", R.scale.gini_area);
+set("t-gini93", RB.gini.count_n93);
+set("t-ginia93", RB.gini.area_n93);
+set("t-med", R.scale.median_area_ha);
+set("t-p95", R.scale.p95_area_ha);
+set("t-min", R.scale.min_area_ha);
+set("t-top5", pc(R.scale.largest_5pct_area_share));
+set("t-n2", nf(R.scale.n_water_bodies));
+set("t-n3", nf(R.scale.n_water_bodies));
+set("t-n4", nf(R.scale.n_water_bodies));
+set("t-muni", nf(R.ownership.municipal));
+set("t-munipct", pc(R.ownership.municipal_pct));
+set("t-peri", nf(R.ownership.peripheral.municipal) + " of " +
+    nf(R.ownership.peripheral.n) + ", or " + pc(R.ownership.peripheral.municipal_pct));
+set("t-rest", pc(R.ownership.rest.municipal_pct));
+set("t-perishare", pc(R.ownership.peripheral.share_of_city_pct));
+set("t-dis", nf(R.disuse.n_disused));
+set("t-xivxv-stock", pc(R.disuse.xiv_xv.stock_share_pct));
+set("t-xivxv-dis", pc(R.disuse.xiv_xv.disused_share_of_all_pct));
+set("t-missing", DATA.missing_wards.reduce((a, m) => a + m.n, 0));
+set("t-vint", R.quality.enumerated_from + " to " + R.quality.enumerated_to);
+const MONTHS = ["January","February","March","April","May","June","July",
+  "August","September","October","November","December"];
+const pretty = iso => {
+  const d = iso.split("-");
+  return MONTHS[parseInt(d[1], 10) - 1] + " " + d[0];
+};
+set("t-vint2", pretty(R.quality.enumerated_from) + " to " +
+    pretty(R.quality.enumerated_to));
+set("t-wshare", RB.area_units.water_share_pct + "%");
+set("t-r1", RB.excluding_giants.disused_pct_full + "% to " +
+    RB.excluding_giants.disused_pct_excl + "%");
+set("t-r2", RB.excluding_giants.municipal_pct_full + "% to " +
+    RB.excluding_giants.municipal_pct_excl + "%");
+set("t-joinrho", RB.join_key.rank_correlation);
+set("t-elec", R.denominators.electorate_caveat);
+
+const byB = Object.fromEntries(R.disuse.by_borough.map(b => [b.borough, b]));
+set("t-xv", pc(byB["XV"].disused_pct));
+set("t-vii", pc(byB["VII"].disused_pct));
+
+/* gradient */
+const G = R.gradient;
+set("t-gwards", G.n_wards);
+set("t-grho", G.easting_vs_disuse.rho);
+set("t-gp", G.easting_vs_disuse.p.toFixed(3));
+set("t-gcrit", G.critical_rho_5pct);
+set("t-gnorth", "rho " + G.northing_vs_disuse.rho + ", p = " +
+    G.northing_vs_disuse.p.toFixed(2));
+set("t-gnote", RB.gradient_note);
+
+/* nulls */
+set("t-null-muni", "rho " + R.nulls.municipal_vs_disuse_ward.rho + ", p = " +
+    R.nulls.municipal_vs_disuse_ward.p.toFixed(2));
+const W2 = R.nulls.waterbody_level_chi2;
+set("t-chi-muni", pc(100 * W2.municipal_in_use / W2.municipal_total));
+set("t-chi-priv", pc(100 * W2.private_in_use / W2.private_total));
+set("t-chi-p", W2.p < 0.001 ? W2.p.toExponential(1) : W2.p.toFixed(4));
+
+/* denominator sentence */
+const dp = Object.fromEntries(R.denominators.pairs.map(p => [p.a + "|" + p.b, p.rho]));
+set("t-denom", "Kolkata's wards vary far less in size and electorate than its " +
+  "ponds vary in number, so the measures move together: raw count against count " +
+  "per square kilometre gives rho " + dp["n|n_per_km2"] + ", and against count " +
+  "per ten thousand electors rho " + dp["n|n_per_10k_electors"] + ". The " +
+  "geography is the same whichever you pick.");
+
+set("t-join", "The two labels disagree for " + R.quality.join.disagree +
+  " of the " + nf(R.quality.join.both_present) + " records where both exist, or " +
+  R.quality.join.disagree_pct + "%. A further " + R.quality.join.no_polygon_but_attr +
+  " fall outside the published boundary set: " + R.quality.join.in_wards_142_144 +
+  " of them in wards 142 to 144, and " + R.quality.join.outside_and_not_142_144 +
+  " outside the 141-ward extent entirely.");
+
+/* ---------- tables ---------- */
+const tbody = id => $(id).querySelector("tbody");
+const row = (cells, cls) => {
+  const tr = document.createElement("tr");
+  if (cls) tr.className = cls;
+  cells.forEach((c, i) => {
+    const td = document.createElement("td");
+    if (i > 0) td.className = "num";
+    td.textContent = c;
+    tr.appendChild(td);
+  });
+  return tr;
+};
+
+const totalN = R.scale.n_water_bodies;
+Object.entries(R.ownership.breakdown).forEach(([k, v]) => {
+  tbody("own-table").appendChild(
+    row([k === "Muncipal authority" ? "Municipal authority (KMC)" : k,
+         nf(v), pc(100 * v / totalN)]));
+});
+
+R.disuse.by_borough.forEach(b => {
+  const thin = b.n > 0 && b.n < 20;
+  tbody("bor-table").appendChild(row([
+    "Borough " + b.borough, b.wards, nf(b.n), b.area_ha.toFixed(1),
+    b.n === 0 ? "no data" : b.disused_pct.toFixed(1) + "%",
+    b.n === 0 ? "no data" : b.municipal_pct.toFixed(1) + "%",
+  ], thin || b.n === 0 ? "dim" : ""));
+});
+set("smalldenom", "Greyed rows rest on fewer than 20 water bodies, where a " +
+  "percentage is not worth reading: Boroughs " +
+  R.disuse.small_denominator_boroughs.join(", ") +
+  ". They are shown rather than filtered out so the whole city stays visible.");
+
+RB.gradient_sensitivity.forEach(g => {
+  tbody("grad-table").appendChild(row([
+    "n ≥ " + g.min_n, g.n_wards, g.critical_rho.toFixed(3),
+    g.easting_rho.toFixed(3), g.easting_p.toFixed(3),
+    g.northing_rho.toFixed(3),
+  ], g.easting_clears ? "" : "dim"));
+});
+
+R.nulls.count_vs_disuse_by_threshold.forEach(t => {
+  tbody("null-table").appendChild(row([
+    "n ≥ " + t.min_n, t.n_wards, t.rho.toFixed(3), t.p.toFixed(3),
+  ]));
+});
+
+Object.entries(R.prior_counts.counts).forEach(([k, v]) => {
+  tbody("prior-table").appendChild(row([k, nf(v)]));
+});
+tbody("prior-table").appendChild(
+  row(["This census, 2020-21", nf(R.scale.n_water_bodies)]));
+
+const J = R.quality.join;
+[["Ward label and polygon agree", J.agree],
+ ["Ward label and polygon disagree", J.disagree],
+ ["In wards 142 to 144, which have no polygon", J.in_wards_142_144],
+ ["Outside the 141-ward extent", J.outside_and_not_142_144],
+ ["No ward label at all", J.no_attr]].forEach(r =>
+  tbody("join-table").appendChild(row([r[0], nf(r[1])])));
+
+RB.zeros_are_real.bands.forEach(b => {
+  tbody("zero-table").appendChild(row([
+    b.band.replace("<=", "≤"), nf(b.n), b.min_ha.toFixed(2),
+    b.p10_ha.toFixed(2), b.median_ha.toFixed(2), b.pct_le_0_03ha + "%",
+  ]));
+});
+
+/* ---------- map ---------- */
+const METRICS = [
+  {k: "n", label: "Water bodies", unit: "", fmt: v => nf(v),
+   note: "Raw count. Ward 108 holds 453, which is why the scale is quantile-based " +
+         "rather than linear.",
+   grey: "Grey wards hold no water body at all, which is a real zero rather " +
+         "than a low value."},
+  {k: "n_per_km2", label: "Per km²", unit: " / km²", fmt: v => v.toFixed(1),
+   note: "Count divided by ward area. Nearly the same geography as the raw count " +
+         "(rho " + dp["n|n_per_km2"] + ").",
+   grey: "Grey wards hold none."},
+  {k: "n_per_10k_electors", label: "Per 10k electors", unit: " / 10k",
+   fmt: v => v.toFixed(1),
+   note: "Count per ten thousand registered electors, from the 2015 KMC election. " +
+         "An electorate, not a population, and a decade older than the census.",
+   grey: "Grey wards hold none."},
+  {k: "area_pct_of_ward", label: "% of ward under water", unit: "%",
+   fmt: v => v.toFixed(2),
+   note: "The one measure that genuinely reorders the city: it picks out wards " +
+         "holding a few large ponds rather than wards holding many.",
+   grey: "Grey wards hold none."},
+  {k: "disused_share", label: "Share not in use", unit: "", fmt: v => pc(100 * v),
+   note: "Only wards holding at least ten water bodies are shaded. Below that a " +
+         "share is too coarse to read.",
+   grey: "Grey wards hold fewer than ten water bodies, so no share is shaded " +
+         "for them.", warm: true, min: 10},
+];
+let metric = METRICS[0];
+
+const svg = $("map");
+svg.setAttribute("viewBox", DATA.viewBox);
+const paths = DATA.wards.map(w => {
+  const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  p.setAttribute("d", w.d);
+  p.setAttribute("class", "ward");
+  p.addEventListener("mouseenter", () => showWard(w));
+  p.addEventListener("focus", () => showWard(w));
+  p.addEventListener("click", () => showWard(w));
+  p.setAttribute("tabindex", "0");
+  const t = document.createElementNS("http://www.w3.org/2000/svg", "title");
+  t.textContent = "Ward " + w.ward;
+  p.appendChild(t);
+  svg.appendChild(p);
+  return {p, w};
+});
+
+function quantiles(vals, k) {
+  const s = vals.slice().sort((a, b) => a - b);
+  const out = [];
+  for (let i = 1; i < k; i++) out.push(s[Math.floor(i * s.length / k)]);
+  return out;
+}
+
+function paint() {
+  const eligible = DATA.wards.filter(w =>
+    w[metric.k] !== null && w[metric.k] !== undefined &&
+    (!metric.min || w.n >= metric.min));
+  const vals = eligible.map(w => w[metric.k]).filter(v => v > 0);
+  const cuts = quantiles(vals, 5);
+  const ramp = metric.warm ? ["--d1", "--d2", "--d3", "--d4", "--d5"]
+                           : ["--w1", "--w2", "--w3", "--w4", "--w5"];
+  paths.forEach(({p, w}) => {
+    const v = w[metric.k];
+    const usable = v !== null && v !== undefined && (!metric.min || w.n >= metric.min);
+    // A ward holding no water body is a real zero, not a low value and not
+    // missing data. It gets its own fill so the map makes the same claim the
+    // page does: these 51 wards have none, they are not simply the bottom bin.
+    if (!usable) { p.style.fill = "var(--nodata)"; return; }
+    if (w.n === 0) { p.style.fill = "var(--nodata)"; return; }
+    if (v <= 0) { p.style.fill = "var(" + ramp[0] + ")"; return; }
+    let b = 0;
+    while (b < cuts.length && v > cuts[b]) b++;
+    p.style.fill = "var(" + ramp[b] + ")";
+  });
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  set("leg-lo", metric.fmt(metric.k === "disused_share" ? lo : 0));
+  set("leg-hi", metric.fmt(hi));
+  set("scalenote", metric.note + " " + metric.grey +
+      " Wards 142, 143 and 144 are not drawn at all, because the published " +
+      "boundary file does not contain them.");
+}
+
+function showWard(w) {
+  const dis = w.disused_share === null ? "not enough records"
+            : pc(100 * w.disused_share);
+  const mun = w.municipal_share === null ? "not enough records"
+            : pc(100 * w.municipal_share);
+  $("side-body").innerHTML =
+    '<div style="font-size:1.15rem;font-weight:600;margin-bottom:10px">Ward ' +
+    w.ward + ' <span style="color:var(--ink-3);font-weight:400;font-size:.8rem">' +
+    'Borough ' + w.borough + '</span></div><dl>' +
+    '<dt>Water bodies</dt><dd>' + nf(w.n) + '</dd>' +
+    '<dt>Water surface</dt><dd>' + w.area_ha.toFixed(1) + ' ha</dd>' +
+    '<dt>Ward area</dt><dd>' + w.area_km2.toFixed(2) + ' km²</dd>' +
+    '<dt>Under water</dt><dd>' + w.area_pct_of_ward.toFixed(2) + '%</dd>' +
+    '<dt>Electors (2015)</dt><dd>' + nf(w.electors) + '</dd>' +
+    '<dt>Not in use</dt><dd>' + dis + '</dd>' +
+    '<dt>KMC-owned</dt><dd>' + mun + '</dd></dl>';
+}
+
+const cont = $("controls");
+METRICS.forEach((m, i) => {
+  const b = document.createElement("button");
+  b.textContent = m.label;
+  b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+  b.addEventListener("click", () => {
+    metric = m;
+    [...cont.children].forEach(c =>
+      c.setAttribute("aria-pressed", c === b ? "true" : "false"));
+    paint();
+  });
+  cont.appendChild(b);
+});
+paint();
+</script>

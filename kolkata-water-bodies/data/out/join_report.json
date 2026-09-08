@@ -1,0 +1,28 @@
+{
+  "agreement": {
+    "total": 3051,
+    "both_present": 2968,
+    "agree": 2892,
+    "disagree": 76,
+    "disagree_pct": 2.6,
+    "no_polygon_but_attr": 83,
+    "in_wards_142_144": 68,
+    "outside_and_not_142_144": 15,
+    "no_attr": 0
+  },
+  "boundary_double_matches": 0,
+  "dead_fields": {
+    "waterbody_encroached": {
+      "distinct": 1,
+      "value": "No"
+    },
+    "water_body_nature": {
+      "distinct": 1,
+      "value": "Man-made"
+    }
+  },
+  "water_bodies_dropped_no_geometry": 0,
+  "ward_polygons_dropped": 0,
+  "enumerated_from": "2020-11-05",
+  "enumerated_to": "2021-11-12"
+}

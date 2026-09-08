@@ -227,11 +227,14 @@ too sparse to compute per-ward rates:
 
 | Table | Rows | Wards covered (of 144) |
 |---|---|---|
-| KMC Immunization centres | 223 | 127 |
-| KMC Schools | 258 | 106 |
-| KMC Taxi Parking (2018) | 276 | 55 |
-| KMC Parks and Gardens | 92 | 53 |
-| KMC Dispensaries | 22 | 21 |
+| KMC Immunization centres | 224 | 127 |
+| KMC Schools | 259 | 106 |
+| KMC Taxi Parking (2018) | 277 | 55 |
+| KMC Parks and Gardens | 93 | 53 |
+| KMC Dispensaries | 23 | 21 |
+
+(Row counts are the parsed data rows. An earlier draft took them from `wc -l`,
+which undercounts by one on a file with no trailing newline.)
 
 The rest carry borough only (Malaria Clinics, Birth Registration), a bare address
 (Crematoriums, Chest Clinics, Death Registration), or **nothing but a name** —
@@ -252,7 +255,7 @@ public-toilet data at all**, so the Mumbai chapter's central question cannot be
 asked here. This is worth reporting to OpenCity regardless of what gets built.
 
 > **The structural-zero problem is what actually rules out ward amenity access.**
-> With 88 of 144 wards absent from the parks table, there is no way to tell "this
+> With 91 of 144 wards absent from the parks table, there is no way to tell "this
 > ward has no park" from "this ward is not in the registry." Every per-ward rate
 > would rest on an ambiguous denominator, and the ambiguity will not be random —
 > it will correlate with whatever is being tested. These tables support a
@@ -412,6 +415,24 @@ thirteen years old.
 No of Pumps, Telephone) is the only other drainage-adjacent table. It has **no
 ward and no coordinates**, so it can be mapped only by geocoding station names.
 
+### Scope agreed, 2026-09-07
+
+After the feasibility pass above, the agreed Kolkata chapter is
+**`kolkata-water-bodies`: the ward-level pond and tank stock**, published as a
+static page under `docs/` like the other two chapters. Streamlit was considered
+and declined, so the repo shape stays consistent and needs no hosting.
+
+Explicitly out of scope, with the reasons recorded above: ward amenity access
+(structural zeros, and the toilets file is the schools file), the drainage maps
+(80 scanned PDFs), a BBMP-style spending analysis (0.38% of budget, flat), and
+the economic census (real, but 2012-13, district-sourced and unverified beyond
+the first 6,439 rows - left as a documented lead for a later session).
+
+The data-quality findings are not a caveats appendix, they are part of the
+chapter: the flat ward budget, the duplicate toilets resource, the pre-2015 ward
+file mislabelled "2022", and the water bodies file mislabelled in two directions
+at once.
+
 ### Where this leaves Kolkata
 
 - **Drainage maps: no.** 80 scanned PDFs, 55% ward coverage, digitisation project.
@@ -433,7 +454,7 @@ would repeat the Mumbai 47,450-grid-cell mistake.
 
 **Superseded by the feasibility pass.** The second half holds and is now
 quantified (0.38% of budget, zero ward variance). The first half does not:
-Kolkata does *not* publish enough to locate its amenities — 88 of 144 wards are
+Kolkata does *not* publish enough to locate its amenities: 91 of 144 wards are
 absent from the parks table, the markets table has names only, and the
 pay-and-use toilets resource is a duplicate of the schools file. The cumulative
 three-chapter comparison stands, but Kolkata's side of it is "cannot audit
@@ -578,3 +599,106 @@ which is a publishable data-quality finding in itself.
 placemark, carry no geometry at all. Report the drop; do not let a layer quietly
 shrink.
 
+
+---
+
+# Carried forward from the Kolkata build
+
+*Added after `kolkata-water-bodies` shipped. This was the chapter that had to be
+scoped down rather than up, and the feasibility pass above is why. These are the
+lessons that were new, not the ones Bengaluru and Mumbai already taught.*
+
+**Check the framing against the data before writing a word of it.** The
+attractive angle here was East Kolkata Wetlands. It took one query to kill it:
+the census totals 1,175 ha against the Ramsar site's ~12,500, its largest water
+body is 38.93 ha, and its easternmost record sits at 88.458 E, where KMC's
+jurisdiction ends. The bheris are outside the corporation and outside the file.
+Had that gone unchecked the page would have shipped under a name the data cannot
+carry, which is the Mumbai retraction shape one step earlier in the process. The
+honest name, "ward-level pond and tank stock", is less exciting and correct.
+
+**A constant column is not a finding, and a collected-but-empty field is not a
+null result.** `waterbody_encroached` reads `No` for all 3,051 records. The
+national census instrument collects encroachment, so in a city with a litigated
+pond-filling history that column is evidence the field was never populated. No
+encroachment figure was published, hedged or otherwise, because a hedged "0%
+encroached" gets quoted without the hedge. Scan for zero-variance columns before
+building anything on a field, and treat a dead field as missing data rather than
+as an answer.
+
+**Test the structural zeros before choosing the inference unit.** 51 of 144
+wards hold no water body. Whether those are real absence or an enumeration gap
+decides whether n is 144 or 93, so it was tested rather than assumed: the dense
+old-city core records ponds down to 0.02 ha and a *higher* share of very small
+ponds than the middle band, so no size threshold was suppressing them. Zeros were
+carried, and every concentration figure is reported on both units. This is the
+same problem that disqualified the amenity tables, applied honestly to the asset
+being recommended rather than only to the ones being rejected.
+
+**Report the threshold at which a result appears, not just the coefficient.**
+The east-west disuse gradient clears the 5% critical value at five of six count
+thresholds. At the sixth, unfiltered, it vanishes and the apparent axis flips to
+north-south, because a disuse share computed on one or two water bodies is 0 or
+1. A single published rho would have concealed that. The page carries the whole
+threshold table and says why the floor exists.
+
+**Delete the chart title that claims what the null rejects.** A draft figure was
+titled "Disuse is worst where KMC owns least". The borough-level test says
+rho +0.17, p = 0.65, n = 10, meaning no relationship. The figure and its title
+now describe two things that both vary. Chart titles are claims and need the same
+evidence as prose; a caption that hedges a title still leaves the title standing.
+
+**Denominators do not always disagree, and saying so is worth as much as the
+warning.** The Bengaluru lesson is that raw counts, per km² and per resident can
+give three opposite geographies. In Kolkata they agree at rho 0.92 to 0.97,
+because ward area and electorate vary far less than pond counts do. Check all
+three every time, then report what the check found instead of repeating the
+caveat by reflex. Only "share of ward area under water" reorders the city, and it
+answers a different question.
+
+**When the geometry cannot represent the universe, key on the attribute.** The
+published ward polygons are the pre-2015 141-ward set; wards 142-144 do not
+exist in them and hold 68 water bodies. Keying the panel on geometry would have
+silently dropped three wards from a 144-ward city. The panel is keyed on the
+census's own ward label, the spatial join is kept to validate that choice, and
+the 2.6% disagreement rate between the two is published. Mumbai's rule was
+"assign spatially, keep the attribute"; Kolkata inverts it, and the reason is
+that Mumbai's polygons covered every ward and Kolkata's do not. The general rule
+is: key on whichever source covers the whole universe, and use the other to
+measure the cost.
+
+**Recover vintage from inside the file.** CKAN dates are upload dates. Here the
+ward file is named "2022" and is pre-2015, and the water bodies file is described
+as 2018-19, named 2023, and carries per-record `enumeration_date` timestamps
+putting fieldwork in November 2020 to November 2021. Both labels are wrong, in
+opposite directions. The only trustworthy vintage evidence was embedded in the
+records themselves.
+
+**A duplicate upload is a publishable finding.** `KMC Pay-and-use Toilets (2018)`
+is byte-identical to `KMC Schools`, same MD5. The check runs on every fetch and
+records the hashes in the manifest rather than asserting the duplicate, so a
+corrected upload surfaces as a corrected finding instead of a crash. Worth
+reporting to OpenCity.
+
+**Small mechanical traps.** The OpenCity CKAN API returns 502 on `rows=1000`;
+page at 25 with retries. Long-running catalogue sweeps in this environment were
+killed for memory, so `curl` to disk beat holding the whole catalogue in a Python
+process. `pdftotext -layout` reads KMC's budget PDFs cleanly, so "it is a PDF" is
+not a reason to skip a feasibility check. A ward centroid join leaves NaN for
+wards with no polygon, which silently poisons `spearmanr` unless
+`nan_policy="omit"` is set *and* the rows are filtered first.
+
+## Still open in Kolkata
+
+- **`Kolkata - Economic Census`** (6th EC, 2012-13) is ~558,000 establishment-level
+  rows with a ward code, `TOTAL_WORKER`, hired and non-hired employment by sex,
+  and a 21-class activity code. Only the first 6,439 rows were parsed. Its ward
+  codes run 0-141, so it is the pre-2015 regime like everything else, and it is
+  district-sourced. Possibly its own chapter, certainly a candidate denominator
+  better than a decade-old electorate.
+- **The NATMO gap.** This census counted 3,051 where NATMO counted 8,731. The
+  zero-ward test shows the census applied no size threshold in the core; it
+  cannot show the census found everything. Reconciling the two would need the
+  NATMO plates.
+- **The drainage PDFs.** 80 scanned ward plans. A digitisation proposal, not an
+  analysis, but the only published record of Kolkata's drainage network.

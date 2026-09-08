@@ -1,0 +1,163 @@
+{
+  "zeros_are_real": {
+    "bands": [
+      {
+        "band": "core (<=54)",
+        "n": 134,
+        "min_ha": 0.02,
+        "p10_ha": 0.04,
+        "median_ha": 0.11,
+        "pct_le_0_03ha": 9.0
+      },
+      {
+        "band": "mid (55-100)",
+        "n": 578,
+        "min_ha": 0.01,
+        "p10_ha": 0.05,
+        "median_ha": 0.22,
+        "pct_le_0_03ha": 2.2
+      },
+      {
+        "band": "peripheral (>100)",
+        "n": 2339,
+        "min_ha": 0.01,
+        "p10_ha": 0.03,
+        "median_ha": 0.09,
+        "pct_le_0_03ha": 13.6
+      }
+    ],
+    "verdict": "real absence"
+  },
+  "gini": {
+    "count_n144": 0.804,
+    "count_n93": 0.696,
+    "area_n144": 0.882,
+    "area_n93": 0.818
+  },
+  "gradient_sensitivity": [
+    {
+      "min_n": 1,
+      "n_wards": 90,
+      "critical_rho": 0.208,
+      "easting_rho": -0.09,
+      "easting_p": 0.3995474670625181,
+      "easting_clears": false,
+      "northing_rho": -0.268,
+      "northing_p": 0.010622592335132634
+    },
+    {
+      "min_n": 5,
+      "n_wards": 61,
+      "critical_rho": 0.253,
+      "easting_rho": -0.296,
+      "easting_p": 0.02062055353207364,
+      "easting_clears": true,
+      "northing_rho": -0.176,
+      "northing_p": 0.17527640685170284
+    },
+    {
+      "min_n": 10,
+      "n_wards": 47,
+      "critical_rho": 0.289,
+      "easting_rho": -0.353,
+      "easting_p": 0.014972672530485804,
+      "easting_clears": true,
+      "northing_rho": -0.178,
+      "northing_p": 0.23203655002658813
+    },
+    {
+      "min_n": 15,
+      "n_wards": 41,
+      "critical_rho": 0.31,
+      "easting_rho": -0.37,
+      "easting_p": 0.017104573591632703,
+      "easting_clears": true,
+      "northing_rho": -0.11,
+      "northing_p": 0.4941697905843977
+    },
+    {
+      "min_n": 20,
+      "n_wards": 35,
+      "critical_rho": 0.336,
+      "easting_rho": -0.37,
+      "easting_p": 0.028674452580196734,
+      "easting_clears": true,
+      "northing_rho": -0.119,
+      "northing_p": 0.4957793664862301
+    },
+    {
+      "min_n": 30,
+      "n_wards": 26,
+      "critical_rho": 0.392,
+      "easting_rho": -0.466,
+      "easting_p": 0.01642656720006979,
+      "easting_clears": true,
+      "northing_rho": 0.099,
+      "northing_p": 0.631084510101265
+    }
+  ],
+  "gradient_note": "The east-west gradient appears only once a ward's disuse share rests on at least five water bodies. Unfiltered, where a share can be 0/1 or 1/1, easting returns rho -0.090 (p=0.4) and the apparent axis flips to north-south. That instability is why the floor exists, and why the result is published as a threshold table rather than as one coefficient.",
+  "excluding_giants": {
+    "removed": [
+      108,
+      58
+    ],
+    "n_removed": 745,
+    "area_removed_ha": 640.4,
+    "disused_pct_full": 29.7,
+    "disused_pct_excl": 31.3,
+    "municipal_pct_full": 7.5,
+    "municipal_pct_excl": 9.6,
+    "area_ha_excl": 534.6
+  },
+  "join_key": {
+    "n_by_attribute": 3051,
+    "n_by_geometry": 2968,
+    "lost_to_geometry": 83,
+    "wards_differing": 52,
+    "max_ward_difference": 27,
+    "rank_correlation": 0.9292
+  },
+  "min_n_for_share": {
+    "chosen": 10,
+    "rows": [
+      {
+        "min_n": 5,
+        "n_wards": 64,
+        "median_disused_share": 0.202,
+        "mean_disused_share": 0.241
+      },
+      {
+        "min_n": 8,
+        "n_wards": 57,
+        "median_disused_share": 0.241,
+        "mean_disused_share": 0.256
+      },
+      {
+        "min_n": 10,
+        "n_wards": 50,
+        "median_disused_share": 0.226,
+        "mean_disused_share": 0.264
+      },
+      {
+        "min_n": 15,
+        "n_wards": 44,
+        "median_disused_share": 0.258,
+        "mean_disused_share": 0.291
+      },
+      {
+        "min_n": 20,
+        "n_wards": 37,
+        "median_disused_share": 0.289,
+        "mean_disused_share": 0.299
+      }
+    ]
+  },
+  "area_units": {
+    "assumed": "hectares",
+    "total_if_hectares_ha": 1175.1,
+    "kmc_141_ward_area_ha": 18657.4,
+    "water_share_pct": 6.3,
+    "implausible_if_km2_pct": 629.8
+  }
+}
